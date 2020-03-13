@@ -309,9 +309,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
+/* harmony import */ var _Link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Link */ "./components/Link.js");
 var _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/Footer.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 var Footer = function Footer() {
@@ -319,33 +321,104 @@ var Footer = function Footer() {
     className: "sticky-footer bg-white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 5
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
     className: "my-auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 6
     },
     __self: this
   }, __jsx("div", {
     className: "copyright text-center my-auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 7
     },
     __self: this
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 8
     },
     __self: this
-  }, "\u0422\u043E\u0437\u0438 \u0443\u0435\u0431\u0441\u0430\u0439\u0442 \u043D\u0435 \u0435 \u043E\u0444\u0438\u0446\u0438\u0430\u043B\u0435\u043D \u0438\u0437\u0442\u043E\u0447\u043D\u0438\u043A \u043D\u0430 \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F. \u0418\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F\u0442\u0430 \u043F\u0443\u0431\u043B\u0438\u043A\u0443\u0432\u0430\u043D\u0430 \u0442\u0443\u043A \u0435 \u0441 \u0438\u0437\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u0442\u0435\u043B\u0441\u043A\u0438 \u0445\u0430\u0440\u0430\u043A\u0435\u0440."))));
+  }, "\u0422\u043E\u0437\u0438 \u0443\u0435\u0431\u0441\u0430\u0439\u0442 \u043D\u0435 \u0435 \u043E\u0444\u0438\u0446\u0438\u0430\u043B\u0435\u043D \u0438\u0437\u0442\u043E\u0447\u043D\u0438\u043A \u043D\u0430 \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F. \u0418\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F\u0442\u0430 \u043F\u0443\u0431\u043B\u0438\u043A\u0443\u0432\u0430\u043D\u0430 \u0442\u0443\u043A \u0435 \u0441 \u0438\u0437\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u0442\u0435\u043B\u0441\u043A\u0438 \u0445\u0430\u0440\u0430\u043A\u0435\u0440."), __jsx("div", {
+    className: "mt-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, __jsx(_Link__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    href: "/privacy",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, "\u041F\u043E\u0432\u0435\u0440\u0438\u0442\u0435\u043B\u043D\u043E\u0441\u0442"))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);
+
+/***/ }),
+
+/***/ "./components/Link.js":
+/*!****************************!*\
+  !*** ./components/Link.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
+
+
+var _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/Link.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
+
+var assetPrefix = "";
+
+var Link = function Link(_ref) {
+  var href = _ref.href,
+      rest = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["href"]);
+
+  return (// eslint-disable-next-line react/jsx-props-no-spreading
+    __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      href: href,
+      as: "".concat(assetPrefix).concat(href)
+    }, rest, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }))
+  );
+};
+
+Link.propTypes = {
+  href: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string.isRequired
+};
+/* harmony default export */ __webpack_exports__["default"] = (Link);
 
 /***/ }),
 
@@ -360,17 +433,107 @@ var Footer = function Footer() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
+/* harmony import */ var _Link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Link */ "./components/Link.js");
+/* harmony import */ var _NavigationLink__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./NavigationLink */ "./components/NavigationLink.js");
 var _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/Navigation.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
+var Navigation = function Navigation() {
+  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Navbar"], {
+    as: "ul",
+    bg: "gradient-primary",
+    variant: "dark",
+    bsPrefix: "sidebar",
+    className: "navbar-nav accordion",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, __jsx(_Link__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, __jsx("a", {
+    className: "sidebar-brand d-flex align-items-center justify-content-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "sidebar-brand-icon",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, __jsx("i", {
+    className: "fas fa-medkit",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  })), __jsx("div", {
+    className: "sidebar-brand-text mx-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, "COVID-19 BG"))), __jsx("hr", {
+    className: "sidebar-divider my-0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }), __jsx(_NavigationLink__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    title: "\u041D\u0430\u0447\u0430\u043B\u043E",
+    href: "/",
+    icon: "fas fa-fw fa-tachometer-alt",
+    active: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Navigation);
+
+/***/ }),
+
+/***/ "./components/NavigationLink.js":
+/*!**************************************!*\
+  !*** ./components/NavigationLink.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
+var _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/NavigationLink.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+var assetPrefix = "";
 
 var NavigationLink = function NavigationLink(props) {
   var title = props.title,
@@ -381,107 +544,39 @@ var NavigationLink = function NavigationLink(props) {
     className: "nav-item ".concat(active ? 'active' : ''),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 15
     },
     __self: this
-  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Nav"].Link, {
-    href: href,
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Nav"].Link, {
+    href: "".concat(assetPrefix).concat(href),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 16
     },
     __self: this
   }, __jsx("i", {
     className: icon,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 17
     },
     __self: this
   }), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 18
     },
     __self: this
   }, title)));
 };
 
 NavigationLink.propTypes = {
-  title: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
-  href: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
-  icon: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
-  active: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool.isRequired
+  title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
+  href: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
+  icon: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
+  active: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool.isRequired
 };
-
-var Navigation = function Navigation() {
-  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Navbar"], {
-    as: "ul",
-    bg: "gradient-primary",
-    variant: "dark",
-    bsPrefix: "sidebar",
-    className: "navbar-nav accordion",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, __jsx("a", {
-    className: "sidebar-brand d-flex align-items-center justify-content-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "sidebar-brand-icon",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, __jsx("i", {
-    className: "fas fa-medkit",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  })), __jsx("div", {
-    className: "sidebar-brand-text mx-3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  }, "COVID-19 BG"))), __jsx("hr", {
-    className: "sidebar-divider my-0",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: this
-  }), __jsx(NavigationLink, {
-    title: "\u041D\u0430\u0447\u0430\u043B\u043E",
-    href: "/",
-    icon: "fas fa-fw fa-tachometer-alt",
-    active: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: this
-  }));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Navigation);
+/* harmony default export */ __webpack_exports__["default"] = (NavigationLink);
 
 /***/ }),
 
@@ -785,6 +880,39 @@ function _inheritsLoose(subClass, superClass) {
   subClass.prototype = Object.create(superClass.prototype);
   subClass.prototype.constructor = subClass;
   subClass.__proto__ = superClass;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _objectWithoutProperties; });
+/* harmony import */ var _objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+  var target = Object(_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(source, excluded);
+  var key, i;
+
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+
+  return target;
 }
 
 /***/ }),
@@ -56263,7 +56391,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 var Index = function Index() {
-  var data = [{
+  var infected = {
     name: 'Заразени',
     data: {
       // https://www.bnr.bg/post/101237668/potvardeni-sa-dva-sluchaa-na-koronavirus-v-balggaria
@@ -56276,18 +56404,23 @@ var Index = function Index() {
       '2020-03-11': 1,
       // https://nova.bg/news/view/2020/03/12/281028/%D0%B8%D0%B7%D0%B2%D1%8A%D0%BD%D1%80%D0%B5%D0%B4%D0%BD%D0%BE-%D0%BD%D0%BE%D0%B2%D0%B8-9-%D1%81%D0%BB%D1%83%D1%87%D0%B0%D1%8F-%D0%BD%D0%B0-%D0%BA%D0%BE%D1%80%D0%BE%D0%BD%D0%B0%D0%B2%D0%B8%D1%80%D1%83%D1%81-%D1%83-%D0%BD%D0%B0%D1%81/
       // https://nova.bg/news/view/2020/03/12/281060/%D0%B8%D0%B7%D0%B2%D1%8A%D0%BD%D1%80%D0%B5%D0%B4%D0%BD%D0%BE-%D0%BD%D0%BE%D0%B2%D0%B8-7-%D1%81%D0%BB%D1%83%D1%87%D0%B0%D1%8F-%D0%BD%D0%B0-%D0%BA%D0%BE%D1%80%D0%BE%D0%BD%D0%B0%D0%B2%D0%B8%D1%80%D1%83%D1%81-%D0%BE%D0%B1%D1%89%D0%BE-%D1%81%D1%82%D0%B0%D0%B2%D0%B0%D1%82-23-%D0%B2-%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F/
-      '2020-03-12': 16
+      '2020-03-12': 16,
+      // https://nova.bg/news/view/2020/03/13/281238/31-%D1%81%D0%B0-%D0%B2%D0%B5%D1%87%D0%B5-%D1%81%D0%BB%D1%83%D1%87%D0%B0%D0%B8%D1%82%D0%B5-%D0%BD%D0%B0-%D0%BA%D0%BE%D1%80%D0%BE%D0%BD%D0%B0%D0%B2%D0%B8%D1%80%D1%83%D1%81-%D1%83-%D0%BD%D0%B0%D1%81/
+      '2020-03-13': 8
     }
-  }, {
+  };
+  var cured = {
     name: 'Излекувани',
     data: {
       '2020-03-08': 0,
       '2020-03-09': 0,
       '2020-03-10': 0,
       '2020-03-11': 0,
-      '2020-03-12': 0
+      '2020-03-12': 0,
+      '2020-03-13': 0
     }
-  }, {
+  };
+  var fatal = {
     name: 'Жертви',
     data: {
       '2020-03-08': 0,
@@ -56295,50 +56428,59 @@ var Index = function Index() {
       '2020-03-10': 0,
       // https://www.economic.bg/bg/news/12/parvi-smarten-sluchaj-ot-koronavirusa-v-balgariya.html
       '2020-03-11': 1,
-      '2020-03-12': 0
+      '2020-03-12': 0,
+      '2020-03-13': 0
     }
-  }];
+  };
+  var data = [infected, cured, fatal];
+
+  var sumCases = function sumCases(dataSet) {
+    return Object.values(dataSet.data).reduce(function (total, cases) {
+      return total + cases;
+    }, 0);
+  };
+
   return __jsx(_components_BaseLayout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 57
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
     fluid: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 58
     },
     __self: this
   }, __jsx("div", {
-    className: "d-sm-flex align-items-center justify-content-between mt-4",
+    className: "d-sm-flex align-items-center justify-content-between my-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 59
     },
     __self: this
   }, __jsx("h1", {
     className: "h3 mb-0 text-gray-800",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 60
     },
     __self: this
   }, "\u041D\u0430\u0447\u0430\u043B\u043E")), __jsx(_components_CasesOverview__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    infected: 23,
-    cured: 0,
-    fatal: 1,
+    infected: sumCases(infected),
+    cured: sumCases(cured),
+    fatal: sumCases(fatal),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 62
     },
     __self: this
   }), __jsx(_components_CasesLineChart__WEBPACK_IMPORTED_MODULE_4__["default"], {
     data: data,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 67
     },
     __self: this
   })));
@@ -56348,7 +56490,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!*****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Findex.js ***!
   \*****************************************************************************************************************************/
@@ -56371,5 +56513,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

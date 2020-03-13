@@ -1,4 +1,5 @@
 import { Container } from 'react-bootstrap';
+import Link from './Link';
 
 const Footer = () => (
   <footer className="sticky-footer bg-white">
@@ -8,6 +9,10 @@ const Footer = () => (
           Този уебсайт не е официален източник на информация.
           Информацията публикувана тук е с изследователски харакер.
         </span>
+
+        <div className="mt-2">
+          <Link href="/privacy"><a>Поверителност</a></Link>
+        </div>
       </div>
     </Container>
   </footer>
