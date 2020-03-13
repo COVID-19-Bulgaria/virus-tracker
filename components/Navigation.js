@@ -1,31 +1,6 @@
-import Link from 'next/link';
-import PropTypes from 'prop-types';
-import { Navbar, Nav } from 'react-bootstrap';
-
-const NavigationLink = (props) => {
-  const {
-    title,
-    href,
-    icon,
-    active,
-  } = props;
-
-  return (
-    <li className={`nav-item ${active ? 'active' : ''}`}>
-      <Nav.Link href={href}>
-        <i className={icon} />
-        <span>{title}</span>
-      </Nav.Link>
-    </li>
-  );
-};
-
-NavigationLink.propTypes = {
-  title: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
-  active: PropTypes.bool.isRequired,
-};
+import { Navbar } from 'react-bootstrap';
+import Link from './Link';
+import NavigationLink from './NavigationLink';
 
 const Navigation = () => (
   <Navbar as="ul" bg="gradient-primary" variant="dark" bsPrefix="sidebar" className="navbar-nav accordion">
