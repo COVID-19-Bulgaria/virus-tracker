@@ -36,7 +36,7 @@ var BaseLayout = function BaseLayout(_ref) {
   }, __jsx("link", {
     rel: "stylesheet",
     type: "text/css",
-    href: "/static/css/sb-admin-2.min.css",
+    href: "".concat("", "/static/css/sb-admin-2.min.css"),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -45,7 +45,7 @@ var BaseLayout = function BaseLayout(_ref) {
   }), __jsx("link", {
     rel: "stylesheet",
     type: "text/css",
-    href: "/static/fontawesome-free/css/all.min.css",
+    href: "".concat("", "/static/fontawesome-free/css/all.min.css"),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
@@ -54,7 +54,7 @@ var BaseLayout = function BaseLayout(_ref) {
   }), __jsx("link", {
     rel: "stylesheet",
     type: "text/css",
-    href: "/static/css/style.css",
+    href: "".concat("", "/static/css/style.css"),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
@@ -178,13 +178,6 @@ var CasesLineChart = function CasesLineChart(props) {
       lineNumber: 16
     },
     __self: this
-  }, __jsx("div", {
-    className: "chart-area",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
   }, __jsx(react_chartkick__WEBPACK_IMPORTED_MODULE_2__["LineChart"], {
     data: data,
     xtitle: "\u0414\u0430\u0442\u0430",
@@ -192,10 +185,10 @@ var CasesLineChart = function CasesLineChart(props) {
     colors: ['#f6c23e', '#1cc88a', '#e74a3b'],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 17
     },
     __self: this
-  }))))));
+  })))));
 };
 
 CasesLineChart.propTypes = {
@@ -39010,7 +39003,13 @@ var Link = /*#__PURE__*/function (_react$Component) {
       // "<page>/index.html" directly.
 
 
-      if (false) { var rewriteUrlForNextExport; }
+      if (true) {
+        var rewriteUrlForNextExport = __webpack_require__(/*! ../next-server/lib/router/rewrite-url-for-export */ "./node_modules/next/dist/next-server/lib/router/rewrite-url-for-export.js").rewriteUrlForNextExport;
+
+        if (props.href && typeof __NEXT_DATA__ !== 'undefined' && __NEXT_DATA__.nextExport) {
+          props.href = rewriteUrlForNextExport(props.href);
+        }
+      }
 
       return _react["default"].cloneElement(child, props);
     }
@@ -39646,6 +39645,49 @@ exports.RouterContext = React.createContext(null);
 
 /***/ }),
 
+/***/ "./node_modules/next/dist/next-server/lib/router/rewrite-url-for-export.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/router/rewrite-url-for-export.js ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _slicedToArray = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+function rewriteUrlForNextExport(url) {
+  var _url$split = url.split('#'),
+      _url$split2 = _slicedToArray(_url$split, 2),
+      pathname = _url$split2[0],
+      hash = _url$split2[1]; // tslint:disable-next-line
+
+
+  var _pathname$split = pathname.split('?'),
+      _pathname$split2 = _slicedToArray(_pathname$split, 2),
+      path = _pathname$split2[0],
+      qs = _pathname$split2[1];
+
+  if (path) {
+    path = path.replace(/\/$/, ''); // Append a trailing slash if this path does not have an extension
+
+    if (!/\.[^/]+\/?$/.test(path)) path += "/";
+  }
+
+  if (qs) path += '?' + qs;
+  if (hash) path += '#' + hash;
+  return path;
+}
+
+exports.rewriteUrlForNextExport = rewriteUrlForNextExport;
+
+/***/ }),
+
 /***/ "./node_modules/next/dist/next-server/lib/router/router.js":
 /*!*****************************************************************!*\
   !*** ./node_modules/next/dist/next-server/lib/router/router.js ***!
@@ -39970,7 +40012,14 @@ var Router = /*#__PURE__*/function () {
         var as = typeof _as === 'object' ? utils_1.formatWithValidation(_as) : _as; // Add the ending slash to the paths. So, we can serve the
         // "<page>/index.html" directly for the SSR page.
 
-        if (false) { var rewriteUrlForNextExport; }
+        if (true) {
+          var rewriteUrlForNextExport = __webpack_require__(/*! ./rewrite-url-for-export */ "./node_modules/next/dist/next-server/lib/router/rewrite-url-for-export.js").rewriteUrlForNextExport; // @ts-ignore this is temporarily global (attached to window)
+
+
+          if (__NEXT_DATA__.nextExport) {
+            as = rewriteUrlForNextExport(as);
+          }
+        }
 
         _this2.abortComponentLoad(as); // If the url change is only related to a hash change
         // We should not proceed. We should only change the state.
@@ -40431,9 +40480,11 @@ var Router = /*#__PURE__*/function () {
   }], [{
     key: "_rewriteUrlForNextExport",
     value: function _rewriteUrlForNextExport(url) {
-      if (false) { var rewriteUrlForNextExport; } else {
-        return url;
-      }
+      if (true) {
+        var rewriteUrlForNextExport = __webpack_require__(/*! ./rewrite-url-for-export */ "./node_modules/next/dist/next-server/lib/router/rewrite-url-for-export.js").rewriteUrlForNextExport;
+
+        return rewriteUrlForNextExport(url);
+      } else {}
     }
   }]);
 

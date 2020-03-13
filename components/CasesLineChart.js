@@ -14,9 +14,7 @@ const CasesLineChart = (props) => {
             <h6 className="m-0 font-weight-bold text-primary">Хронология на заразата</h6>
           </Card.Header>
           <Card.Body>
-            <div className="chart-area">
-              <LineChart data={data} xtitle="Дата" ytitle="Брой засегнати" colors={['#f6c23e', '#1cc88a', '#e74a3b']} />
-            </div>
+            <LineChart data={data} xtitle="Дата" ytitle="Брой засегнати" colors={['#f6c23e', '#1cc88a', '#e74a3b']} />
           </Card.Body>
         </Card>
       </Col>
