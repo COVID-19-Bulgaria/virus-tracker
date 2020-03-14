@@ -26,6 +26,7 @@ module.exports = {
         "react/jsx-filename-extension": "off",
         "react/react-in-jsx-scope": "off",
         "jsx-a11y/anchor-is-valid": "off",
-        "react/forbid-prop-types": "off"
+        "react/forbid-prop-types": "off",
+        "react/jsx-props-no-spreading": "off"
     }
 };

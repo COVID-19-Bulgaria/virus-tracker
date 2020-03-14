@@ -3,10 +3,10 @@ const webpack = require('webpack');
 const isProduction = (process.env.NODE_ENV || 'production') === 'production';
 const assetPrefix = isProduction ? '/virus-tracker' : '';
 
-
 module.exports = {
   exportPathMap: () => ({
     '/': { page: '/' },
+    '/privacy': { page: '/privacy' },
   }),
   assetPrefix,
   webpack: (config) => {
@@ -20,4 +20,7 @@ module.exports = {
   },
   exportTrailingSlash: true,
   target: 'serverless',
+  seo: {
+    title: 'COVID-19 България',
+  },
 };
