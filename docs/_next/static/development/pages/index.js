@@ -21,16 +21,68 @@ var _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/BaseLayout.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
+/* eslint-disable react/no-unescaped-entities */
+
+
 
 
 
 
 var BaseLayout = function BaseLayout(_ref) {
   var children = _ref.children;
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    window.tarteaucitronForceLanguage = 'bg';
+    window.tarteaucitron.init({
+      privacyUrl: "".concat("", "/privacy"),
+
+      /* Privacy policy url */
+      hashtag: '#tarteaucitron',
+
+      /* Open the panel with this hashtag */
+      cookieName: 'tarteaucitron',
+
+      /* Cookie name */
+      orientation: 'bottom',
+
+      /* Banner position (top - bottom) */
+      showAlertSmall: true,
+
+      /* Show the small banner on bottom right */
+      cookieslist: false,
+
+      /* Show the cookie list */
+      adblocker: false,
+
+      /* Show a Warning if an adblocker is detected */
+      AcceptAllCta: true,
+
+      /* Show the accept all button when highPrivacy on */
+      highPrivacy: false,
+
+      /* Disable auto consent */
+      handleBrowserDNTRequest: false,
+
+      /* If Do Not Track == 1, disallow all */
+      removeCredit: true,
+
+      /* Remove credit link */
+      moreInfoLink: true,
+
+      /* Show more info link */
+      useExternalCss: false,
+
+      /* If false, the tarteaucitron.css file will be loaded */
+      readmoreLink: "".concat("", "/privacy")
+      /* Change the default readmore link */
+
+    });
+    window.tarteaucitron.user.gtagUa = 'UA-137181155-2';
+    (window.tarteaucitron.job = window.tarteaucitron.job || []).push('gtag');
+  });
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 40
     },
     __self: this
   }, __jsx("link", {
@@ -39,7 +91,7 @@ var BaseLayout = function BaseLayout(_ref) {
     href: "".concat("", "/static/css/sb-admin-2.min.css"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 41
     },
     __self: this
   }), __jsx("link", {
@@ -48,7 +100,7 @@ var BaseLayout = function BaseLayout(_ref) {
     href: "".concat("", "/static/fontawesome-free/css/all.min.css"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 42
     },
     __self: this
   }), __jsx("link", {
@@ -57,7 +109,7 @@ var BaseLayout = function BaseLayout(_ref) {
     href: "".concat("", "/static/css/style.css"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 43
     },
     __self: this
   }), __jsx("link", {
@@ -65,20 +117,28 @@ var BaseLayout = function BaseLayout(_ref) {
     href: "https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 44
+    },
+    __self: this
+  }), __jsx("script", {
+    type: "text/javascript",
+    src: "".concat("", "/static/tarteaucitronjs/tarteaucitron.js"),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
     },
     __self: this
   })), __jsx("div", {
     id: "wrapper",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 48
     },
     __self: this
   }, __jsx(_Navigation__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 49
     },
     __self: this
   }), __jsx("div", {
@@ -86,20 +146,20 @@ var BaseLayout = function BaseLayout(_ref) {
     className: "d-flex flex-column",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 51
     },
     __self: this
   }, __jsx("div", {
     id: "content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 52
     },
     __self: this
   }, children), __jsx(_Footer__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 55
     },
     __self: this
   }))));
@@ -56406,7 +56466,9 @@ var Index = function Index() {
       // https://nova.bg/news/view/2020/03/12/281060/%D0%B8%D0%B7%D0%B2%D1%8A%D0%BD%D1%80%D0%B5%D0%B4%D0%BD%D0%BE-%D0%BD%D0%BE%D0%B2%D0%B8-7-%D1%81%D0%BB%D1%83%D1%87%D0%B0%D1%8F-%D0%BD%D0%B0-%D0%BA%D0%BE%D1%80%D0%BE%D0%BD%D0%B0%D0%B2%D0%B8%D1%80%D1%83%D1%81-%D0%BE%D0%B1%D1%89%D0%BE-%D1%81%D1%82%D0%B0%D0%B2%D0%B0%D1%82-23-%D0%B2-%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F/
       '2020-03-12': 16,
       // https://nova.bg/news/view/2020/03/13/281238/31-%D1%81%D0%B0-%D0%B2%D0%B5%D1%87%D0%B5-%D1%81%D0%BB%D1%83%D1%87%D0%B0%D0%B8%D1%82%D0%B5-%D0%BD%D0%B0-%D0%BA%D0%BE%D1%80%D0%BE%D0%BD%D0%B0%D0%B2%D0%B8%D1%80%D1%83%D1%81-%D1%83-%D0%BD%D0%B0%D1%81/
-      '2020-03-13': 8
+      '2020-03-13': 8,
+      // https://btvnovinite.bg/bulgaria/shest-novi-sluchaja-na-koronavirus-v-sofija.html?fbclid=IwAR0DUHMTm3ifVcJzFz-CRW4xf4ivJoFH-izcE-XYou-XPWav6oiwMUOV1BA
+      '2020-03-14': 6
     }
   };
   var cured = {
@@ -56417,7 +56479,8 @@ var Index = function Index() {
       '2020-03-10': 0,
       '2020-03-11': 0,
       '2020-03-12': 0,
-      '2020-03-13': 0
+      '2020-03-13': 0,
+      '2020-03-14': 0
     }
   };
   var fatal = {
@@ -56429,7 +56492,9 @@ var Index = function Index() {
       // https://www.economic.bg/bg/news/12/parvi-smarten-sluchaj-ot-koronavirusa-v-balgariya.html
       '2020-03-11': 1,
       '2020-03-12': 0,
-      '2020-03-13': 0
+      '2020-03-13': 0,
+      // https://btvnovinite.bg/bulgaria/vtora-zhertva-na-koronavirusa-u-nas.html
+      '2020-03-14': 1
     }
   };
   var data = [infected, cured, fatal];
@@ -56443,28 +56508,28 @@ var Index = function Index() {
   return __jsx(_components_BaseLayout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 62
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
     fluid: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 63
     },
     __self: this
   }, __jsx("div", {
     className: "d-sm-flex align-items-center justify-content-between my-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 64
     },
     __self: this
   }, __jsx("h1", {
     className: "h3 mb-0 text-gray-800",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 65
     },
     __self: this
   }, "\u041D\u0430\u0447\u0430\u043B\u043E")), __jsx(_components_CasesOverview__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -56473,14 +56538,14 @@ var Index = function Index() {
     fatal: sumCases(fatal),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 67
     },
     __self: this
   }), __jsx(_components_CasesLineChart__WEBPACK_IMPORTED_MODULE_4__["default"], {
     data: data,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 72
     },
     __self: this
   })));
@@ -56490,7 +56555,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 2:
 /*!*****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Findex.js ***!
   \*****************************************************************************************************************************/
@@ -56513,5 +56578,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

@@ -20,6 +20,9 @@ const Index = () => {
       '2020-03-12': 16,
       // https://nova.bg/news/view/2020/03/13/281238/31-%D1%81%D0%B0-%D0%B2%D0%B5%D1%87%D0%B5-%D1%81%D0%BB%D1%83%D1%87%D0%B0%D0%B8%D1%82%D0%B5-%D0%BD%D0%B0-%D0%BA%D0%BE%D1%80%D0%BE%D0%BD%D0%B0%D0%B2%D0%B8%D1%80%D1%83%D1%81-%D1%83-%D0%BD%D0%B0%D1%81/
       '2020-03-13': 8,
+      // https://btvnovinite.bg/bulgaria/shest-novi-sluchaja-na-koronavirus-v-sofija.html?fbclid=IwAR0DUHMTm3ifVcJzFz-CRW4xf4ivJoFH-izcE-XYou-XPWav6oiwMUOV1BA
+      // https://btvnovinite.bg/bulgaria/operativnijat-shtab-shte-predlozhi-po-strog-merki-zaradi-koronavirusa.html
+      '2020-03-14': 10,
     },
   };
 
@@ -32,6 +35,7 @@ const Index = () => {
       '2020-03-11': 0,
       '2020-03-12': 0,
       '2020-03-13': 0,
+      '2020-03-14': 0,
     },
   };
 
@@ -45,6 +49,8 @@ const Index = () => {
       '2020-03-11': 1,
       '2020-03-12': 0,
       '2020-03-13': 0,
+      // https://btvnovinite.bg/bulgaria/vtora-zhertva-na-koronavirusa-u-nas.html
+      '2020-03-14': 1,
     },
   };
 
