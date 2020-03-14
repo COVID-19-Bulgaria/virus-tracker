@@ -66,7 +66,7 @@ const Index = () => {
           <h1 className="h3 mb-0 text-gray-800">Начало</h1>
         </div>
         <CasesOverview
-          infected={sumCases(infected)}
+          infected={sumCases(infected) - sumCases(cured) - sumCases(fatal)}
           cured={sumCases(cured)}
           fatal={sumCases(fatal)}
         />
