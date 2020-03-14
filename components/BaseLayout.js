@@ -2,9 +2,11 @@
 
 import { useEffect } from 'react';
 import Head from 'next/head';
+import { DefaultSeo } from 'next-seo';
 import PropTypes from 'prop-types';
 import Navigation from './Navigation';
 import Footer from './Footer';
+import SEO from '../next-seo.config';
 
 const BaseLayout = ({ children }) => {
   useEffect(() => {
@@ -36,7 +38,8 @@ const BaseLayout = ({ children }) => {
   });
 
   return (
-    <>
+    <div>
+      <DefaultSeo {...SEO} />
       <Head>
         <link rel="stylesheet" type="text/css" href={`${process.env.ASSET_PREFIX}/static/css/sb-admin-2.min.css`} />
         <link rel="stylesheet" type="text/css" href={`${process.env.ASSET_PREFIX}/static/fontawesome-free/css/all.min.css`} />
@@ -55,7 +58,7 @@ const BaseLayout = ({ children }) => {
           <Footer />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

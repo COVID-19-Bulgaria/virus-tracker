@@ -1,3 +1,4 @@
+import { NextSeo } from 'next-seo';
 import {
   Container,
   Row,
@@ -9,6 +10,7 @@ import CollapsibleCard from '../components/CollapsibleCard';
 
 const Privacy = () => (
   <BaseLayout>
+    <NextSeo title="Политика за поверителност" />
     <Container fluid>
       <div className="d-sm-flex align-items-center justify-content-between mt-4">
         <h1 className="h3 mb-0 text-gray-800">Политика за поверителност</h1>
