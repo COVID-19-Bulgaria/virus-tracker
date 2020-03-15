@@ -17,7 +17,8 @@ const Navigation = () => (
 
     <hr className="sidebar-divider my-0" />
 
-    <NavigationLink title="Начало" href="/" icon="fas fa-fw fa-tachometer-alt" active />
+    <NavigationLink title="Начало" href="/" icon="fas fa-fw fa-tachometer-alt" />
+    <NavigationLink title="Разпространение" href="/map" icon="fas fa-fw fa-map-marker-alt" />
   </Navbar>
 );
 

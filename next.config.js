@@ -7,6 +7,7 @@ module.exports = {
   exportPathMap: () => ({
     '/': { page: '/' },
     '/privacy': { page: '/privacy' },
+    '/map': { page: '/map' },
   }),
   assetPrefix,
   webpack: (config) => {

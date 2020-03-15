@@ -1,0 +1,142 @@
+{
+    "Благоевград": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Бургас": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Варна": {
+        "infected": 1,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Велико Търново": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Видин": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Враца": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Габрово": {
+        "infected": 2,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Добрич": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Кърджали": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Кюстендил": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Ловеч": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Монтана": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Пазарджик": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Перник": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Плевен": {
+        "infected": 4,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Пловдив": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Разград": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Русе": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Силистра": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Сливен": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Смолян": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "София": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "София-град": {
+        "infected": 42,
+        "cured": 0,
+        "fatal": 2
+    },
+    "Стара Загора": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Търговище": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Хасково": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Ямбол": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Шумен": {
+        "infected": 0,
+        "cured": 0,
+        "fatal": 0
+    }
+}
