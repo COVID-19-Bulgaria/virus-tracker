@@ -12,7 +12,7 @@ const BaseLayout = ({ children }) => {
   useEffect(() => {
     window.tarteaucitronForceLanguage = 'bg';
     window.tarteaucitron.init({
-      privacyUrl: `${process.env.ASSET_PREFIX}/privacy`, /* Privacy policy url */
+      privacyUrl: '/privacy', /* Privacy policy url */
 
       hashtag: '#tarteaucitron', /* Open the panel with this hashtag */
       cookieName: 'tarteaucitron', /* Cookie name */
@@ -30,7 +30,7 @@ const BaseLayout = ({ children }) => {
       moreInfoLink: true, /* Show more info link */
       useExternalCss: false, /* If false, the tarteaucitron.css file will be loaded */
 
-      readmoreLink: `${process.env.ASSET_PREFIX}/privacy`, /* Change the default readmore link */
+      readmoreLink: '/privacy', /* Change the default readmore link */
     });
 
     window.tarteaucitron.user.gtagUa = 'UA-137181155-2';
@@ -41,11 +41,11 @@ const BaseLayout = ({ children }) => {
     <div>
       <DefaultSeo {...SEO} />
       <Head>
-        <link rel="stylesheet" type="text/css" href={`${process.env.ASSET_PREFIX}/static/css/sb-admin-2.min.css`} />
-        <link rel="stylesheet" type="text/css" href={`${process.env.ASSET_PREFIX}/static/fontawesome-free/css/all.min.css`} />
-        <link rel="stylesheet" type="text/css" href={`${process.env.ASSET_PREFIX}/static/css/style.css`} />
+        <link rel="stylesheet" type="text/css" href="/static/css/sb-admin-2.min.css" />
+        <link rel="stylesheet" type="text/css" href="/static/fontawesome-free/css/all.min.css" />
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" />
-        <script type="text/javascript" src={`${process.env.ASSET_PREFIX}/static/tarteaucitronjs/tarteaucitron.js`} />
+        <script type="text/javascript" src="/static/tarteaucitronjs/tarteaucitron.js" />
       </Head>
 
       <div id="wrapper">

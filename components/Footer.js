@@ -1,5 +1,5 @@
 import { Container } from 'react-bootstrap';
-import Link from './Link';
+import Link from 'next/link';
 
 const Footer = () => (
   <footer className="sticky-footer bg-white mt-3">

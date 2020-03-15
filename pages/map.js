@@ -12,9 +12,9 @@ const Map = () => (
       openGraph={{
         images: [
           {
-            url: 'https://covid-19-bulgaria.github.io/virus-tracker/static/images/open_graph_map.png',
-            width: 800,
-            height: 520,
+            url: 'https://coronavirus-bulgaria.org/static/images/open_graph_map.png',
+            width: 1200,
+            height: 630,
             alt: 'Разпространение на коронавируса по области',
           },
         ],

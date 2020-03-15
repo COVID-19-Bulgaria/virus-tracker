@@ -24,7 +24,7 @@ const Index = () => {
         openGraph={{
           images: [
             {
-              url: 'https://covid-19-bulgaria.github.io/virus-tracker/static/images/open_graph_index.png',
+              url: 'https://coronavirus-bulgaria.org/static/images/open_graph_index.png',
               width: 1932,
               height: 600,
               alt: 'Хронология на заразата',
