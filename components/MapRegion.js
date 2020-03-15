@@ -1,5 +1,6 @@
 import { Tooltip, OverlayTrigger } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 const MapRegion = (props) => {
   const {
@@ -9,6 +10,7 @@ const MapRegion = (props) => {
     fatal,
     warning,
     danger,
+    ...rest
   } = props;
 
   let additionalClasses = warning ? 'warning' : '';
@@ -19,46 +21,44 @@ const MapRegion = (props) => {
   }
 
   return (
-    <>
-      <OverlayTrigger
-        overlay={(
-          <Tooltip>
-            <strong>{title}</strong>
-            <br />
-            {`Заразени: ${infected}`}
-            <br />
-            {`Излекувани: ${cured}`}
-            <br />
-            {`Жертви: ${fatal}`}
-            <br />
-          </Tooltip>
-        )}
-      >
-        <path className={`map-region ${additionalClasses}`} {...props} />
-      </OverlayTrigger>
+    <OverlayTrigger
+      overlay={(
+        <Tooltip>
+          <strong>{title}</strong>
+          <br />
+          {`Заразени: ${infected}`}
+          <br />
+          {`Излекувани: ${cured}`}
+          <br />
+          {`Жертви: ${fatal}`}
+          <br />
+        </Tooltip>
+      )}
+    >
+      <path className={`map-region ${additionalClasses}`} {...rest}>
+        <style jsx>
+          {`
+            .map-region {
+              fill: #858796;
+              stroke: #ffffff;
+              stroke-width: 0.05em;
+            }
 
-      <style jsx>
-        {`
-          .map-region {
-            fill: #858796;
-            stroke: #ffffff;
-            stroke-width: 0.05em;
-          }
+            .map-region:hover {
+              fill-opacity: 0.5;
+            }
 
-          .map-region:hover {
-            fill-opacity: 0.5;
-          }
+            .warning {
+              fill: #f6c23e;
+            }
 
-          .warning {
-            fill: #f6c23e;
-          }
-
-          .danger {
-            fill: #e74a3b;
-          }
-        `}
-      </style>
-    </>
+            .danger {
+              fill: #e74a3b;
+            }
+          `}
+        </style>
+      </path>
+    </OverlayTrigger>
   );
 };
 
