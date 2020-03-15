@@ -19,6 +19,7 @@ const Navigation = () => (
 
     <NavigationLink title="Начало" href="/" icon="fas fa-fw fa-tachometer-alt" />
     <NavigationLink title="Разпространение" href="/map" icon="fas fa-fw fa-map-marker-alt" />
+    <NavigationLink title="За проекта" href="/about" icon="fas fa-fw fa-info-circle" />
   </Navbar>
 );
 

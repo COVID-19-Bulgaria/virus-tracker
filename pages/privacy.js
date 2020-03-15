@@ -8,6 +8,7 @@ import {
 } from 'react-bootstrap';
 import BaseLayout from '../components/BaseLayout';
 import CollapsibleCard from '../components/CollapsibleCard';
+import ExternalLink from '../components/ExternalLink';
 
 const Privacy = () => (
   <BaseLayout>
@@ -55,9 +56,9 @@ const Privacy = () => (
               <ul>
                 <li>
                   Google Ireland Ltd. - Google Analytics, Google Tag Manager -
-                  <a href="https://safety.google/privacy/" target="_blank" rel="noopener noreferrer">
+                  <ExternalLink href="https://safety.google/privacy/">
                     https://safety.google/privacy/
-                  </a>
+                  </ExternalLink>
                 </li>
               </ul>
             </CollapsibleCard>
