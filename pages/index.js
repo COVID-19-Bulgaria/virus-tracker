@@ -1,3 +1,4 @@
+import { NextSeo } from 'next-seo';
 import { Container } from 'react-bootstrap';
 import BaseLayout from '../components/BaseLayout';
 import CasesOverview from '../components/CasesOverview';
@@ -19,6 +20,18 @@ const Index = () => {
 
   return (
     <BaseLayout>
+      <NextSeo
+        openGraph={{
+          images: [
+            {
+              url: 'https://covid-19-bulgaria.github.io/virus-tracker/static/images/open_graph_index.png',
+              width: 1932,
+              height: 600,
+              alt: 'Хронология на заразата',
+            },
+          ],
+        }}
+      />
       <Container fluid>
         <div className="d-sm-flex align-items-center justify-content-between my-4">
           <h1 className="h3 mb-0 text-gray-800">Начало</h1>

@@ -8,6 +8,7 @@ module.exports = {
     '/': { page: '/' },
     '/privacy': { page: '/privacy' },
     '/map': { page: '/map' },
+    '/about': { page: '/about' },
   }),
   assetPrefix,
   webpack: (config) => {

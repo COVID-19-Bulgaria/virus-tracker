@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import { LineChart } from 'react-chartkick';
 import 'chart.js';
@@ -14,7 +15,13 @@ const CasesLineChart = (props) => {
             <h6 className="m-0 font-weight-bold text-primary">Хронология на заразата</h6>
           </Card.Header>
           <Card.Body>
-            <LineChart data={data} xtitle="Дата" ytitle="Брой засегнати" colors={['#f6c23e', '#1cc88a', '#e74a3b']} />
+            <LineChart
+              data={data}
+              xtitle="Дата"
+              ytitle="Брой засегнати"
+              colors={['#f6c23e', '#1cc88a', '#e74a3b']}
+              download={{ background: '#ffffff', filename: 'COVID-19-Bulgaria_CasesLineChart' }}
+            />
           </Card.Body>
         </Card>
       </Col>

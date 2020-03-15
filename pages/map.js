@@ -9,6 +9,16 @@ const Map = () => (
     <NextSeo
       title="Карта на разпространение"
       description="Карта на разпространението на коронавируса по области"
+      openGraph={{
+        images: [
+          {
+            url: 'https://covid-19-bulgaria.github.io/virus-tracker/static/images/open_graph_map.png',
+            width: 800,
+            height: 520,
+            alt: 'Разпространение на коронавируса по области',
+          },
+        ],
+      }}
     />
     <Container fluid>
       <div className="d-sm-flex align-items-center justify-content-between my-4">
