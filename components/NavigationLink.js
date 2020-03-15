@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Nav } from 'react-bootstrap';
+import { useRouter } from 'next/router';
 
 const assetPrefix = process.env.ASSET_PREFIX;
 
@@ -8,11 +9,12 @@ const NavigationLink = (props) => {
     title,
     href,
     icon,
-    active,
   } = props;
 
+  const router = useRouter();
+
   return (
-    <li className={`nav-item ${active ? 'active' : ''}`}>
+    <li className={`nav-item ${router.pathname === href ? 'active' : ''}`}>
       <Nav.Link href={`${assetPrefix}${href}`}>
         <i className={icon} />
         <span>{title}</span>
@@ -25,7 +27,6 @@ NavigationLink.propTypes = {
   title: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
-  active: PropTypes.bool.isRequired,
 };
 
 export default NavigationLink;

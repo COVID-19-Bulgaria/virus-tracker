@@ -2,16 +2,20 @@ import { Container } from 'react-bootstrap';
 import BaseLayout from '../components/BaseLayout';
 import CasesOverview from '../components/CasesOverview';
 import CasesLineChart from '../components/CasesLineChart';
-import {
-  infected,
-  cured,
-  fatal,
-  dataset,
-} from '../dataset';
+
+import TotalsDataset from '../db/TotalsDataset.json';
+import DateCasesDataset from '../db/DateCasesDataset.json';
 
 const Index = () => {
-  const sumCases = (dataSet) => Object.values(dataSet.data)
-    .reduce((total, cases) => total + cases, 0);
+  const prepareChartData = (dataset) => Object.fromEntries(
+    Object.entries(dataset).map((entry) => [entry[0], entry[1].cases]),
+  );
+
+  const lineChartData = [
+    { name: 'Заразени', data: prepareChartData(DateCasesDataset.infected) },
+    { name: 'Излекувани', data: prepareChartData(DateCasesDataset.cured) },
+    { name: 'Жертви', data: prepareChartData(DateCasesDataset.fatal) },
+  ];
 
   return (
     <BaseLayout>
@@ -20,11 +24,11 @@ const Index = () => {
           <h1 className="h3 mb-0 text-gray-800">Начало</h1>
         </div>
         <CasesOverview
-          infected={sumCases(infected) - sumCases(cured) - sumCases(fatal)}
-          cured={sumCases(cured)}
-          fatal={sumCases(fatal)}
+          infected={TotalsDataset.infected - TotalsDataset.cured - TotalsDataset.fatal}
+          cured={TotalsDataset.cured}
+          fatal={TotalsDataset.fatal}
         />
-        <CasesLineChart data={dataset} />
+        <CasesLineChart data={lineChartData} />
       </Container>
     </BaseLayout>
   );
