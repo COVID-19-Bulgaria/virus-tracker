@@ -4,6 +4,7 @@ import {
   Row,
   Col,
   Accordion,
+  Button,
 } from 'react-bootstrap';
 import BaseLayout from '../components/BaseLayout';
 import CollapsibleCard from '../components/CollapsibleCard';
@@ -59,6 +60,16 @@ const Privacy = () => (
                   </a>
                 </li>
               </ul>
+            </CollapsibleCard>
+            <CollapsibleCard anchor="preferences" title="Управление на услуги">
+              <div>
+                Даваме възможност на потребителите да променят предпочитанията си за нашите услуги.
+                <br />
+                Кликнете на бутона, за да промените предпочитанията си:
+              </div>
+              <Button className="mt-2" onClick={() => window.tarteaucitron.userInterface.openPanel()}>
+                Управление на услуги
+              </Button>
             </CollapsibleCard>
             <CollapsibleCard anchor="changes" title="Промяна в политиката за поверителност">
               Запазваме си правото да извършваме промени по политиката за поверителност. Промените
