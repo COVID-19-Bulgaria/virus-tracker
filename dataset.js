@@ -17,6 +17,9 @@ const infected = {
     // https://btvnovinite.bg/bulgaria/shest-novi-sluchaja-na-koronavirus-v-sofija.html?fbclid=IwAR0DUHMTm3ifVcJzFz-CRW4xf4ivJoFH-izcE-XYou-XPWav6oiwMUOV1BA
     // https://btvnovinite.bg/bulgaria/operativnijat-shtab-shte-predlozhi-po-strog-merki-zaradi-koronavirusa.html
     '2020-03-14': 10,
+    // https://btvnovinite.bg/bulgaria/oshte-dvama-zarazeni-s-koronavirus-u-nas.html
+    // https://btvnovinite.bg/bulgaria/parvi-potvarden-sluchaj-na-covid-19-vav-varna.html
+    '2020-03-15': 3,
   },
 };
 
@@ -30,6 +33,7 @@ const cured = {
     '2020-03-12': 0,
     '2020-03-13': 0,
     '2020-03-14': 0,
+    '2020-03-15': 0,
   },
 };
 
@@ -45,6 +49,7 @@ const fatal = {
     '2020-03-13': 0,
     // https://btvnovinite.bg/bulgaria/vtora-zhertva-na-koronavirusa-u-nas.html
     '2020-03-14': 1,
+    '2020-03-15': 0,
   },
 };
 
