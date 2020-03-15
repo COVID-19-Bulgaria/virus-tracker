@@ -1,5 +1,5 @@
 import { Navbar } from 'react-bootstrap';
-import Link from './Link';
+import Link from 'next/link';
 import NavigationLink from './NavigationLink';
 
 const Navigation = () => (
