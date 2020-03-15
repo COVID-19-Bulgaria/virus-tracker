@@ -18,7 +18,7 @@ const BaseLayout = ({ children }) => {
       cookieName: 'tarteaucitron', /* Cookie name */
 
       orientation: 'bottom', /* Banner position (top - bottom) */
-      showAlertSmall: true, /* Show the small banner on bottom right */
+      showAlertSmall: false, /* Show the small banner on bottom right */
       cookieslist: false, /* Show the cookie list */
 
       adblocker: false, /* Show a Warning if an adblocker is detected */
