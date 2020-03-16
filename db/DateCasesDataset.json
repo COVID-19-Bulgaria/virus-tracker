@@ -49,6 +49,12 @@
                 "https://btvnovinite.bg/bulgaria/parvi-potvarden-sluchaj-na-covid-19-vav-varna.html",
                 "https://btvnovinite.bg/bulgaria/8-novi-sluchaja-na-covid-19-ima-v-balgarija.html"
             ]
+        },
+        "2020-03-16": {
+            "cases": 1,
+            "sources": [
+                "https://btvnovinite.bg/bulgaria/nov-sluch.html"
+            ]
         }
     },
     "cured": {
@@ -81,6 +87,10 @@
             "sources": []
         },
         "2020-03-15": {
+            "cases": 0,
+            "sources": []
+        },
+        "2020-03-16": {
             "cases": 0,
             "sources": []
         }
@@ -119,6 +129,10 @@
             ]
         },
         "2020-03-15": {
+            "cases": 0,
+            "sources": []
+        },
+        "2020-03-16": {
             "cases": 0,
             "sources": []
         }
