@@ -1,6 +1,6 @@
 {
     "Благоевград": {
-        "infected": 0,
+        "infected": 2,
         "cured": 0,
         "fatal": 0
     },
@@ -110,7 +110,7 @@
         "fatal": 0
     },
     "София-град": {
-        "infected": 43,
+        "infected": 51,
         "cured": 0,
         "fatal": 2
     },

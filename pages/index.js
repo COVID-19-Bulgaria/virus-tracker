@@ -1,5 +1,10 @@
 import { NextSeo } from 'next-seo';
-import { Container } from 'react-bootstrap';
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+} from 'react-bootstrap';
 import BaseLayout from '../components/BaseLayout';
 import CasesOverview from '../components/CasesOverview';
 import CasesLineChart from '../components/CasesLineChart';
@@ -24,9 +29,9 @@ const Index = () => {
         openGraph={{
           images: [
             {
-              url: 'https://coronavirus-bulgaria.org/static/images/open_graph_index.png',
-              width: 1932,
-              height: 600,
+              url: `https://coronavirus-bulgaria.org/static/images/open_graph_map.png?v=${process.env.BUILD_ID}`,
+              width: 1200,
+              height: 630,
               alt: 'Хронология на заразата',
             },
           ],
@@ -41,7 +46,18 @@ const Index = () => {
           cured={TotalsDataset.cured}
           fatal={TotalsDataset.fatal}
         />
-        <CasesLineChart data={lineChartData} />
+        <Row>
+          <Col>
+            <Card className="shadow mb-4">
+              <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 className="m-0 font-weight-bold text-primary">Хронология на заразата</h6>
+              </Card.Header>
+              <Card.Body>
+                <CasesLineChart data={lineChartData} />
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
       </Container>
     </BaseLayout>
   );
