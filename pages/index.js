@@ -29,7 +29,7 @@ const Index = () => {
         openGraph={{
           images: [
             {
-              url: `https://coronavirus-bulgaria.org/static/images/open_graph_map.png?v=${process.env.BUILD_ID}`,
+              url: `https://coronavirus-bulgaria.org/static/images/open_graph_linechart.png?v=${process.env.BUILD_ID}`,
               width: 1200,
               height: 630,
               alt: 'Хронология на заразата',

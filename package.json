@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "deploy": "node ./open-graph-images.js && rm -rf node_modules/.cache && rimraf out && next build && next export && touch out/.nojekyll && echo \"coronavirus-bulgaria.org\" > out/CNAME && gh-pages --dist out --dotfiles --message \"Automatic deploy commit\""
+    "deploy": "rm -rf node_modules/.cache && rimraf out && next build && next export && touch out/.nojekyll && echo \"coronavirus-bulgaria.org\" > out/CNAME && gh-pages --dist out --dotfiles --message \"Automatic deploy commit\" --user \"Deploy Bot <hello@coronavirus-bulgaria.org>\""
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
@@ -19,7 +19,8 @@
     "react": "16.13.0",
     "react-bootstrap": "^1.0.0-beta.17",
     "react-chartkick": "^0.4.0",
-    "react-dom": "16.13.0"
+    "react-dom": "16.13.0",
+    "react-simple-maps": "^1.0.0-beta.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
@@ -29,7 +30,6 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "gh-pages": "^2.2.0",
-    "repng": "^4.0.1",
     "rimraf": "^3.0.2"
   }
 }

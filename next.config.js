@@ -5,6 +5,7 @@ module.exports = {
     '/': { page: '/' },
     '/privacy': { page: '/privacy' },
     '/map': { page: '/map' },
+    '/what-we-know': { page: '/what-we-know' },
     '/about': { page: '/about' },
   }),
   exportTrailingSlash: true,
@@ -20,5 +21,8 @@ module.exports = {
     );
 
     return config;
+  },
+  devIndicators: {
+    autoPrerender: false,
   },
 };
