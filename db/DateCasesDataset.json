@@ -56,6 +56,13 @@
                 "https://btvnovinite.bg/bulgaria/nov-sluch.html",
                 "https://btvnovinite.bg/bulgaria/62-ma-sa-veche-zarazenite-s-koronavirus-u-nas.html"
             ]
+        },
+        "2020-03-17": {
+            "cases": 19,
+            "sources": [
+                "https://btvnovinite.bg/predavania/tazi-sutrin/67-sa-veche-zarazenite-s-koronavirus-u-nas.html",
+                "https://btvnovinite.bg/bulgaria/sluchaite-na-koronavirus-veche-sa-81.html"
+            ]
         }
     },
     "cured": {
@@ -92,6 +99,10 @@
             "sources": []
         },
         "2020-03-16": {
+            "cases": 0,
+            "sources": []
+        },
+        "2020-03-17": {
             "cases": 0,
             "sources": []
         }
@@ -134,6 +145,10 @@
             "sources": []
         },
         "2020-03-16": {
+            "cases": 0,
+            "sources": []
+        },
+        "2020-03-17": {
             "cases": 0,
             "sources": []
         }

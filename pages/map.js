@@ -1,8 +1,8 @@
 import { NextSeo } from 'next-seo';
 import { Container, Row, Col } from 'react-bootstrap';
 import BaseLayout from '../components/BaseLayout';
-import CasesMap from '../components/CasesMap';
-import RegionsDataset from '../db/RegionsDataset.json';
+import GeoDataset from '../db/GeoDataset.json';
+import CasesMap from '../components/CasesMap/CasesMap';
 
 const Map = () => (
   <BaseLayout>
@@ -26,7 +26,7 @@ const Map = () => (
       </div>
       <Row className="mt-3">
         <Col lg={8}>
-          <CasesMap data={RegionsDataset} />
+          <CasesMap data={GeoDataset} />
         </Col>
       </Row>
     </Container>
