@@ -737,10 +737,10 @@ NavigationLink.propTypes = {
 /*!****************************!*\
   !*** ./db/GeoDataset.json ***!
   \****************************/
-/*! exports provided: Благоевград, Варна, Габрово, Троян, Лом, Перник, Плевен, София, default */
+/*! exports provided: Благоевград, Варна, Габрово, Троян, Лом, Перник, Плевен, София, Смолян, Велико Търново, Банско, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"Благоевград\":{\"coordinates\":[23.0771891,42.0138136],\"infected\":4,\"cured\":0,\"fatal\":0},\"Варна\":{\"coordinates\":[27.8024789,43.2050055],\"infected\":1,\"cured\":0,\"fatal\":0},\"Габрово\":{\"coordinates\":[25.255064,42.8490386],\"infected\":2,\"cured\":0,\"fatal\":0},\"Троян\":{\"coordinates\":[24.6399862,42.8871812],\"infected\":1,\"cured\":0,\"fatal\":0},\"Лом\":{\"coordinates\":[23.1929388,43.8047905],\"infected\":1,\"cured\":0,\"fatal\":0},\"Перник\":{\"coordinates\":[22.9812354,42.5963976],\"infected\":2,\"cured\":0,\"fatal\":0},\"Плевен\":{\"coordinates\":[24.5794278,43.4212345],\"infected\":4,\"cured\":0,\"fatal\":0},\"София\":{\"coordinates\":[23.1835169,42.6955987],\"infected\":64,\"cured\":0,\"fatal\":2,\"circleProps\":{\"r\":8},\"textProps\":{\"x\":12,\"y\":6}}}");
+module.exports = JSON.parse("{\"Благоевград\":{\"coordinates\":[23.0771891,42.0138136],\"infected\":3,\"cured\":0,\"fatal\":0},\"Варна\":{\"coordinates\":[27.8024789,43.2050055],\"infected\":1,\"cured\":0,\"fatal\":0},\"Габрово\":{\"coordinates\":[25.255064,42.8490386],\"infected\":2,\"cured\":0,\"fatal\":0},\"Троян\":{\"coordinates\":[24.6399862,42.8871812],\"infected\":1,\"cured\":0,\"fatal\":0},\"Лом\":{\"coordinates\":[23.1929388,43.8047905],\"infected\":1,\"cured\":0,\"fatal\":0},\"Перник\":{\"coordinates\":[22.9812354,42.5963976],\"infected\":2,\"cured\":0,\"fatal\":0},\"Плевен\":{\"coordinates\":[24.5794278,43.4212345],\"infected\":4,\"cured\":0,\"fatal\":0},\"София\":{\"coordinates\":[23.1835169,42.6955987],\"infected\":73,\"cured\":0,\"fatal\":2,\"circleProps\":{\"r\":8},\"textProps\":{\"x\":12,\"y\":6}},\"Смолян\":{\"coordinates\":[24.6711145,41.579193],\"infected\":1,\"cured\":0,\"fatal\":0},\"Велико Търново\":{\"coordinates\":[25.5981029,43.0841301],\"infected\":1,\"cured\":0,\"fatal\":0},\"Банско\":{\"coordinates\":[23.4694057,41.8357303],\"infected\":1,\"cured\":0,\"fatal\":0}}");
 
 /***/ }),
 
@@ -27637,7 +27637,7 @@ var Map = function Map() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!******************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fmap&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Fmap.js ***!
   \******************************************************************************************************************************/
@@ -27660,5 +27660,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=map.js.map
