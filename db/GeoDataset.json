@@ -4,7 +4,7 @@
             23.0771891,
             42.0138136
         ],
-        "infected": 4,
+        "infected": 3,
         "cured": 0,
         "fatal": 0
     },
@@ -67,7 +67,7 @@
             23.1835169,
             42.6955987
         ],
-        "infected": 64,
+        "infected": 73,
         "cured": 0,
         "fatal": 2,
         "circleProps": {
@@ -77,5 +77,32 @@
             "x": 12,
             "y": 6
         }
+    },
+    "Смолян": {
+        "coordinates": [
+            24.6711145,
+            41.579193
+        ],
+        "infected": 1,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Велико Търново": {
+        "coordinates": [
+            25.5981029,
+            43.0841301
+        ],
+        "infected": 1,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Банско": {
+        "coordinates": [
+            23.4694057,
+            41.8357303
+        ],
+        "infected": 1,
+        "cured": 0,
+        "fatal": 0
     }
 }
