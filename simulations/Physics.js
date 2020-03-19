@@ -1,10 +1,9 @@
-import Person from './Person';
-
 const checkCollision = (currentPerson, otherPerson) => {
   const horizontalDistance = otherPerson.x - currentPerson.x;
   const verticalDistance = otherPerson.y - currentPerson.y;
 
-  return Math.sqrt(horizontalDistance ** 2 + verticalDistance ** 2) <= Person.radius * 2;
+  return Math.sqrt(horizontalDistance ** 2 + verticalDistance ** 2)
+    <= (currentPerson.radius);
 };
 
 const changeDirections = (currentPerson, otherPerson) => {

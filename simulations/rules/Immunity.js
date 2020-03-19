@@ -1,10 +1,10 @@
 import { useRef, useEffect } from 'react';
 import p5 from 'p5';
-import Person from './Person';
-import DiseaseState from './DiseaseState';
-import { checkCollision, changeDirections } from './Physics';
+import Person from '../Person';
+import DiseaseState from '../DiseaseState';
+import { checkCollision, changeDirections } from '../Physics';
 
-const Infection = () => {
+const Immunity = () => {
   const containerRef = useRef();
 
   const sketch = (p) => {
@@ -14,31 +14,35 @@ const Infection = () => {
 
     const population = [];
 
-    const setupPopulation = (size) => {
+    const setupPopulation = () => {
       population[0] = new Person({
-        x: p.random(Person.radius, p.width - Person.radius),
-        y: p.random(Person.radius, p.height - Person.radius),
+        x: 100,
+        y: 48,
+        horizontalSpeed: 1,
+        verticalSpeed: 0,
+        radius: 30,
         state: DiseaseState.INFECTED,
         p5: p,
       });
 
-      for (let i = 1; i < size; i += 1) {
-        population[i] = new Person({
-          x: p.random(Person.radius, p.width - Person.radius),
-          y: p.random(Person.radius, p.height - Person.radius),
-          state: DiseaseState.UNAFFECTED,
-          p5: p,
-        });
-      }
+      population[1] = new Person({
+        x: 170,
+        y: 48,
+        horizontalSpeed: 0,
+        verticalSpeed: 0,
+        radius: 30,
+        state: DiseaseState.CURED,
+        p5: p,
+      });
     };
 
     p.setup = () => {
-      setupCanvas(640, 480);
-      setupPopulation(100);
+      setupCanvas(300, 100);
+      setupPopulation();
     };
 
     p.draw = () => {
-      p.background('white');
+      p.background('#f8f9fc');
 
       population.forEach((person) => {
         person.move();
@@ -68,8 +72,8 @@ const Infection = () => {
   });
 
   return (
-    <div id="infection" ref={containerRef} />
+    <div id="immunity" ref={containerRef} />
   );
 };
 
-export default Infection;
+export default Immunity;
