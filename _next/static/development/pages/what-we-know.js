@@ -21371,7 +21371,7 @@ var WhatWeKnow = function WhatWeKnow() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 4:
 /*!************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fwhat-we-know&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Fwhat-we-know.js ***!
   \************************************************************************************************************************************************/
@@ -21394,5 +21394,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[4,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=what-we-know.js.map
