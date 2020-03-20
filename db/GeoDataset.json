@@ -4,7 +4,7 @@
             23.0771891,
             42.0138136
         ],
-        "infected": 3,
+        "infected": 2,
         "cured": 0,
         "fatal": 0
     },
@@ -13,7 +13,7 @@
             27.8024789,
             43.2050055
         ],
-        "infected": 1,
+        "infected": 4,
         "cured": 0,
         "fatal": 0
     },
@@ -67,8 +67,8 @@
             23.1835169,
             42.6955987
         ],
-        "infected": 79,
-        "cured": 0,
+        "infected": 91,
+        "cured": 1,
         "fatal": 3,
         "circleProps": {
             "r": 8
@@ -110,7 +110,7 @@
             27.3118794,
             42.5266897
         ],
-        "infected": 1,
+        "infected": 2,
         "cured": 0,
         "fatal": 0
     },
@@ -120,6 +120,15 @@
             42.1442269
         ],
         "infected": 2,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Добрич": {
+        "coordinates": [
+            27.7768147,
+            43.5753322
+        ],
+        "infected": 4,
         "cured": 0,
         "fatal": 0
     }
