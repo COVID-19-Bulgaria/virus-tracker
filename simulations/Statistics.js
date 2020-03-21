@@ -1,16 +1,27 @@
 class Statistics {
   constructor({
+    unaffected = 0,
     infected = 0,
     cured = 0,
     fatal = 0,
   }) {
+    this.unaffectedValue = unaffected;
     this.infectedValue = infected;
     this.curedValue = cured;
     this.fatalValue = fatal;
 
+    this.unaffectedTimelineValue = [];
     this.infectedTimelineValue = [];
     this.curedTimelineValue = [];
     this.fatalTimelineValue = [];
+  }
+
+  get unaffected() {
+    return this.unaffectedValue;
+  }
+
+  set unaffected(unaffected) {
+    this.unaffectedValue = unaffected;
   }
 
   get infected() {
@@ -21,20 +32,12 @@ class Statistics {
     this.infectedValue = infected;
   }
 
-  incrementInfected() {
-    this.infectedValue += 1;
-  }
-
   get cured() {
     return this.curedValue;
   }
 
   set cured(cured) {
     this.curedValue = cured;
-  }
-
-  incrementCured() {
-    this.curedValue += 1;
   }
 
   get fatal() {
@@ -45,8 +48,8 @@ class Statistics {
     this.fatalValue = fatal;
   }
 
-  incrementFatal() {
-    this.fatalValue += 1;
+  get unaffectedTimeline() {
+    return this.unaffectedTimelineValue;
   }
 
   get infectedTimeline() {
@@ -61,16 +64,40 @@ class Statistics {
     return this.fatalTimelineValue;
   }
 
-  recordInfectedTimeline() {
+  recordTimelines() {
+    this.unaffectedTimelineValue.push(this.unaffectedValue);
     this.infectedTimelineValue.push(this.infectedValue);
-  }
-
-  recordCuredTimeline() {
     this.curedTimelineValue.push(this.curedValue);
+    this.fatalTimelineValue.push(this.fatalValue);
   }
 
-  recordFatalTimeline() {
-    this.fatalTimelineValue.push(this.fatalValue);
+  reset() {
+    this.unaffectedValue = 0;
+    this.infectedValue = 0;
+    this.curedValue = 0;
+    this.fatalValue = 0;
+    this.unaffectedTimelineValue = [];
+    this.infectedTimelineValue = [];
+    this.curedTimelineValue = [];
+    this.fatalTimelineValue = [];
+  }
+
+  counters() {
+    return {
+      unaffected: this.unaffectedValue,
+      infected: this.infectedValue,
+      cured: this.curedValue,
+      fatal: this.fatalValue,
+    };
+  }
+
+  timelines() {
+    return {
+      unaffectedTimeline: this.unaffectedTimelineValue,
+      infectedTimeline: this.infectedTimelineValue,
+      curedTimeline: this.curedTimelineValue,
+      fatalTimeline: this.fatalTimelineValue,
+    };
   }
 }
 

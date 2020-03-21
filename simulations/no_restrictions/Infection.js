@@ -5,43 +5,34 @@ import DiseaseState from '../DiseaseState';
 import { checkCollision, changeDirections } from '../Physics';
 import Statistics from '../Statistics';
 import Graph from '../Graph';
-
-const Stats = ({ infected, cured, fatal }) => (
-  <ul>
-    <li>
-      Заразени -
-      {infected}
-    </li>
-    <li>
-      Излекувани -
-      {cured}
-    </li>
-    <li>
-      Жертви -
-      {fatal}
-    </li>
-  </ul>
-);
+import Counters from '../Counters';
+import Replay from '../Replay';
 
 const Infection = () => {
   const containerRef = useRef();
-  const statistics = new Statistics({ infected: 0, cured: 0, fatal: 0 });
-  const [infected, setInfected] = useState(0);
-  const [cured, setCured] = useState(0);
-  const [fatal, setFatal] = useState(0);
-  const [infectedTimeline, setInfectedTimeline] = useState([]);
-  const [curedTimeline, setCuredTimeline] = useState([]);
+  const statistics = new Statistics({});
+  const [counters, setCounters] = useState(statistics.counters());
+  const [timelines, setTimelines] = useState(statistics.timelines());
+  const [showReplay, setShowReplay] = useState(false);
 
   const sketch = (p) => {
     const RECOVERY_TIME = 500;
-    const MORTALITY_RATE = 0.05;
+    const MORTALITY_RATE = 0.02;
+
+    let population = [];
+
+    const initialize = () => {
+      population = [];
+      statistics.reset();
+      setCounters(statistics.counters());
+      setTimelines(statistics.timelines());
+      setShowReplay(false);
+    }
 
     const setupCanvas = (width, height) => {
-      p.createCanvas(width, height);
+      const canvas = p.createCanvas(width, height);
+      canvas.class('simulation');
     };
-
-    const population = [];
-    let frames = 0;
 
     const setupPopulation = (size) => {
       population[0] = new Person({
@@ -52,7 +43,7 @@ const Infection = () => {
         p5: p,
       });
 
-      statistics.incrementInfected();
+      statistics.infected += 1;
 
       for (let i = 1; i < size; i += 1) {
         population[i] = new Person({
@@ -62,6 +53,8 @@ const Infection = () => {
           state: DiseaseState.UNAFFECTED,
           p5: p,
         });
+
+        statistics.unaffected += 1;
       }
     };
 
@@ -76,8 +69,15 @@ const Infection = () => {
           if (person.state === other.state) return;
           if (person.state === DiseaseState.CURED || other.state === DiseaseState.CURED) return;
 
-          if (person.infect(p.random(0, 1) > MORTALITY_RATE)) statistics.incrementInfected();
-          if (other.infect(p.random(0, 1) > MORTALITY_RATE)) statistics.incrementInfected();
+          if (person.infect(p.random(0, 1) > MORTALITY_RATE)) {
+            statistics.infected += 1;
+            statistics.unaffected -= 1;
+          }
+
+          if (other.infect(p.random(0, 1) > MORTALITY_RATE)) {
+            statistics.infected += 1;
+            statistics.unaffected -= 1;
+          }
         }
       });
     };
@@ -87,14 +87,14 @@ const Infection = () => {
 
       if (person.infectedTime > RECOVERY_TIME / 2 && !person.willSurvive) {
         person.state = DiseaseState.FATAL;
-        statistics.incrementFatal();
+        statistics.fatal += 1;
         statistics.infected -= 1;
         return;
       }
 
       if (person.infectedTime >= RECOVERY_TIME) {
         person.state = DiseaseState.CURED;
-        statistics.incrementCured();
+        statistics.cured += 1;
         statistics.infected -= 1;
         return;
       }
@@ -103,11 +103,17 @@ const Infection = () => {
     };
 
     p.setup = () => {
+      initialize();
       setupCanvas(640, 480);
       setupPopulation(200);
     };
 
     p.draw = () => {
+      if (p.frameCount === 1600) {
+        p.noLoop();
+        setShowReplay(true);
+      }
+
       p.background('white');
 
       population.forEach((person) => {
@@ -117,21 +123,18 @@ const Infection = () => {
         person.render();
       });
 
-      setInfected(statistics.infected);
-      setCured(statistics.cured);
-      setFatal(statistics.fatal);
+      setCounters(statistics.counters());
 
-      statistics.recordInfectedTimeline();
-      statistics.recordCuredTimeline();
-      statistics.recordFatalTimeline();
+      statistics.recordTimelines();
 
-      if (frames % 4 === 0) {
-        setInfectedTimeline(statistics.infectedTimeline);
-        setCuredTimeline(statistics.curedTimeline);
+      if (p.frameCount % 2 === 0) {
+        setTimelines(statistics.timelines());
       }
-
-      frames += 1;
     };
+  };
+
+  const handleReplay = () => {
+    sketch.frameCount = -1;
   };
 
   useEffect(() => {
@@ -140,9 +143,20 @@ const Infection = () => {
 
   return (
     <div>
-      <Stats infected={infected} cured={cured} fatal={fatal} />
-      <Graph width={640} height={60} infectedTimeline={infectedTimeline} curedTimeline={curedTimeline} populationSize={200} />
-      <div id="infection" ref={containerRef} />
+      <Counters counters={counters} />
+      <Graph width={300} height={60} timelines={timelines} populationSize={200} />
+
+      <div id="infection" ref={containerRef} className={showReplay && 'overlay'} style={{ maxWidth: 640, position: 'relative' }}>
+        <Replay show={showReplay} onClick={handleReplay} />
+      </div>
+
+      <style jsx global>
+        {`
+          .overlay canvas {
+            opacity: 0.2;
+          }
+        `}
+      </style>
     </div>
   );
 };

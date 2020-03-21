@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
+import DiseaseState from './DiseaseState';
 
 const Graph = (props) => {
   const {
     width,
     height,
-    infectedTimeline,
-    curedTimeline,
+    timelines,
     populationSize,
   } = props;
 
@@ -47,8 +47,9 @@ const Graph = (props) => {
     <svg className="graph" width={width} height={height}>
       <g>
         <rect width={width} height={height} className="background" />
-        <path d={generatePath(infectedTimeline)} className="infected" />
-        <path d={generateInversePath(curedTimeline)} className="cured" />
+        <path d={generatePath(timelines.infectedTimeline)} className="infected" />
+        <path d={generateInversePath(timelines.unaffectedTimeline)} className="unaffected" />
+        <path d={generateInversePath(timelines.curedTimeline)} className="cured" />
       </g>
 
       <style jsx>
@@ -57,12 +58,16 @@ const Graph = (props) => {
             fill: #eeeeee;
           }
 
+          .graph .unaffected {
+            fill: ${DiseaseState.UNAFFECTED.color};
+          }
+
           .graph .infected {
-            fill: #f6c23e;
+            fill: ${DiseaseState.INFECTED.color};
           }
 
           .graph .cured {
-            fill: #1cc88a;
+            fill: ${DiseaseState.CURED.color};
           }
         `}
       </style>
@@ -73,8 +78,7 @@ const Graph = (props) => {
 Graph.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
-  infectedTimeline: PropTypes.array.isRequired,
-  curedTimeline: PropTypes.array.isRequired,
+  timelines: PropTypes.object.isRequired,
   populationSize: PropTypes.number.isRequired,
 };
 
