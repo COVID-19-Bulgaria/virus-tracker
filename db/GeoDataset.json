@@ -67,7 +67,7 @@
             23.1835169,
             42.6955987
         ],
-        "infected": 91,
+        "infected": 105,
         "cured": 1,
         "fatal": 3,
         "circleProps": {
@@ -129,6 +129,15 @@
             43.5753322
         ],
         "infected": 4,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Шумен": {
+        "coordinates": [
+            26.9037187,
+            43.2698551
+        ],
+        "infected": 1,
         "cured": 0,
         "fatal": 0
     }
