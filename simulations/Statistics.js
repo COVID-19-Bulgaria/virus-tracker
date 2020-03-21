@@ -7,6 +7,10 @@ class Statistics {
     this.infectedValue = infected;
     this.curedValue = cured;
     this.fatalValue = fatal;
+
+    this.infectedTimelineValue = [];
+    this.curedTimelineValue = [];
+    this.fatalTimelineValue = [];
   }
 
   get infected() {
@@ -43,6 +47,30 @@ class Statistics {
 
   incrementFatal() {
     this.fatalValue += 1;
+  }
+
+  get infectedTimeline() {
+    return this.infectedTimelineValue;
+  }
+
+  get curedTimeline() {
+    return this.curedTimelineValue;
+  }
+
+  get fatalTimeline() {
+    return this.fatalTimelineValue;
+  }
+
+  recordInfectedTimeline() {
+    this.infectedTimelineValue.push(this.infectedValue);
+  }
+
+  recordCuredTimeline() {
+    this.curedTimelineValue.push(this.curedValue);
+  }
+
+  recordFatalTimeline() {
+    this.fatalTimelineValue.push(this.fatalValue);
   }
 }
 
