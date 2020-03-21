@@ -4,11 +4,33 @@ import Person from '../Person';
 import DiseaseState from '../DiseaseState';
 import { checkCollision, changeDirections } from '../Physics';
 import Statistics from '../Statistics';
+import Graph from '../Graph';
+
+const Stats = ({ infected, cured, fatal }) => (
+  <ul>
+    <li>
+      Заразени -
+      {infected}
+    </li>
+    <li>
+      Излекувани -
+      {cured}
+    </li>
+    <li>
+      Жертви -
+      {fatal}
+    </li>
+  </ul>
+);
 
 const Infection = () => {
   const containerRef = useRef();
   const statistics = new Statistics({ infected: 0, cured: 0, fatal: 0 });
-  const stats = useState(statistics);
+  const [infected, setInfected] = useState(0);
+  const [cured, setCured] = useState(0);
+  const [fatal, setFatal] = useState(0);
+  const [infectedTimeline, setInfectedTimeline] = useState([]);
+  const [curedTimeline, setCuredTimeline] = useState([]);
 
   const sketch = (p) => {
     const RECOVERY_TIME = 500;
@@ -19,6 +41,7 @@ const Infection = () => {
     };
 
     const population = [];
+    let frames = 0;
 
     const setupPopulation = (size) => {
       population[0] = new Person({
@@ -93,29 +116,32 @@ const Infection = () => {
         handleInteractions(person);
         person.render();
       });
+
+      setInfected(statistics.infected);
+      setCured(statistics.cured);
+      setFatal(statistics.fatal);
+
+      statistics.recordInfectedTimeline();
+      statistics.recordCuredTimeline();
+      statistics.recordFatalTimeline();
+
+      if (frames % 4 === 0) {
+        setInfectedTimeline(statistics.infectedTimeline);
+        setCuredTimeline(statistics.curedTimeline);
+      }
+
+      frames += 1;
     };
   };
 
   useEffect(() => {
     const p = new p5(sketch, containerRef.current);
-  });
+  }, []);
 
   return (
     <div>
-      <ul>
-        <li>
-          Заразени -
-          {stats.infected}
-        </li>
-        <li>
-          Излекувани -
-          {stats.cured}
-        </li>
-        <li>
-          Жертви -
-          {stats.fatal}
-        </li>
-      </ul>
+      <Stats infected={infected} cured={cured} fatal={fatal} />
+      <Graph width={640} height={60} infectedTimeline={infectedTimeline} curedTimeline={curedTimeline} populationSize={200} />
       <div id="infection" ref={containerRef} />
     </div>
   );
