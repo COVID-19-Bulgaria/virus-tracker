@@ -67,7 +67,7 @@
             23.1835169,
             42.6955987
         ],
-        "infected": 105,
+        "infected": 103,
         "cured": 1,
         "fatal": 3,
         "circleProps": {
@@ -110,7 +110,7 @@
             27.3118794,
             42.5266897
         ],
-        "infected": 2,
+        "infected": 4,
         "cured": 0,
         "fatal": 0
     },
@@ -136,6 +136,15 @@
         "coordinates": [
             26.9037187,
             43.2698551
+        ],
+        "infected": 1,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Пещера": {
+        "coordinates": [
+            24.2884,
+            42.0339131
         ],
         "infected": 1,
         "cured": 0,
