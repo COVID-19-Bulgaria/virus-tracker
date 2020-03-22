@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 const checkCollision = (currentPerson, otherPerson) => {
   const horizontalDistance = otherPerson.x - currentPerson.x;
   const verticalDistance = otherPerson.y - currentPerson.y;
