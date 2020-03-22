@@ -7,6 +7,7 @@ module.exports = {
     '/map': { page: '/map' },
     '/what-we-know': { page: '/what-we-know' },
     '/about': { page: '/about' },
+    '/why-stay-home': { page: '/why-stay-home' },
   }),
   exportTrailingSlash: true,
   target: 'serverless',

@@ -3,7 +3,7 @@ import Person from '../Person';
 import DiseaseState from '../DiseaseState';
 import RulesSketch from './RulesSketch';
 
-const TransmissionSketch = () => {
+const TransmissionSketch = (props) => {
   const setupPopulation = (p5, population) => {
     population[0] = new Person({
       x: 100,
@@ -26,7 +26,7 @@ const TransmissionSketch = () => {
     });
   };
 
-  return <RulesSketch id="transmission" setupPopulation={setupPopulation} />;
+  return <RulesSketch id="transmission" setupPopulation={setupPopulation} {...props} />;
 };
 
 export default TransmissionSketch;

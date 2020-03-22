@@ -3,8 +3,7 @@ import DiseaseState from './DiseaseState';
 import { checkCollision, changeDirections } from './Physics';
 
 const setupCanvas = (p5, width, height) => {
-  const canvas = p5.createCanvas(width, height);
-  canvas.class('simulation');
+  p5.createCanvas(width, height);
 };
 
 const handleInteractions = (p5, person, population, statistics = null, mortalityRate = 0) => {

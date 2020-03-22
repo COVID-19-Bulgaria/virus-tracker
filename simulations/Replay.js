@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Replay = ({ show, onClick }) => {
+const Replay = ({ show, onClick, replayText }) => {
   const handleKeyPress = (event) => {
     if (event.key === 'Enter') {
       onClick();
@@ -19,7 +19,7 @@ const Replay = ({ show, onClick }) => {
         <span role="img" aria-label="replay">🔄</span>
       </div>
       <div>
-        Стартирай нова симулация
+        {replayText}
       </div>
       <style jsx>
         {`
@@ -51,10 +51,12 @@ const Replay = ({ show, onClick }) => {
 Replay.propTypes = {
   show: PropTypes.bool.isRequired,
   onClick: PropTypes.func,
+  replayText: PropTypes.string,
 };
 
 Replay.defaultProps = {
   onClick: () => { },
+  replayText: 'Стартирай нова симулация',
 };
 
 export default Replay;
