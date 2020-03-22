@@ -65,7 +65,7 @@ class Statistics {
   }
 
   recordTimelines() {
-    this.unaffectedTimelineValue.push(this.unaffectedValue);
+    this.unaffectedTimelineValue.push(this.unaffectedValue + this.curedValue);
     this.infectedTimelineValue.push(this.infectedValue);
     this.curedTimelineValue.push(this.curedValue);
     this.fatalTimelineValue.push(this.fatalValue);

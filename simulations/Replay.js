@@ -50,7 +50,11 @@ const Replay = ({ show, onClick }) => {
 
 Replay.propTypes = {
   show: PropTypes.bool.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
+};
+
+Replay.defaultProps = {
+  onClick: () => { },
 };
 
 export default Replay;

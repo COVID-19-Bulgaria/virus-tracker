@@ -44,7 +44,11 @@ const Graph = (props) => {
   };
 
   return (
-    <svg className="graph" width={width} height={height}>
+    <svg
+      className="graph"
+      viewBox={`0 0 ${width} ${height}`}
+      style={{ maxWidth: width }}
+    >
       <g>
         <rect width={width} height={height} className="background" />
         <path d={generatePath(timelines.infectedTimeline)} className="infected" />
@@ -54,6 +58,11 @@ const Graph = (props) => {
 
       <style jsx>
         {`
+          .graph {
+            width: 100%;
+            height: auto;
+          }
+
           .graph .background {
             fill: #eeeeee;
           }

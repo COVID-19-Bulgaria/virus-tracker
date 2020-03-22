@@ -1,4 +1,4 @@
-import DiseaseState from "./DiseaseState";
+import DiseaseState from './DiseaseState';
 
 class Person {
   static get defaultRadius() {
@@ -16,11 +16,13 @@ class Person {
     verticalSpeed,
     radius,
     state,
+    staysHome = false,
     p5,
   }) {
     this.x = x;
     this.y = y;
     this.state = state;
+    this.staysHome = staysHome;
     this.p5 = p5;
 
     this.horizontalSpeed = horizontalSpeed !== undefined
@@ -40,7 +42,7 @@ class Person {
   }
 
   canMove() {
-    return this.state !== DiseaseState.FATAL;
+    return !this.staysHome && this.state !== DiseaseState.FATAL;
   }
 
   move() {
