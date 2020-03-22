@@ -8,9 +8,11 @@ import Replay from '../Replay';
 const RulesSketch = (props) => {
   const {
     id,
+    className,
     backgroundColor,
     maxFrameCount,
     setupPopulation,
+    replayProps,
   } = props;
 
   const canvasWidth = 300;
@@ -58,6 +60,8 @@ const RulesSketch = (props) => {
       } else {
         p.noLoop();
       }
+    }, {
+      threshold: 0.50,
     });
 
     observer.observe(containerRef.current);
@@ -69,15 +73,15 @@ const RulesSketch = (props) => {
   }, []);
 
   return (
-    <div id={id} ref={containerRef} className={showReplay && 'overlay'} style={{ maxWidth: canvasWidth, position: 'relative' }}>
-      <Replay show={showReplay} onClick={handleReplay} />
+    <div id={id} ref={containerRef} className={`simulation ${className} ${showReplay && 'overlay'}`} style={{ maxWidth: canvasWidth, position: 'relative' }}>
+      <Replay show={showReplay} onClick={handleReplay} {...replayProps} />
       <style jsx global>
         {`
           .overlay canvas {
             opacity: 0.2;
           }
 
-          canvas.simulation {
+          .simulation canvas {
             width: 100% !important;
             height: auto !important;
           }
@@ -89,14 +93,18 @@ const RulesSketch = (props) => {
 
 RulesSketch.propTypes = {
   id: PropTypes.string.isRequired,
+  className: PropTypes.string,
   backgroundColor: PropTypes.string,
   maxFrameCount: PropTypes.number,
   setupPopulation: PropTypes.func.isRequired,
+  replayProps: PropTypes.object,
 };
 
 RulesSketch.defaultProps = {
+  className: '',
   backgroundColor: '#ffffff',
   maxFrameCount: 500,
+  replayProps: {},
 };
 
 export default RulesSketch;

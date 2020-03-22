@@ -3,7 +3,7 @@ import Person from '../Person';
 import DiseaseState from '../DiseaseState';
 import RulesSketch from './RulesSketch';
 
-const ImmunitySketch = () => {
+const ImmunitySketch = (props) => {
   const setupPopulation = (p5, population) => {
     population[0] = new Person({
       x: 100,
@@ -26,7 +26,7 @@ const ImmunitySketch = () => {
     });
   };
 
-  return <RulesSketch id="immunity" setupPopulation={setupPopulation} />;
+  return <RulesSketch id="immunity" setupPopulation={setupPopulation} {...props} />;
 };
 
 export default ImmunitySketch;

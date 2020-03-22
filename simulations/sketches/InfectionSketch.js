@@ -12,6 +12,7 @@ import Replay from '../Replay';
 const InfectionSketch = (props) => {
   const {
     id,
+    className,
     canvasWidth,
     canvasHeight,
     populationSize,
@@ -101,6 +102,8 @@ const InfectionSketch = (props) => {
       } else {
         p.noLoop();
       }
+    }, {
+      threshold: 0.50,
     });
 
     observer.observe(containerRef.current);
@@ -112,7 +115,7 @@ const InfectionSketch = (props) => {
   }, []);
 
   return (
-    <div id={id} style={{ maxWidth: canvasWidth }}>
+    <div id={id} className={`simulation ${className}`} style={{ maxWidth: canvasWidth }}>
       <CountersComponent counters={counters} />
       <Graph
         width={graphWidth}
@@ -130,6 +133,11 @@ const InfectionSketch = (props) => {
           .overlay canvas {
             opacity: 0.2;
           }
+
+          .simulation canvas {
+            width: 100% !important;
+            height: auto !important;
+          }
         `}
       </style>
     </div>
@@ -138,6 +146,7 @@ const InfectionSketch = (props) => {
 
 InfectionSketch.propTypes = {
   id: PropTypes.string.isRequired,
+  className: PropTypes.string,
   canvasWidth: PropTypes.number,
   canvasHeight: PropTypes.number,
   populationSize: PropTypes.number,
@@ -152,10 +161,11 @@ InfectionSketch.propTypes = {
 };
 
 InfectionSketch.defaultProps = {
+  className: '',
   canvasWidth: 640,
   canvasHeight: 480,
   populationSize: 200,
-  recoveryTime: 500,
+  recoveryTime: 600,
   mortalityRate: 0,
   graphWidth: 640,
   graphHeight: 60,
