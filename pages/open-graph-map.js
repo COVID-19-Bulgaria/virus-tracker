@@ -1,5 +1,7 @@
 import ErrorPage from 'next/error';
-import MapImage from '../components/OpenGraph/MapImage';
+import dynamic from 'next/dynamic';
+
+const MapImage = dynamic(() => import('../components/OpenGraph/MapImage'), { ssr: false });
 
 const OpenGraphMap = () => {
   const shouldRender = process.env.BUILD_ID === 'development';

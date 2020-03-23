@@ -1,9 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import BulgariaMap from './BulgariaMap';
 import MapMarker from './MapMarker';
 
-const CasesMap = ({ data }) => {
+const CasesMap = ({ data, ...rest }) => {
   const tooltipText = (location, infected, cured, fatal) => (
     <>
       <strong>{location}</strong>
@@ -18,7 +17,7 @@ const CasesMap = ({ data }) => {
   );
 
   return (
-    <BulgariaMap>
+    <BulgariaMap {...rest}>
       {
         Object.entries(data).map(([location, {
           coordinates,
@@ -26,15 +25,12 @@ const CasesMap = ({ data }) => {
           cured,
           fatal,
           circleProps,
-          textProps,
         }]) => (
           <MapMarker
             key={location}
-            title={location}
             coordinates={coordinates}
             tooltip={tooltipText(location, infected, cured, fatal)}
             circleProps={circleProps}
-            textProps={textProps}
           />
         ))
       }
