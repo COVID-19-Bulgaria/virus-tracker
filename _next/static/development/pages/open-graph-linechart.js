@@ -99,7 +99,7 @@ var CasesLineChartImage = function CasesLineChartImage() {
     data: prepareChartData(_db_DateCasesDataset_json__WEBPACK_IMPORTED_MODULE_4__.fatal)
   }];
   return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], {
-    className: "map-container align-items-center",
+    className: "chart-container align-items-center",
     noGutters: true,
     __source: {
       fileName: _jsxFileName,
@@ -117,7 +117,7 @@ var CasesLineChartImage = function CasesLineChartImage() {
       width: '1059px',
       height: '600px'
     },
-    className: "jsx-2659496106" + " " + "mx-auto",
+    className: "jsx-856858223" + " " + "mx-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
@@ -136,16 +136,16 @@ var CasesLineChartImage = function CasesLineChartImage() {
     rel: "stylesheet",
     type: "text/css",
     href: "/static/css/sb-admin-2.min.css",
-    className: "jsx-2659496106",
+    className: "jsx-856858223",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
     },
     __self: this
   }), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "2659496106",
+    id: "856858223",
     __self: this
-  }, "body{margin:0;padding:0;}.map-container{width:1200px;height:630px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9WZXNlbGluL1dvcmsvdmlydXMtdHJhY2tlci9jb21wb25lbnRzL09wZW5HcmFwaC9DYXNlc0xpbmVDaGFydEltYWdlLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXlCUyxBQUdzQixBQUtJLFNBSkgsSUFLRyxNQUpmLE9BS0EiLCJmaWxlIjoiL1VzZXJzL1Zlc2VsaW4vV29yay92aXJ1cy10cmFja2VyL2NvbXBvbmVudHMvT3BlbkdyYXBoL0Nhc2VzTGluZUNoYXJ0SW1hZ2UuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgUm93LCBDb2wgfSBmcm9tICdyZWFjdC1ib290c3RyYXAnO1xuaW1wb3J0IENhc2VzTGluZUNoYXJ0IGZyb20gJy4uL0Nhc2VzTGluZUNoYXJ0JztcbmltcG9ydCBEYXRlQ2FzZXNEYXRhc2V0IGZyb20gJy4uLy4uL2RiL0RhdGVDYXNlc0RhdGFzZXQuanNvbic7XG5cbmNvbnN0IENhc2VzTGluZUNoYXJ0SW1hZ2UgPSAoKSA9PiB7XG4gIGNvbnN0IHByZXBhcmVDaGFydERhdGEgPSAoZGF0YXNldCkgPT4gT2JqZWN0LmZyb21FbnRyaWVzKFxuICAgIE9iamVjdC5lbnRyaWVzKGRhdGFzZXQpLm1hcCgoZW50cnkpID0+IFtlbnRyeVswXSwgZW50cnlbMV0uY2FzZXNdKSxcbiAgKTtcblxuICBjb25zdCBsaW5lQ2hhcnREYXRhID0gW1xuICAgIHsgbmFtZTogJ9CX0LDRgNCw0LfQtdC90LgnLCBkYXRhOiBwcmVwYXJlQ2hhcnREYXRhKERhdGVDYXNlc0RhdGFzZXQuaW5mZWN0ZWQpIH0sXG4gICAgeyBuYW1lOiAn0JjQt9C70LXQutGD0LLQsNC90LgnLCBkYXRhOiBwcmVwYXJlQ2hhcnREYXRhKERhdGVDYXNlc0RhdGFzZXQuY3VyZWQpIH0sXG4gICAgeyBuYW1lOiAn0JbQtdGA0YLQstC4JywgZGF0YTogcHJlcGFyZUNoYXJ0RGF0YShEYXRlQ2FzZXNEYXRhc2V0LmZhdGFsKSB9LFxuICBdO1xuXG4gIHJldHVybiAoXG4gICAgPFJvdyBjbGFzc05hbWU9XCJtYXAtY29udGFpbmVyIGFsaWduLWl0ZW1zLWNlbnRlclwiIG5vR3V0dGVycz5cbiAgICAgIDxDb2w+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibXgtYXV0b1wiIHN0eWxlPXt7IHdpZHRoOiAnMTA1OXB4JywgaGVpZ2h0OiAnNjAwcHgnIH19PlxuICAgICAgICAgIDxDYXNlc0xpbmVDaGFydCBkYXRhPXtsaW5lQ2hhcnREYXRhfSB3aWR0aD1cIjEwNTlweFwiIGhlaWdodD1cIjYwMHB4XCIgLz5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L0NvbD5cbiAgICAgIDxsaW5rIHJlbD1cInN0eWxlc2hlZXRcIiB0eXBlPVwidGV4dC9jc3NcIiBocmVmPVwiL3N0YXRpYy9jc3Mvc2ItYWRtaW4tMi5taW4uY3NzXCIgLz5cbiAgICAgIDxzdHlsZSBqc3ggZ2xvYmFsPlxuICAgICAgICB7YFxuICAgICAgICAgIGJvZHkge1xuICAgICAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgICB9XG5cbiAgICAgICAgICAubWFwLWNvbnRhaW5lciB7XG4gICAgICAgICAgICB3aWR0aDogMTIwMHB4O1xuICAgICAgICAgICAgaGVpZ2h0OiA2MzBweDtcbiAgICAgICAgICB9XG4gICAgICAgIGB9XG4gICAgICA8L3N0eWxlPlxuICAgIDwvUm93PlxuICApO1xufTtcblxuZXhwb3J0IGRlZmF1bHQgQ2FzZXNMaW5lQ2hhcnRJbWFnZTtcbiJdfQ== */\n/*@ sourceURL=/Users/Veselin/Work/virus-tracker/components/OpenGraph/CasesLineChartImage.js */"));
+  }, "body{margin:0;padding:0;}.chart-container{width:1200px;height:630px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9WZXNlbGluL1dvcmsvdmlydXMtdHJhY2tlci9jb21wb25lbnRzL09wZW5HcmFwaC9DYXNlc0xpbmVDaGFydEltYWdlLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXlCUyxBQUdzQixBQUtJLFNBSkgsSUFLRyxNQUpmLE9BS0EiLCJmaWxlIjoiL1VzZXJzL1Zlc2VsaW4vV29yay92aXJ1cy10cmFja2VyL2NvbXBvbmVudHMvT3BlbkdyYXBoL0Nhc2VzTGluZUNoYXJ0SW1hZ2UuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgUm93LCBDb2wgfSBmcm9tICdyZWFjdC1ib290c3RyYXAnO1xuaW1wb3J0IENhc2VzTGluZUNoYXJ0IGZyb20gJy4uL0Nhc2VzTGluZUNoYXJ0JztcbmltcG9ydCBEYXRlQ2FzZXNEYXRhc2V0IGZyb20gJy4uLy4uL2RiL0RhdGVDYXNlc0RhdGFzZXQuanNvbic7XG5cbmNvbnN0IENhc2VzTGluZUNoYXJ0SW1hZ2UgPSAoKSA9PiB7XG4gIGNvbnN0IHByZXBhcmVDaGFydERhdGEgPSAoZGF0YXNldCkgPT4gT2JqZWN0LmZyb21FbnRyaWVzKFxuICAgIE9iamVjdC5lbnRyaWVzKGRhdGFzZXQpLm1hcCgoZW50cnkpID0+IFtlbnRyeVswXSwgZW50cnlbMV0uY2FzZXNdKSxcbiAgKTtcblxuICBjb25zdCBsaW5lQ2hhcnREYXRhID0gW1xuICAgIHsgbmFtZTogJ9CX0LDRgNCw0LfQtdC90LgnLCBkYXRhOiBwcmVwYXJlQ2hhcnREYXRhKERhdGVDYXNlc0RhdGFzZXQuaW5mZWN0ZWQpIH0sXG4gICAgeyBuYW1lOiAn0JjQt9C70LXQutGD0LLQsNC90LgnLCBkYXRhOiBwcmVwYXJlQ2hhcnREYXRhKERhdGVDYXNlc0RhdGFzZXQuY3VyZWQpIH0sXG4gICAgeyBuYW1lOiAn0JbQtdGA0YLQstC4JywgZGF0YTogcHJlcGFyZUNoYXJ0RGF0YShEYXRlQ2FzZXNEYXRhc2V0LmZhdGFsKSB9LFxuICBdO1xuXG4gIHJldHVybiAoXG4gICAgPFJvdyBjbGFzc05hbWU9XCJjaGFydC1jb250YWluZXIgYWxpZ24taXRlbXMtY2VudGVyXCIgbm9HdXR0ZXJzPlxuICAgICAgPENvbD5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJteC1hdXRvXCIgc3R5bGU9e3sgd2lkdGg6ICcxMDU5cHgnLCBoZWlnaHQ6ICc2MDBweCcgfX0+XG4gICAgICAgICAgPENhc2VzTGluZUNoYXJ0IGRhdGE9e2xpbmVDaGFydERhdGF9IHdpZHRoPVwiMTA1OXB4XCIgaGVpZ2h0PVwiNjAwcHhcIiAvPlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvQ29sPlxuICAgICAgPGxpbmsgcmVsPVwic3R5bGVzaGVldFwiIHR5cGU9XCJ0ZXh0L2Nzc1wiIGhyZWY9XCIvc3RhdGljL2Nzcy9zYi1hZG1pbi0yLm1pbi5jc3NcIiAvPlxuICAgICAgPHN0eWxlIGpzeCBnbG9iYWw+XG4gICAgICAgIHtgXG4gICAgICAgICAgYm9keSB7XG4gICAgICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICAgIH1cblxuICAgICAgICAgIC5jaGFydC1jb250YWluZXIge1xuICAgICAgICAgICAgd2lkdGg6IDEyMDBweDtcbiAgICAgICAgICAgIGhlaWdodDogNjMwcHg7XG4gICAgICAgICAgfVxuICAgICAgICBgfVxuICAgICAgPC9zdHlsZT5cbiAgICA8L1Jvdz5cbiAgKTtcbn07XG5cbmV4cG9ydCBkZWZhdWx0IENhc2VzTGluZUNoYXJ0SW1hZ2U7XG4iXX0= */\n/*@ sourceURL=/Users/Veselin/Work/virus-tracker/components/OpenGraph/CasesLineChartImage.js */"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (CasesLineChartImage);
@@ -53736,7 +53736,7 @@ var OpenGraphLineChart = function OpenGraphLineChart() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 1:
 /*!****************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fopen-graph-linechart&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Fopen-graph-linechart.js ***!
   \****************************************************************************************************************************************************************/
@@ -53759,5 +53759,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=open-graph-linechart.js.map

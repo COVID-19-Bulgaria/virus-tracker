@@ -1662,7 +1662,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 var MapImage = next_dynamic__WEBPACK_IMPORTED_MODULE_2___default()(function () {
-  return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ../components/OpenGraph/MapImage */ "./components/OpenGraph/MapImage.js"));
+  return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../components/OpenGraph/MapImage */ "./components/OpenGraph/MapImage.js"));
 }, {
   ssr: false,
   loadableGenerated: {
@@ -1695,7 +1695,7 @@ var OpenGraphMap = function OpenGraphMap() {
 
 /***/ }),
 
-/***/ 4:
+/***/ 2:
 /*!****************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fopen-graph-map&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Fopen-graph-map.js ***!
   \****************************************************************************************************************************************************/
@@ -1718,5 +1718,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=open-graph-map.js.map
