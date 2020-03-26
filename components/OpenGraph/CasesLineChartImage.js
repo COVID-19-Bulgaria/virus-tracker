@@ -15,7 +15,7 @@ const CasesLineChartImage = () => {
   ];
 
   return (
-    <Row className="map-container align-items-center" noGutters>
+    <Row className="chart-container align-items-center" noGutters>
       <Col>
         <div className="mx-auto" style={{ width: '1059px', height: '600px' }}>
           <CasesLineChart data={lineChartData} width="1059px" height="600px" />
@@ -29,7 +29,7 @@ const CasesLineChartImage = () => {
             padding: 0;
           }
 
-          .map-container {
+          .chart-container {
             width: 1200px;
             height: 630px;
           }
