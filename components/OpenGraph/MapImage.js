@@ -21,7 +21,7 @@ const MapImage = () => (
 
         .map-container {
           width: 1200px;
-          height: 680px;
+          height: 630px;
         }
       `}
     </style>

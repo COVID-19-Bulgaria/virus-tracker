@@ -1,10 +1,10 @@
 {
     "Благоевград": {
         "coordinates": [
-            41.7515,
-            23.4894
+            42.0116,
+            23.0905
         ],
-        "infected": 2,
+        "infected": 4,
         "cured": 0,
         "fatal": 0
     },
@@ -13,7 +13,7 @@
             43.2071,
             27.9151
         ],
-        "infected": 4,
+        "infected": 6,
         "cured": 0,
         "fatal": 0
     },
@@ -58,7 +58,7 @@
             43.4092,
             24.6180
         ],
-        "infected": 5,
+        "infected": 8,
         "cured": 2,
         "fatal": 0
     },
@@ -67,7 +67,7 @@
             42.7035,
             23.3105
         ],
-        "infected": 131,
+        "infected": 170,
         "cured": 1,
         "fatal": 3,
         "circleProps": {
@@ -79,7 +79,7 @@
             41.6226,
             24.6219
         ],
-        "infected": 3,
+        "infected": 5,
         "cured": 0,
         "fatal": 0
     },
@@ -88,7 +88,7 @@
             43.2157,
             25.6244
         ],
-        "infected": 2,
+        "infected": 3,
         "cured": 0,
         "fatal": 0
     },
@@ -115,7 +115,7 @@
             42.1421,
             24.7499
         ],
-        "infected": 2,
+        "infected": 6,
         "cured": 0,
         "fatal": 0
     },
@@ -124,7 +124,7 @@
             43.6646,
             27.9040
         ],
-        "infected": 5,
+        "infected": 6,
         "cured": 0,
         "fatal": 0
     },
@@ -169,7 +169,43 @@
             42.1504,
             24.1456
         ],
+        "infected": 6,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Стара Загора": {
+        "coordinates": [
+            42.4249,
+            25.6257
+        ],
         "infected": 2,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Сливен": {
+        "coordinates": [
+            42.6824,
+            26.3150
+        ],
+        "infected": 1,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Хасково": {
+        "coordinates": [
+            41.7652,
+            25.8975
+        ],
+        "infected": 1,
+        "cured": 0,
+        "fatal": 0
+    },
+    "Кърджали": {
+        "coordinates": [
+            41.5723,
+            25.4773
+        ],
+        "infected": 1,
         "cured": 0,
         "fatal": 0
     }

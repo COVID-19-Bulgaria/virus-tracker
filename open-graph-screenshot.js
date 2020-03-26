@@ -30,13 +30,13 @@ const takeScreenshot = async ({
 takeScreenshot({
   url: 'http://localhost:3000/open-graph-linechart',
   width: 1200,
-  height: 680,
+  height: 630,
   path: './public/static/images/open_graph_linechart.png',
 });
 
 takeScreenshot({
   url: 'http://localhost:3000/open-graph-map',
   width: 1200,
-  height: 680,
+  height: 630,
   path: './public/static/images/open_graph_map.png',
 });
