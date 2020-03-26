@@ -1695,7 +1695,7 @@ var OpenGraphMap = function OpenGraphMap() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 4:
 /*!****************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fopen-graph-map&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Fopen-graph-map.js ***!
   \****************************************************************************************************************************************************/
@@ -1718,5 +1718,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[4,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=open-graph-map.js.map
