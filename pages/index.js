@@ -42,7 +42,7 @@ const Index = () => {
           <h1 className="h3 mb-0 text-gray-800">Начало</h1>
         </div>
         <CasesOverview
-          infected={TotalsDataset.infected - TotalsDataset.cured - TotalsDataset.fatal}
+          infected={TotalsDataset.infected}
           cured={TotalsDataset.cured}
           fatal={TotalsDataset.fatal}
         />
