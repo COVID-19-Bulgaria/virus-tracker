@@ -1,17 +1,16 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import CasesLineChart from '../CasesLineChart';
-import DateCasesDataset from '../../db/DateCasesDataset.json';
 
-const CasesLineChartImage = () => {
+const CasesLineChartImage = ({ dateCasesData }) => {
   const prepareChartData = (dataset) => Object.fromEntries(
     Object.entries(dataset).map((entry) => [entry[0], entry[1].cases]),
   );
 
   const lineChartData = [
-    { name: 'Заразени', data: prepareChartData(DateCasesDataset.infected) },
-    { name: 'Излекувани', data: prepareChartData(DateCasesDataset.cured) },
-    { name: 'Жертви', data: prepareChartData(DateCasesDataset.fatal) },
+    { name: 'Заразени', data: prepareChartData(dateCasesData.infected) },
+    { name: 'Излекувани', data: prepareChartData(dateCasesData.cured) },
+    { name: 'Жертви', data: prepareChartData(dateCasesData.fatal) },
   ];
 
   return (
