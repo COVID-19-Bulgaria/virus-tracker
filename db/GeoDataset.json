@@ -4,16 +4,16 @@
             42.0116,
             23.0905
         ],
-        "infected": 4,
+        "infected": 9,
         "cured": 0,
-        "fatal": 0
+        "fatal": 2
     },
     "Варна": {
         "coordinates": [
             43.2071,
             27.9151
         ],
-        "infected": 7,
+        "infected": 9,
         "cured": 0,
         "fatal": 0
     },
@@ -67,9 +67,9 @@
             42.7035,
             23.3105
         ],
-        "infected": 187,
-        "cured": 1,
-        "fatal": 3,
+        "infected": 221,
+        "cured": 5,
+        "fatal": 4,
         "circleProps": {
             "radius": 15
         }
@@ -79,7 +79,7 @@
             41.6226,
             24.6219
         ],
-        "infected": 5,
+        "infected": 6,
         "cured": 0,
         "fatal": 0
     },
@@ -106,7 +106,7 @@
             42.4489,
             27.3071
         ],
-        "infected": 9,
+        "infected": 13,
         "cured": 0,
         "fatal": 0
     },
@@ -115,7 +115,7 @@
             42.1421,
             24.7499
         ],
-        "infected": 11,
+        "infected": 16,
         "cured": 0,
         "fatal": 0
     },
@@ -142,7 +142,7 @@
             42.0337,
             24.3052
         ],
-        "infected": 1,
+        "infected": 2,
         "cured": 0,
         "fatal": 0
     },
@@ -187,7 +187,7 @@
             42.6824,
             26.3150
         ],
-        "infected": 2,
+        "infected": 3,
         "cured": 0,
         "fatal": 0
     },
@@ -205,7 +205,7 @@
             41.5723,
             25.4773
         ],
-        "infected": 1,
+        "infected": 4,
         "cured": 0,
         "fatal": 0
     },
@@ -216,6 +216,6 @@
         ],
         "infected": 1,
         "cured": 0,
-        "fatal": 0
+        "fatal": 1
     }
 }
