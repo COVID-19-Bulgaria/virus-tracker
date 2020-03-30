@@ -56857,17 +56857,106 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
-var Index = function Index(_ref) {
-  var totalsData = _ref.totalsData,
-      dateCasesData = _ref.dateCasesData,
-      dateDiffCasesData = _ref.dateDiffCasesData;
+
+var Index = function Index() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(true),
+      isLoading = _useState[0],
+      setIsLoading = _useState[1];
+
+  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])({}),
+      totalsData = _useState2[0],
+      setTotalsData = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])({}),
+      dateCasesData = _useState3[0],
+      setDateCasesData = _useState3[1];
+
+  var _useState4 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])({}),
+      dateDiffCasesData = _useState4[0],
+      setDateDiffCasesData = _useState4[1];
 
   var prepareChartData = function prepareChartData(dataset) {
+    if (dataset == null) return;
     return Object.fromEntries(Object.entries(dataset).map(function (entry) {
       return [entry[0], entry[1].cases];
     }));
   };
 
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
+    var fetchData = function fetchData() {
+      var totalsDataset, dateCasesDataset, dateDiffCasesDataset, response, parsedResponse;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function fetchData$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.prev = 0;
+              _context.next = 3;
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()('https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/TotalsDataset.json'));
+
+            case 3:
+              totalsDataset = _context.sent;
+              _context.t0 = setTotalsData;
+              _context.next = 7;
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(totalsDataset.json());
+
+            case 7:
+              _context.t1 = _context.sent;
+              (0, _context.t0)(_context.t1);
+              _context.next = 11;
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()('https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DateCasesDataset.json'));
+
+            case 11:
+              dateCasesDataset = _context.sent;
+              _context.t2 = setDateCasesData;
+              _context.next = 15;
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(dateCasesDataset.json());
+
+            case 15:
+              _context.t3 = _context.sent;
+              (0, _context.t2)(_context.t3);
+              _context.next = 19;
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()('https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DateDiffCasesDataset.json'));
+
+            case 19:
+              dateDiffCasesDataset = _context.sent;
+              _context.t4 = setDateDiffCasesData;
+              _context.next = 23;
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(dateDiffCasesDataset.json());
+
+            case 23:
+              _context.t5 = _context.sent;
+              (0, _context.t4)(_context.t5);
+              setIsLoading(false);
+              _context.next = 36;
+              break;
+
+            case 28:
+              _context.prev = 28;
+              _context.t6 = _context["catch"](0);
+              response = _context.t6.response;
+
+              if (!response) {
+                _context.next = 36;
+                break;
+              }
+
+              _context.next = 34;
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(response.json());
+
+            case 34:
+              parsedResponse = _context.sent;
+              console.log(parsedResponse.message);
+
+            case 36:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, null, null, [[0, 28]], Promise);
+    };
+
+    fetchData();
+  }, []);
   var lineChartData = [{
     name: 'Заразени',
     data: prepareChartData(dateCasesData.infected)
@@ -56891,7 +56980,7 @@ var Index = function Index(_ref) {
   return __jsx(_components_BaseLayout__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 71
     },
     __self: this
   }, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_2__["NextSeo"], {
@@ -56905,42 +56994,50 @@ var Index = function Index(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 72
     },
     __self: this
   }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Container"], {
     fluid: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 84
     },
     __self: this
   }, __jsx("div", {
     className: "d-sm-flex align-items-center justify-content-between my-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 85
     },
     __self: this
   }, __jsx("h1", {
     className: "h3 mb-0 text-gray-800",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 86
     },
     __self: this
-  }, "\u041D\u0430\u0447\u0430\u043B\u043E")), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Badge"], {
+  }, "\u041D\u0430\u0447\u0430\u043B\u043E")), isLoading ? __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Spinner"], {
+    animation: "border",
+    variant: "primary",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88
+    },
+    __self: this
+  }) : __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Badge"], {
     variant: "info",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 90
     },
     __self: this
   }, "\u041F\u043E\u0441\u043B\u0435\u0434\u043D\u0430 \u0430\u043A\u0442\u0443\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F:\xA0", __jsx(react_moment__WEBPACK_IMPORTED_MODULE_5___default.a, {
     format: "DD.MM.YYYY \u0433. \u0432 HH:mm \u0447.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 92
     },
     __self: this
   }, totalsData.timestamp)), __jsx(_components_CasesOverview__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -56949,141 +57046,141 @@ var Index = function Index(_ref) {
     fatal: totalsData.fatal,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 96
     },
     __self: this
   }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 101
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 102
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"], {
     className: "shadow mb-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 103
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Header, {
     className: "py-3 d-flex flex-row align-items-center justify-content-between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 104
     },
     __self: this
   }, __jsx("h6", {
     className: "m-0 font-weight-bold text-primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 105
     },
     __self: this
   }, "\u0425\u0440\u043E\u043D\u043E\u043B\u043E\u0433\u0438\u044F \u043D\u0430 \u0437\u0430\u0440\u0430\u0437\u0430\u0442\u0430")), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Body, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 107
     },
     __self: this
   }, __jsx(_components_CasesLineChart__WEBPACK_IMPORTED_MODULE_8__["default"], {
     data: lineChartData,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 108
     },
     __self: this
   }))))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 113
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 114
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"], {
     className: "shadow mb-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 115
     },
     __self: this
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Header, {
     className: "py-3 d-flex flex-row align-items-center justify-content-between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 116
     },
     __self: this
   }, __jsx("h6", {
     className: "m-0 font-weight-bold text-primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 117
     },
     __self: this
   }, "\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043A\u0430 \u043F\u043E \u0434\u043D\u0438")), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Body, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 119
     },
     __self: this
   }, __jsx(_components_CasesBarChart__WEBPACK_IMPORTED_MODULE_9__["default"], {
     data: barChartData,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 120
     },
     __self: this
-  })))))));
+  }))))))));
 };
 
 Index.getInitialProps = function _callee() {
   var totalsDataset, totalsData, dateCasesDataset, dateCasesData, dateDiffCasesDataset, dateDiffCasesData;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee$(_context) {
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee$(_context2) {
     while (1) {
-      switch (_context.prev = _context.next) {
+      switch (_context2.prev = _context2.next) {
         case 0:
-          _context.next = 2;
+          _context2.next = 2;
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()('https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/TotalsDataset.json'));
 
         case 2:
-          totalsDataset = _context.sent;
-          _context.next = 5;
+          totalsDataset = _context2.sent;
+          _context2.next = 5;
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(totalsDataset.json());
 
         case 5:
-          totalsData = _context.sent;
-          _context.next = 8;
+          totalsData = _context2.sent;
+          _context2.next = 8;
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()('https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DateCasesDataset.json'));
 
         case 8:
-          dateCasesDataset = _context.sent;
-          _context.next = 11;
+          dateCasesDataset = _context2.sent;
+          _context2.next = 11;
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(dateCasesDataset.json());
 
         case 11:
-          dateCasesData = _context.sent;
-          _context.next = 14;
+          dateCasesData = _context2.sent;
+          _context2.next = 14;
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()('https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DateDiffCasesDataset.json'));
 
         case 14:
-          dateDiffCasesDataset = _context.sent;
-          _context.next = 17;
+          dateDiffCasesDataset = _context2.sent;
+          _context2.next = 17;
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(dateDiffCasesDataset.json());
 
         case 17:
-          dateDiffCasesData = _context.sent;
-          return _context.abrupt("return", {
+          dateDiffCasesData = _context2.sent;
+          return _context2.abrupt("return", {
             totalsData: totalsData,
             dateCasesData: dateCasesData,
             dateDiffCasesData: dateDiffCasesData
@@ -57091,7 +57188,7 @@ Index.getInitialProps = function _callee() {
 
         case 19:
         case "end":
-          return _context.stop();
+          return _context2.stop();
       }
     }
   }, null, null, null, Promise);
