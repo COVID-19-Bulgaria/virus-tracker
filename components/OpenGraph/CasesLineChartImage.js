@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import { Row, Col } from 'react-bootstrap';
 import CasesLineChart from '../CasesLineChart';
 
@@ -36,6 +36,10 @@ const CasesLineChartImage = ({ dateCasesData }) => {
       </style>
     </Row>
   );
+};
+
+CasesLineChartImage.propTypes = {
+  dateCasesData: PropTypes.object.isRequired,
 };
 
 export default CasesLineChartImage;
