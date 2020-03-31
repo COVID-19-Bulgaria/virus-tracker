@@ -1,9 +1,9 @@
 import dynamic from 'next/dynamic';
-import GeoDataset from '../../db/GeoDataset.json';
+import PropTypes from 'prop-types';
 
 const CasesMap = dynamic(() => import('../CasesMap/CasesMap'), { ssr: false });
 
-const MapImage = () => (
+const MapImage = ({ geoData }) => (
   <div className="map-container align-content-center">
     <link
       rel="stylesheet"
@@ -11,7 +11,7 @@ const MapImage = () => (
       integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
       crossOrigin=""
     />
-    <CasesMap data={GeoDataset} zoom={7.5} zoomSnap={0.5} zoomControl={false} />
+    <CasesMap data={geoData} zoom={7.5} zoomSnap={0.5} zoomControl={false} />
     <style jsx global>
       {`
         body {
@@ -26,5 +26,9 @@ const MapImage = () => (
     </style>
   </div>
 );
+
+MapImage.propTypes = {
+  geoData: PropTypes.object.isRequired,
+};
 
 export default MapImage;
