@@ -77,12 +77,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _BulgariaMap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./BulgariaMap */ "./components/CasesMap/BulgariaMap.js");
 /* harmony import */ var _MapMarker__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./MapMarker */ "./components/CasesMap/MapMarker.js");
+/* harmony import */ var _MapCustomizations_json__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./MapCustomizations.json */ "./components/CasesMap/MapCustomizations.json");
+var _MapCustomizations_json__WEBPACK_IMPORTED_MODULE_7___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./MapCustomizations.json */ "./components/CasesMap/MapCustomizations.json", 1);
 
 
 
 var _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/CasesMap/CasesMap.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
+
 
 
 
@@ -95,31 +98,31 @@ var CasesMap = function CasesMap(_ref) {
     return __jsx(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, __jsx("strong", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 8
+        lineNumber: 9
       },
       __self: this
     }, location), __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 9
+        lineNumber: 10
       },
       __self: this
     }), "\u0417\u0430\u0440\u0430\u0437\u0435\u043D\u0438: ".concat(infected), __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 12
       },
       __self: this
     }), "\u0418\u0437\u043B\u0435\u043A\u0443\u0432\u0430\u043D\u0438: ".concat(cured), __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 14
       },
       __self: this
     }), "\u0416\u0435\u0440\u0442\u0432\u0438: ".concat(fatal), __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 16
       },
       __self: this
     }));
@@ -128,7 +131,7 @@ var CasesMap = function CasesMap(_ref) {
   return __jsx(_BulgariaMap__WEBPACK_IMPORTED_MODULE_5__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, rest, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 21
     },
     __self: this
   }), Object.entries(data).map(function (_ref2) {
@@ -138,8 +141,13 @@ var CasesMap = function CasesMap(_ref) {
         coordinates = _ref3$.coordinates,
         infected = _ref3$.infected,
         cured = _ref3$.cured,
-        fatal = _ref3$.fatal,
-        circleProps = _ref3$.circleProps;
+        fatal = _ref3$.fatal;
+
+    var circleProps = {};
+
+    if (_MapCustomizations_json__WEBPACK_IMPORTED_MODULE_7__[location] && _MapCustomizations_json__WEBPACK_IMPORTED_MODULE_7__[location].circleProps) {
+      circleProps = _MapCustomizations_json__WEBPACK_IMPORTED_MODULE_7__[location].circleProps;
+    }
 
     return __jsx(_MapMarker__WEBPACK_IMPORTED_MODULE_6__["default"], {
       key: location,
@@ -148,7 +156,7 @@ var CasesMap = function CasesMap(_ref) {
       circleProps: circleProps,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 36
       },
       __self: this
     });
@@ -159,6 +167,17 @@ CasesMap.propTypes = {
   data: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object.isRequired
 };
 /* harmony default export */ __webpack_exports__["default"] = (CasesMap);
+
+/***/ }),
+
+/***/ "./components/CasesMap/MapCustomizations.json":
+/*!****************************************************!*\
+  !*** ./components/CasesMap/MapCustomizations.json ***!
+  \****************************************************/
+/*! exports provided: София, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"София\":{\"circleProps\":{\"radius\":15}}}");
 
 /***/ }),
 
@@ -232,6 +251,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _arrayWithHoles; });
 function _arrayWithHoles(arr) {
   if (Array.isArray(arr)) return arr;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
 }
 
 /***/ }),
@@ -320,6 +369,33 @@ function _objectWithoutProperties(source, excluded) {
       if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
       target[key] = source[key];
     }
+  }
+
+  return target;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _objectWithoutPropertiesLoose; });
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
   }
 
   return target;
@@ -14612,6 +14688,17 @@ window.L = exports;
 
 /***/ }),
 
+/***/ "./node_modules/react-dom/index.js":
+/*!***********************************************************************************************!*\
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_82519ec661270f7f484f ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = (__webpack_require__(/*! dll-reference dll_82519ec661270f7f484f */ "dll-reference dll_82519ec661270f7f484f"))("./node_modules/react-dom/index.js");
+
+/***/ }),
+
 /***/ "./node_modules/react-leaflet/es/AttributionControl.js":
 /*!*************************************************************!*\
   !*** ./node_modules/react-leaflet/es/AttributionControl.js ***!
@@ -17680,6 +17767,80 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
   return target;
 }
+
+/***/ }),
+
+/***/ "./node_modules/warning/warning.js":
+/*!*****************************************!*\
+  !*** ./node_modules/warning/warning.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+/**
+ * Similar to invariant but only logs a warning if the condition is not met.
+ * This can be used to log issues in development environments in critical
+ * paths. Removing the logging code for production environments will keep the
+ * same logic and follow the same code paths.
+ */
+
+var __DEV__ = "development" !== 'production';
+
+var warning = function() {};
+
+if (__DEV__) {
+  var printWarning = function printWarning(format, args) {
+    var len = arguments.length;
+    args = new Array(len > 1 ? len - 1 : 0);
+    for (var key = 1; key < len; key++) {
+      args[key - 1] = arguments[key];
+    }
+    var argIndex = 0;
+    var message = 'Warning: ' +
+      format.replace(/%s/g, function() {
+        return args[argIndex++];
+      });
+    if (typeof console !== 'undefined') {
+      console.error(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  }
+
+  warning = function(condition, format, args) {
+    var len = arguments.length;
+    args = new Array(len > 2 ? len - 2 : 0);
+    for (var key = 2; key < len; key++) {
+      args[key - 2] = arguments[key];
+    }
+    if (format === undefined) {
+      throw new Error(
+          '`warning(condition, format, ...args)` requires a warning ' +
+          'message argument'
+      );
+    }
+    if (!condition) {
+      printWarning.apply(null, [format].concat(args));
+    }
+  };
+}
+
+module.exports = warning;
+
 
 /***/ })
 

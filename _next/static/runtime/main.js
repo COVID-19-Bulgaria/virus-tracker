@@ -717,10 +717,9 @@ var friendlySyntaxErrorLabel = 'Syntax error:';
 function isLikelyASyntaxError(message) {
   return message.indexOf(friendlySyntaxErrorLabel) !== -1;
 } // Cleans up webpack error messages.
-// eslint-disable-next-line no-unused-vars
 
 
-function formatMessage(message, isError) {
+function formatMessage(message) {
   var lines = message.split('\n'); // Strip Webpack-added headers off errors/warnings
   // https://github.com/webpack/webpack/blob/master/lib/ModuleError.js
 
@@ -745,10 +744,7 @@ function formatMessage(message, isError) {
   });
   message = lines.join('\n'); // Smoosh syntax errors (commonly found in CSS)
 
-  message = message.replace(/SyntaxError\s+\((\d+):(\d+)\)\s*(.+?)\n/g, friendlySyntaxErrorLabel + " $3 ($1:$2)\n"); // Remove columns from ESLint formatter output (we added these for more
-  // accurate syntax errors)
-
-  message = message.replace(/Line (\d+):\d+:/g, 'Line $1:'); // Clean up export errors
+  message = message.replace(/SyntaxError\s+\((\d+):(\d+)\)\s*(.+?)\n/g, friendlySyntaxErrorLabel + " $3 ($1:$2)\n"); // Clean up export errors
 
   message = message.replace(/^.*export '(.+?)' was not found in '(.+?)'.*$/gm, "Attempted import error: '$1' is not exported from '$2'.");
   message = message.replace(/^.*export 'default' \(imported as '(.+?)'\) was not found in '(.+?)'.*$/gm, "Attempted import error: '$2' does not contain a default export (imported as '$1').");
@@ -764,6 +760,15 @@ function formatMessage(message, isError) {
 
   if (lines[1] && lines[1].indexOf('Module not found: ') === 0) {
     lines = [lines[0], lines[1].replace('Error: ', '').replace('Module not found: Cannot find file:', 'Cannot find file:')];
+  } // Add helpful message for users trying to use Sass for the first time
+
+
+  if (lines[1] && lines[1].match(/Cannot find module.+node-sass/)) {
+    // ./file.module.scss (<<loader info>>) => ./file.module.scss
+    lines[0] = lines[0].replace(/(.+) \(.+?(?=\?\?).+?\)/, '$1');
+    lines[1] = "To use Next.js' built-in Sass support, you first need to install `sass`.\n";
+    lines[1] += 'Run `npm i sass` or `yarn add sass` inside your workspace.\n';
+    lines[1] += '\nLearn more: https://err.sh/next.js/install-sass';
   }
 
   message = lines.join('\n'); // Internal stacks are generally useless so we strip them... with the
@@ -2477,7 +2482,7 @@ function initializeBuildWatcher() {
 function createContainer(prefix) {
   var container = document.createElement('div');
   container.id = prefix + "container";
-  container.innerHTML = "\n    <button id=\"" + prefix + "close\" title=\"Hide indicator for session\">\n      <span>\xD7</span>\n    </button>\n    <a href=\"https://nextjs.org/docs#automatic-static-optimization-indicator\" target=\"_blank\">\n      <div id=\"" + prefix + "icon-wrapper\">\n          <svg width=\"15\" height=\"20\" viewBox=\"0 0 60 80\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M36 3L30.74 41H8L36 3Z\" fill=\"black\"/>\n          <path d=\"M25 77L30.26 39H53L25 77Z\" fill=\"black\"/>\n          <path d=\"M13.5 33.5L53 39L47.5 46.5L7 41.25L13.5 33.5Z\" fill=\"black\"/>\n          </svg>\n          Prerendered Page\n      </div>\n    </a>\n  ";
+  container.innerHTML = "\n    <button id=\"" + prefix + "close\" title=\"Hide indicator for session\">\n      <span>\xD7</span>\n    </button>\n    <a href=\"https://nextjs.org/docs#automatic-static-optimization-indicator\" target=\"_blank\" rel=\"noreferrer\">\n      <div id=\"" + prefix + "icon-wrapper\">\n          <svg width=\"15\" height=\"20\" viewBox=\"0 0 60 80\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M36 3L30.74 41H8L36 3Z\" fill=\"black\"/>\n          <path d=\"M25 77L30.26 39H53L25 77Z\" fill=\"black\"/>\n          <path d=\"M13.5 33.5L53 39L47.5 46.5L7 41.25L13.5 33.5Z\" fill=\"black\"/>\n          </svg>\n          Prerendered Page\n      </div>\n    </a>\n  ";
   return container;
 }
 
@@ -2690,6 +2695,10 @@ var _inherits = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./no
 
 var _slicedToArray = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js");
 
+function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var _interopRequireWildcard3 = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -2738,7 +2747,7 @@ if (!('finally' in Promise.prototype)) {
 
 var data = JSON.parse(document.getElementById('__NEXT_DATA__').textContent);
 window.__NEXT_DATA__ = data;
-var version = "9.3.0";
+var version = "9.3.2";
 exports.version = version;
 var props = data.props,
     err = data.err,
@@ -2789,10 +2798,12 @@ var App, onPerfEntry;
 var Container = /*#__PURE__*/function (_react$default$Compon) {
   _inherits(Container, _react$default$Compon);
 
+  var _super = _createSuper(Container);
+
   function Container() {
     _classCallCheck(this, Container);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Container).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   _createClass(Container, [{
