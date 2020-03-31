@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import BulgariaMap from './BulgariaMap';
 import MapMarker from './MapMarker';
+import MapCustomizations from './MapCustomizations.json';
 
 const CasesMap = ({ data, ...rest }) => {
   const tooltipText = (location, infected, cured, fatal) => (
@@ -24,15 +25,22 @@ const CasesMap = ({ data, ...rest }) => {
           infected,
           cured,
           fatal,
-          circleProps,
-        }]) => (
-          <MapMarker
-            key={location}
-            coordinates={coordinates}
-            tooltip={tooltipText(location, infected, cured, fatal)}
-            circleProps={circleProps}
-          />
-        ))
+        }]) => {
+          let circleProps = {};
+
+          if (MapCustomizations[location] && MapCustomizations[location].circleProps) {
+            circleProps = MapCustomizations[location].circleProps;
+          }
+
+          return (
+            <MapMarker
+              key={location}
+              coordinates={coordinates}
+              tooltip={tooltipText(location, infected, cured, fatal)}
+              circleProps={circleProps}
+            />
+          );
+        })
       }
     </BulgariaMap>
   );

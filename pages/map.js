@@ -1,14 +1,16 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import { NextSeo } from 'next-seo';
-import { Container, Row, Col } from 'react-bootstrap';
+import fetch from 'isomorphic-unfetch';
+import { Container, Row, Col, Spinner } from 'react-bootstrap';
 import BaseLayout from '../components/BaseLayout';
-import GeoDataset from '../db/GeoDataset.json';
 
 const CasesMap = dynamic(() => import('../components/CasesMap/CasesMap'), { ssr: false });
 
 const Map = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [geoData, setGeoData] = useState({});
   const [zoom, setZoom] = useState(7);
 
   const fixZoom = () => {
@@ -16,6 +18,21 @@ const Map = () => {
       setZoom(6);
     }
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const geoDataset = await fetch('https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/GeoDataset.json');
+        setGeoData(await geoDataset.json());
+
+        setIsLoading(false);
+      } catch (error) {
+        // Empty
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <BaseLayout>
@@ -47,7 +64,9 @@ const Map = () => {
         </div>
         <Row className="mt-3">
           <Col style={{ height: '400px' }}>
-            <CasesMap data={GeoDataset} zoom={zoom} whenReady={fixZoom} zoomSnap={0.5} />
+            {isLoading
+              ? <Spinner animation="border" variant="primary" />
+              : <CasesMap data={geoData} zoom={zoom} whenReady={fixZoom} zoomSnap={0.5} />};
           </Col>
         </Row>
       </Container>
