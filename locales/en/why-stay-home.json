@@ -1,0 +1,24 @@
+{
+    "page_title": "Why stay home?",
+    "seo": {
+        "title": "Why stay home?",
+        "description": "A few simulations, which show how important it is to stay home"
+    },
+    "inspiration": "The simulations on this page are inspired by the article:",
+    "p1": "In order to understand why it is important to stay home during a state of emergency, we will look at how a hypothetical virus spreads and how the actions or omissions of society would affect this spread. Let's start!",
+    "legend": "Legend:",
+    "unaffected": "Unaffected",
+    "infected": "Infected",
+    "cured": "Cured",
+    "p2": "Hypothetically, we have discovered a new virus that is spread by airborne droplet. For visualization purposes, we will assume that an infected person always infects an uninfected person in the event of contact. This is illustrated in the following animation:",
+    "see_again": "See again",
+    "p3": "After a while, each infected person recovers. In this way it acquires immunity to the disease and in the event of a subsequent encounter with an infected person cannot be infected:",
+    "p4": "The rules are simple, now let's examine how our hypothetical contagion will spread to a community of 200 people, of whom 1 is infected and free to move and interact with other people:",
+    "p5": "As the histogram shows, we see a sharp increase in the number of infected in a short period of time. Let us assume hypothetically that 100 patients need hospitalization, but the maximum capacity of hospitals is 50. This means that the other 50 people would not receive full medical care.",
+    "p6": "We continue our simulation towards reducing the risk of collapse of the healthcare system. We decide to introduce moderate restrictive measures where 50% of the community in the simulation stays home (stationary balls). Let's examine how these measures affect the spread of the infection:",
+    "p7": "Measures appear to be working and dissemination is slow. However, again, health facilities operate at maximum capacity, which is why we introduce even stricter measures in our simulation and force people to distance themselves socially. The following simulation shows the result of the measures when only 20% of the population contacts:",
+    "p8": "We have achieved our goal - the healthcare facilities in our simulation can take on everyone infected at any time and have free capacity for side cases not related to the hypothetical virus.",
+    "conclusion": "<1>Conclusion:</1> Social distancing extends the length of time the infection spreads to the population. In this way, the capacity of the healthcare system is not exceeded.",
+    "important": "<1>Important:</1> The previous simulations represent a very simplistic model of social processes that occur in real-world conditions. There are many side factors that affect how a true disease such as COVID-19 spreads.",
+    "stay_safe": "Be healthy, comply with state measures, and stay home!"
+}

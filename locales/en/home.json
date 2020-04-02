@@ -1,0 +1,19 @@
+{
+    "page_title": "Home",
+    "charts": {
+        "infected": "Infected",
+        "cured": "Cured",
+        "fatal": "Fatal",
+        "linechart": {
+            "title": "Disease timeline",
+            "xtitle": "Date",
+            "ytitle": "Cases"
+        },
+        "barchart": {
+            "title": "Daily statistics",
+            "xtitle": "Date",
+            "ytitle": "Cases"
+        }
+    },
+    "last_updated": "Last updated:"
+}

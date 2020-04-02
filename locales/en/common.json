@@ -1,0 +1,14 @@
+{
+    "navigation": {
+        "home": "Home",
+        "map": "Spread",
+        "what-we-know": "What we know",
+        "why-stay-home": "Why stay home",
+        "about": "About"
+    },
+    "date_format": "DD/MM/YYYY HH:mm",
+    "footer": {
+        "disclaimer": "This website should not be considered official source of information. The published data represents research efforts.",
+        "privacy": "Privacy Policy"
+    }
+}

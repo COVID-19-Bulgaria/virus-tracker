@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
-import { Nav } from 'react-bootstrap';
+import Link from 'next-translate/Link';
 import { useRouter } from 'next/router';
+import useTranslation from 'next-translate/useTranslation';
 
 const NavigationLink = (props) => {
   const {
@@ -10,13 +11,23 @@ const NavigationLink = (props) => {
   } = props;
 
   const router = useRouter();
+  const { lang } = useTranslation();
+  const noLang = lang === 'bg';
+  let isActivePage;
+  if (noLang) {
+    isActivePage = router.pathname === href;
+  } else {
+    isActivePage = router.pathname === `/${lang}${href}`
+  }
 
   return (
-    <li className={`nav-item ${router.pathname === href ? 'active' : ''}`}>
-      <Nav.Link href={href}>
-        <i className={icon} />
-        <span>{title}</span>
-      </Nav.Link>
+    <li className={`nav-item ${isActivePage ? 'active' : ''}`}>
+      <Link href={href} noLang={noLang}>
+        <a className="nav-link">
+          <i className={icon} />
+          <span>{title}</span>
+        </a>
+      </Link>
     </li>
   );
 };
