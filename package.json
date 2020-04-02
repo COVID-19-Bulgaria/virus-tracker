@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next-translate && next dev",
+    "build": "next-translate && next build",
     "start": "next start",
     "export": "next export",
-    "deploy": "rm -rf node_modules/.cache && rimraf out && next build && next export && touch out/.nojekyll && echo \"coronavirus-bulgaria.org\" > out/CNAME && gh-pages --dist out --dotfiles --message \"Automatic deploy commit\" --user \"Deploy Bot <hello@coronavirus-bulgaria.org>\""
+    "deploy": "rm -rf node_modules/.cache && rimraf out && next-translate && next build && next export && touch out/.nojekyll && echo \"coronavirus-bulgaria.org\" > out/CNAME && gh-pages --dist out --dotfiles --message \"Automatic deploy commit\" --user \"Deploy Bot <hello@coronavirus-bulgaria.org>\""
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
@@ -18,11 +18,13 @@
     "moment": "^2.24.0",
     "next": "9.3.2",
     "next-seo": "^4.4.0",
+    "next-translate": "^0.14.1",
     "p5": "^1.0.0",
     "prop-types": "^15.7.2",
     "react": "16.13.0",
     "react-bootstrap": "^1.0.0-beta.17",
     "react-chartkick": "^0.4.0",
+    "react-country-flag": "^2.0.1",
     "react-dom": "16.13.0",
     "react-leaflet": "^2.6.3",
     "react-moment": "^0.9.7",

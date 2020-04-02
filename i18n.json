@@ -1,0 +1,33 @@
+{
+    "allLanguages": [
+        "bg",
+        "en"
+    ],
+    "defaultLanguage": "bg",
+    "currentPagesDir": "pages_",
+    "finalPagesDir": "pages",
+    "localesPath": "locales",
+    "pages": {
+        "*": [
+            "common"
+        ],
+        "/": [
+            "home"
+        ],
+        "/about": [
+            "about"
+        ],
+        "/map": [
+            "map"
+        ],
+        "/privacy": [
+            "privacy"
+        ],
+        "/what-we-know": [
+            "what-we-know"
+        ],
+        "/why-stay-home": [
+            "why-stay-home"
+        ]
+    }
+}

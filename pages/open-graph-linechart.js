@@ -1,27 +1,27 @@
-import PropTypes from 'prop-types';
-import fetch from 'isomorphic-unfetch';
-import ErrorPage from 'next/error';
-import CasesLineChartImage from '../components/OpenGraph/CasesLineChartImage';
+// @ts-nocheck
+import I18nProvider from 'next-translate/I18nProvider'
+import React from 'react'
+import C from '../pages_/open-graph-linechart'
+import ns0 from '../locales/bg/common.json'
 
-const OpenGraphLineChart = ({ dateCasesData }) => {
-  const shouldRender = process.env.BUILD_ID === 'development';
+const namespaces = { 'common': ns0 }
 
-  return shouldRender
-    ? <CasesLineChartImage dateCasesData={dateCasesData} />
-    : <ErrorPage statusCode={404} />;
-};
+export default function Page(p){
+  return (
+    <I18nProvider lang="bg" namespaces={namespaces} isStaticMode>
+      <C {...p} />
+    </I18nProvider>
+  )
+}
 
-OpenGraphLineChart.getInitialProps = async () => {
-  const dateCasesDataset = await fetch('https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DateCasesDataset.json');
-  const dateCasesData = await dateCasesDataset.json();
+Page = Object.assign(Page, { ...C })
 
-  return {
-    dateCasesData,
-  };
-};
+if(C.getInitialProps) {
+  Page.getInitialProps = ctx => C.getInitialProps({ ...ctx, lang: 'bg'})
+}
 
-OpenGraphLineChart.propTypes = {
-  dateCasesData: PropTypes.object.isRequired,
-};
 
-export default OpenGraphLineChart;
+
+
+
+export * from '../pages_/open-graph-linechart'
