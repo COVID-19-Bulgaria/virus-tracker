@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/en.js"],{
 
 /***/ "./components/BaseLayout.js":
 /*!**********************************!*\
@@ -948,25 +948,25 @@ OverviewCard.propTypes = {
 
 /***/ }),
 
-/***/ "./locales/bg/common.json":
+/***/ "./locales/en/common.json":
 /*!********************************!*\
-  !*** ./locales/bg/common.json ***!
+  !*** ./locales/en/common.json ***!
   \********************************/
 /*! exports provided: navigation, date_format, footer, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"navigation\":{\"home\":\"Начало\",\"map\":\"Разпространение\",\"what-we-know\":\"Какво знаем\",\"why-stay-home\":\"Защо да останем вкъщи\",\"about\":\"За проекта\"},\"date_format\":\"DD.MM.YYYY г. в HH:mm ч.\",\"footer\":{\"disclaimer\":\"Този уебсайт не е официален източник на информация. Информацията публикувана тук е с изследователски харакер.\",\"privacy\":\"Поверителност\"}}");
+module.exports = JSON.parse("{\"navigation\":{\"home\":\"Home\",\"map\":\"Spread\",\"what-we-know\":\"What we know\",\"why-stay-home\":\"Why stay home\",\"about\":\"About\"},\"date_format\":\"DD/MM/YYYY HH:mm\",\"footer\":{\"disclaimer\":\"This website should not be considered official source of information. The published data represents research efforts.\",\"privacy\":\"Privacy Policy\"}}");
 
 /***/ }),
 
-/***/ "./locales/bg/home.json":
+/***/ "./locales/en/home.json":
 /*!******************************!*\
-  !*** ./locales/bg/home.json ***!
+  !*** ./locales/en/home.json ***!
   \******************************/
 /*! exports provided: page_title, seo, charts, last_updated, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"page_title\":\"Начало\",\"seo\":{\"title\":\"Информационен уебсайт за коронавируса в България\",\"description\":\"Актуална информация и графики за разпространението на коронавируса в България\"},\"charts\":{\"infected\":\"Заразени\",\"cured\":\"Излекувани\",\"fatal\":\"Жертви\",\"linechart\":{\"title\":\"Хронология на заразата\",\"xtitle\":\"Дата\",\"ytitle\":\"Брой засегнати\"},\"barchart\":{\"title\":\"Статистика по дни\",\"xtitle\":\"Дата\",\"ytitle\":\"Брой засегнати\"}},\"last_updated\":\"Последна актуализация:\"}");
+module.exports = JSON.parse("{\"page_title\":\"Home\",\"seo\":{\"title\":\"Information website about the coronavirus in Bulgaria\",\"description\":\"Up-to-date information and charts for the spread of coronavirus in Bulgaria\"},\"charts\":{\"infected\":\"Infected\",\"cured\":\"Cured\",\"fatal\":\"Fatal\",\"linechart\":{\"title\":\"Disease timeline\",\"xtitle\":\"Date\",\"ytitle\":\"Cases\"},\"barchart\":{\"title\":\"Daily statistics\",\"xtitle\":\"Date\",\"ytitle\":\"Cases\"}},\"last_updated\":\"Last updated:\"}");
 
 /***/ }),
 
@@ -39635,21 +39635,21 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Findex.js!./":
-/*!*************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Findex.js ***!
-  \*************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fen&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Fen%2Findex.js!./":
+/*!********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fen&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Fen%2Findex.js ***!
+  \********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/", function() {
-      var mod = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/en", function() {
+      var mod = __webpack_require__(/*! ./pages/en/index.js */ "./pages/en/index.js")
       if(true) {
-        module.hot.accept(/*! ./pages/index.js */ "./pages/index.js", function() {
-          if(!next.router.components["/"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
-          next.router.update("/", updatedPage)
+        module.hot.accept(/*! ./pages/en/index.js */ "./pages/en/index.js", function() {
+          if(!next.router.components["/en"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/en/index.js */ "./pages/en/index.js")
+          next.router.update("/en", updatedPage)
         })
       }
       return mod
@@ -57343,10 +57343,10 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./pages/index.js":
-/*!************************!*\
-  !*** ./pages/index.js ***!
-  \************************/
+/***/ "./pages/en/index.js":
+/*!***************************!*\
+  !*** ./pages/en/index.js ***!
+  \***************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -57359,14 +57359,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_translate_I18nProvider__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_translate_I18nProvider__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _pages___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../pages_ */ "./pages_/index.js");
-/* harmony import */ var _locales_bg_common_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../locales/bg/common.json */ "./locales/bg/common.json");
-var _locales_bg_common_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../locales/bg/common.json */ "./locales/bg/common.json", 1);
-/* harmony import */ var _locales_bg_home_json__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../locales/bg/home.json */ "./locales/bg/home.json");
-var _locales_bg_home_json__WEBPACK_IMPORTED_MODULE_6___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../locales/bg/home.json */ "./locales/bg/home.json", 1);
+/* harmony import */ var _pages___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../pages_ */ "./pages_/index.js");
+/* harmony import */ var _locales_en_common_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../locales/en/common.json */ "./locales/en/common.json");
+var _locales_en_common_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../locales/en/common.json */ "./locales/en/common.json", 1);
+/* harmony import */ var _locales_en_home_json__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../locales/en/home.json */ "./locales/en/home.json");
+var _locales_en_home_json__WEBPACK_IMPORTED_MODULE_6___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../locales/en/home.json */ "./locales/en/home.json", 1);
 /* empty/unused harmony star reexport */
 
-var _jsxFileName = "/Users/Veselin/Work/virus-tracker/pages/index.js";
+var _jsxFileName = "/Users/Veselin/Work/virus-tracker/pages/en/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -57380,12 +57380,12 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 var namespaces = {
-  'common': _locales_bg_common_json__WEBPACK_IMPORTED_MODULE_5__,
-  'home': _locales_bg_home_json__WEBPACK_IMPORTED_MODULE_6__
+  'common': _locales_en_common_json__WEBPACK_IMPORTED_MODULE_5__,
+  'home': _locales_en_home_json__WEBPACK_IMPORTED_MODULE_6__
 };
 function Page(p) {
   return __jsx(next_translate_I18nProvider__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    lang: "bg",
+    lang: "en",
     namespaces: namespaces,
     isStaticMode: true,
     __self: this,
@@ -57408,7 +57408,7 @@ Page = Object.assign(Page, _objectSpread({}, _pages___WEBPACK_IMPORTED_MODULE_4_
 if (_pages___WEBPACK_IMPORTED_MODULE_4__["default"].getInitialProps) {
   Page.getInitialProps = function (ctx) {
     return _pages___WEBPACK_IMPORTED_MODULE_4__["default"].getInitialProps(_objectSpread({}, ctx, {
-      lang: 'bg'
+      lang: 'en'
     }));
   };
 }
@@ -57768,14 +57768,14 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 1:
-/*!*****************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Findex.js ***!
-  \*****************************************************************************************************************************/
+/***/ 2:
+/*!************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fen&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Fen%2Findex.js ***!
+  \************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fen&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Fen%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fen&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Fen%2Findex.js!./");
 
 
 /***/ }),
@@ -57791,5 +57791,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=index.js.map
+},[[2,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=en.js.map
