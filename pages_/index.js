@@ -66,6 +66,8 @@ const Index = () => {
   return (
     <BaseLayout>
       <NextSeo
+        title={t('home:seo.title')}
+        description={t('home:seo.description')}
         openGraph={{
           images: [
             {
