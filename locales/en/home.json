@@ -1,5 +1,9 @@
 {
     "page_title": "Home",
+    "seo": {
+        "title": "Information website about the coronavirus in Bulgaria",
+        "description": "Up-to-date information and charts for the spread of coronavirus in Bulgaria"
+    },
     "charts": {
         "infected": "Infected",
         "cured": "Cured",

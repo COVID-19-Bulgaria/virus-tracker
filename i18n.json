@@ -28,6 +28,9 @@
         ],
         "/why-stay-home": [
             "why-stay-home"
+        ],
+        "/open-graph-linechart": [
+            "home"
         ]
     }
 }
