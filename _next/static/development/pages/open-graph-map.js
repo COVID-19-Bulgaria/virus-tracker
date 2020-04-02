@@ -1,5 +1,31 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/open-graph-map.js"],{
 
+/***/ "./locales/bg/common.json":
+/*!********************************!*\
+  !*** ./locales/bg/common.json ***!
+  \********************************/
+/*! exports provided: navigation, date_format, footer, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"navigation\":{\"home\":\"Начало\",\"map\":\"Разпространение\",\"what-we-know\":\"Какво знаем\",\"why-stay-home\":\"Защо да останем вкъщи\",\"about\":\"За проекта\"},\"date_format\":\"DD.MM.YYYY г. в HH:mm ч.\",\"footer\":{\"disclaimer\":\"Този уебсайт не е официален източник на информация. Информацията публикувана тук е с изследователски харакер.\",\"privacy\":\"Поверителност\"}}");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/arrayWithHoles.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/arrayWithHoles.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+module.exports = _arrayWithHoles;
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js":
 /*!******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js ***!
@@ -84,6 +110,89 @@ module.exports = _createClass;
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/defineProperty.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/defineProperty.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+module.exports = _defineProperty;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js":
 /*!***************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
@@ -147,6 +256,71 @@ module.exports = _interopRequireDefault;
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/interopRequireWildcard.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__(/*! ../helpers/typeof */ "./node_modules/@babel/runtime/helpers/typeof.js");
+
+function _getRequireWildcardCache() {
+  if (typeof WeakMap !== "function") return null;
+  var cache = new WeakMap();
+
+  _getRequireWildcardCache = function _getRequireWildcardCache() {
+    return cache;
+  };
+
+  return cache;
+}
+
+function _interopRequireWildcard(obj) {
+  if (obj && obj.__esModule) {
+    return obj;
+  }
+
+  if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") {
+    return {
+      "default": obj
+    };
+  }
+
+  var cache = _getRequireWildcardCache();
+
+  if (cache && cache.has(obj)) {
+    return cache.get(obj);
+  }
+
+  var newObj = {};
+  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+
+  for (var key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+
+      if (desc && (desc.get || desc.set)) {
+        Object.defineProperty(newObj, key, desc);
+      } else {
+        newObj[key] = obj[key];
+      }
+    }
+  }
+
+  newObj["default"] = obj;
+
+  if (cache) {
+    cache.set(obj, newObj);
+  }
+
+  return newObj;
+}
+
+module.exports = _interopRequireWildcard;
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/iterableToArray.js":
 /*!****************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/iterableToArray.js ***!
@@ -159,6 +333,62 @@ function _iterableToArray(iter) {
 }
 
 module.exports = _iterableToArray;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _iterableToArrayLimit(arr, i) {
+  if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
+    return;
+  }
+
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+module.exports = _iterableToArrayLimit;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/nonIterableRest.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/nonIterableRest.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance");
+}
+
+module.exports = _nonIterableRest;
 
 /***/ }),
 
@@ -220,6 +450,27 @@ module.exports = _setPrototypeOf;
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/slicedToArray.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/slicedToArray.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayWithHoles = __webpack_require__(/*! ./arrayWithHoles */ "./node_modules/@babel/runtime/helpers/arrayWithHoles.js");
+
+var iterableToArrayLimit = __webpack_require__(/*! ./iterableToArrayLimit */ "./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js");
+
+var nonIterableRest = __webpack_require__(/*! ./nonIterableRest */ "./node_modules/@babel/runtime/helpers/nonIterableRest.js");
+
+function _slicedToArray(arr, i) {
+  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || nonIterableRest();
+}
+
+module.exports = _slicedToArray;
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/toConsumableArray.js":
 /*!******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/toConsumableArray.js ***!
@@ -277,6 +528,42 @@ module.exports = _typeof;
 
 module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
 
+
+/***/ }),
+
+/***/ "./node_modules/next-translate/I18nProvider.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/next-translate/I18nProvider.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var _interopRequireWildcard=__webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js"),_interopRequireDefault=__webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");Object.defineProperty(exports,"__esModule",{value:!0}),exports["default"]=I18nProvider;var _slicedToArray2=_interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js")),_defineProperty2=_interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js")),_react=_interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js")),_context=_interopRequireDefault(__webpack_require__(/*! ./_context */ "./node_modules/next-translate/_context.js")),_internals=__webpack_require__(/*! ./_helpers/_internals */ "./node_modules/next-translate/_helpers/_internals.js"),__jsx=_react["default"].createElement;function ownKeys(a,b){var c=Object.keys(a);if(Object.getOwnPropertySymbols){var d=Object.getOwnPropertySymbols(a);b&&(d=d.filter(function(b){return Object.getOwnPropertyDescriptor(a,b).enumerable})),c.push.apply(c,d)}return c}function _objectSpread(a){for(var b,c=1;c<arguments.length;c++)b=null==arguments[c]?{}:arguments[c],c%2?ownKeys(Object(b),!0).forEach(function(c){(0,_defineProperty2["default"])(a,c,b[c])}):Object.getOwnPropertyDescriptors?Object.defineProperties(a,Object.getOwnPropertyDescriptors(b)):ownKeys(Object(b)).forEach(function(c){Object.defineProperty(a,c,Object.getOwnPropertyDescriptor(b,c))});return a}var NsContext=(0,_react.createContext)({});function getDicValue(a){var b=1<arguments.length&&arguments[1]!==void 0?arguments[1]:"",c=b.split(".").reduce(function(a,b){return a[b]},a);return"string"==typeof c?c:void 0}function plural(a,b,c){if(!c||"number"!=typeof c.count)return b;var d="".concat(b,"_").concat(c.count);if(getDicValue(a,d)!==void 0)return d;var e="".concat(b,"_plural");return 1<c.count&&void 0!==getDicValue(a,e)?e:b}function interpolation(a,b){return a&&b?Object.keys(b).reduce(function(a,c){var d=new RegExp("{{\\s*".concat(c,"\\s*}}"),"gm");return a=a.replace(d,"".concat(b[c])),a},a):a||""}function I18nProvider(a){var b=a.lang,c=a.namespaces,d=void 0===c?{}:c,e=a.children,f=a.isStaticMode,g=(0,_react.useContext)(NsContext),h=_objectSpread({},g,{},d);return(0,_internals.setInternals)({lang:b,isStaticMode:f}),__jsx(_context["default"].Provider,{value:{lang:b,t:function(){var a=0<arguments.length&&void 0!==arguments[0]?arguments[0]:"",b=1<arguments.length?arguments[1]:void 0,c=Array.isArray(a)?a[0]:a,d=c.split(":"),e=(0,_slicedToArray2["default"])(d,2),f=e[0],g=e[1],i=h[f]||{},j=plural(i,g,b),k=getDicValue(i,j);return interpolation(k,b)||c}}},__jsx(NsContext.Provider,{value:h},e))}
+
+/***/ }),
+
+/***/ "./node_modules/next-translate/_context.js":
+/*!*************************************************!*\
+  !*** ./node_modules/next-translate/_context.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports,"__esModule",{value:!0}),exports["default"]=void 0;var _react=__webpack_require__(/*! react */ "./node_modules/react/index.js"),_default=(0,_react.createContext)({t:function t(a){return Array.isArray(a)?a[0]:a},lang:""});exports["default"]=_default;
+
+/***/ }),
+
+/***/ "./node_modules/next-translate/_helpers/_internals.js":
+/*!************************************************************!*\
+  !*** ./node_modules/next-translate/_helpers/_internals.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports,"__esModule",{value:!0}),exports["default"]=exports.setInternals=void 0;var i={},setInternals=function(a){i.lang=a.lang,i.isStaticMode=a.isStaticMode};exports.setInternals=setInternals;var _default=i;exports["default"]=_default;
 
 /***/ }),
 
@@ -2422,6 +2709,76 @@ if (false) {} else {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Page; });
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var next_translate_I18nProvider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next-translate/I18nProvider */ "./node_modules/next-translate/I18nProvider.js");
+/* harmony import */ var next_translate_I18nProvider__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_translate_I18nProvider__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _pages_open_graph_map__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../pages_/open-graph-map */ "./pages_/open-graph-map.js");
+/* harmony import */ var _locales_bg_common_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../locales/bg/common.json */ "./locales/bg/common.json");
+var _locales_bg_common_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../locales/bg/common.json */ "./locales/bg/common.json", 1);
+/* empty/unused harmony star reexport */
+
+var _jsxFileName = "/Users/Veselin/Work/virus-tracker/pages/open-graph-map.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+// @ts-nocheck
+
+
+
+
+var namespaces = {
+  'common': _locales_bg_common_json__WEBPACK_IMPORTED_MODULE_5__
+};
+function Page(p) {
+  return __jsx(next_translate_I18nProvider__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    lang: "bg",
+    namespaces: namespaces,
+    isStaticMode: true,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 5
+    }
+  }, __jsx(_pages_open_graph_map__WEBPACK_IMPORTED_MODULE_4__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, p, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 7
+    }
+  })));
+}
+Page = Object.assign(Page, _objectSpread({}, _pages_open_graph_map__WEBPACK_IMPORTED_MODULE_4__["default"]));
+
+if (_pages_open_graph_map__WEBPACK_IMPORTED_MODULE_4__["default"].getInitialProps) {
+  Page.getInitialProps = function (ctx) {
+    return _pages_open_graph_map__WEBPACK_IMPORTED_MODULE_4__["default"].getInitialProps(_objectSpread({}, ctx, {
+      lang: 'bg'
+    }));
+  };
+}
+
+
+
+/***/ }),
+
+/***/ "./pages_/open-graph-map.js":
+/*!**********************************!*\
+  !*** ./pages_/open-graph-map.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -2433,7 +2790,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/next/dist/build/polyfills/fetch/index.js");
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__);
 
-var _jsxFileName = "/Users/Veselin/Work/virus-tracker/pages/open-graph-map.js";
+
+var _this = undefined,
+    _jsxFileName = "/Users/Veselin/Work/virus-tracker/pages_/open-graph-map.js";
+
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -2504,21 +2864,23 @@ var OpenGraphMap = function OpenGraphMap() {
     }, []);
     return !isLoading && __jsx(MapImage, {
       geoData: geoData,
+      __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
-      },
-      __self: this
+        lineNumber: 29,
+        columnNumber: 26
+      }
     });
   }
 
   return __jsx(next_error__WEBPACK_IMPORTED_MODULE_2___default.a, {
     statusCode: 404,
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
+      lineNumber: 32,
+      columnNumber: 10
+    }
   });
 };
 
@@ -2526,7 +2888,7 @@ var OpenGraphMap = function OpenGraphMap() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 4:
 /*!****************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fopen-graph-map&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Fopen-graph-map.js ***!
   \****************************************************************************************************************************************************/
@@ -2549,5 +2911,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[4,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=open-graph-map.js.map
