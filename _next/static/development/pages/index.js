@@ -18,11 +18,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _Navigation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Navigation */ "./components/Navigation.js");
-/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Footer */ "./components/Footer.js");
-/* harmony import */ var _next_seo_config__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../next-seo.config */ "./next-seo.config.js");
+/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next-translate/useTranslation */ "./node_modules/next-translate/useTranslation.js");
+/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _Navigation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Navigation */ "./components/Navigation.js");
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Footer */ "./components/Footer.js");
+/* harmony import */ var _next_seo_config__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../next-seo.config */ "./next-seo.config.js");
 
-var _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/BaseLayout.js";
+
+var _this = undefined,
+    _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/BaseLayout.js";
+
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -35,12 +40,18 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
+
 var BaseLayout = function BaseLayout(_ref) {
   var children = _ref.children;
+
+  var _useTranslation = next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_5___default()(),
+      lang = _useTranslation.lang;
+
+  var privacyPath = lang === 'bg' ? '/privacy' : "/".concat(lang, "/privacy");
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    window.tarteaucitronForceLanguage = 'bg';
+    window.tarteaucitronForceLanguage = lang;
     window.tarteaucitron.init({
-      privacyUrl: '/privacy',
+      privacyUrl: privacyPath,
 
       /* Privacy policy url */
       hashtag: '#tarteaucitron',
@@ -79,108 +90,121 @@ var BaseLayout = function BaseLayout(_ref) {
       useExternalCss: false,
 
       /* If false, the tarteaucitron.css file will be loaded */
-      readmoreLink: '/privacy'
+      readmoreLink: privacyPath
       /* Change the default readmore link */
 
     });
     window.tarteaucitron.user.gtagUa = 'UA-137181155-2';
     (window.tarteaucitron.job = window.tarteaucitron.job || []).push('gtag');
-  });
+  }, []);
   return __jsx("div", {
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
-    },
-    __self: this
-  }, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_3__["DefaultSeo"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _next_seo_config__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      lineNumber: 45,
+      columnNumber: 5
+    }
+  }, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_3__["DefaultSeo"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _next_seo_config__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: this
+      lineNumber: 46,
+      columnNumber: 7
+    }
   })), __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: this
+      lineNumber: 47,
+      columnNumber: 7
+    }
   }, __jsx("link", {
     rel: "stylesheet",
     type: "text/css",
     href: "/static/css/sb-admin-2.min.css",
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: this
+      lineNumber: 48,
+      columnNumber: 9
+    }
   }), __jsx("link", {
     rel: "stylesheet",
     type: "text/css",
     href: "/static/fontawesome-free/css/all.min.css",
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: this
+      lineNumber: 49,
+      columnNumber: 9
+    }
   }), __jsx("link", {
     rel: "stylesheet",
     type: "text/css",
     href: "/static/css/style.css",
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
-    },
-    __self: this
+      lineNumber: 50,
+      columnNumber: 9
+    }
   }), __jsx("link", {
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i",
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
-    },
-    __self: this
+      lineNumber: 51,
+      columnNumber: 9
+    }
   }), __jsx("script", {
     type: "text/javascript",
     src: "/static/tarteaucitronjs/tarteaucitron.js",
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
-    },
-    __self: this
+      lineNumber: 52,
+      columnNumber: 9
+    }
   })), __jsx("div", {
     id: "wrapper",
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
-    },
-    __self: this
-  }, __jsx(_Navigation__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      lineNumber: 55,
+      columnNumber: 7
+    }
+  }, __jsx(_Navigation__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: this
+      lineNumber: 56,
+      columnNumber: 9
+    }
   }), __jsx("div", {
     id: "content-wrapper",
     className: "d-flex flex-column",
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
-    },
-    __self: this
+      lineNumber: 58,
+      columnNumber: 9
+    }
   }, __jsx("div", {
     id: "content",
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
-    },
-    __self: this
-  }, children), __jsx(_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      lineNumber: 59,
+      columnNumber: 11
+    }
+  }, children), __jsx(_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
-    },
-    __self: this
+      lineNumber: 62,
+      columnNumber: 11
+    }
   }))));
 };
 
@@ -57768,7 +57792,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 4:
 /*!*****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Findex.js ***!
   \*****************************************************************************************************************************/
@@ -57791,5 +57815,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[4,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
