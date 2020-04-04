@@ -8,6 +8,7 @@ const NavigationLink = (props) => {
     title,
     href,
     icon,
+    ...rest
   } = props;
 
   const router = useRouter();
@@ -17,13 +18,13 @@ const NavigationLink = (props) => {
   if (noLang) {
     isActivePage = router.pathname === href;
   } else {
-    isActivePage = router.pathname === `/${lang}${href}`
+    isActivePage = router.pathname === `/${lang}${href}`;
   }
 
   return (
     <li className={`nav-item ${isActivePage ? 'active' : ''}`}>
       <Link href={href} noLang={noLang}>
-        <a className="nav-link">
+        <a className="nav-link" {...rest}>
           <i className={icon} />
           <span>{title}</span>
         </a>

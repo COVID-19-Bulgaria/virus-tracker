@@ -4,6 +4,7 @@ import useTranslation from 'next-translate/useTranslation';
 import ReactCountryFlag from 'react-country-flag';
 import { useRouter } from 'next/router';
 import NavigationLink from './NavigationLink';
+import ExternalNavigationLink from './ExternalNavigationLink';
 
 const Navigation = () => {
   const { t, lang } = useTranslation();
@@ -46,6 +47,12 @@ const Navigation = () => {
       <NavigationLink title={t('common:navigation.what-we-know')} href="/what-we-know" icon="fas fa-fw fa-question-circle" />
       <NavigationLink title={t('common:navigation.why-stay-home')} href="/why-stay-home" icon="fas fa-fw fa-home" />
       <NavigationLink title={t('common:navigation.about')} href="/about" icon="fas fa-fw fa-info-circle" />
+
+      <ExternalNavigationLink
+        title={t('common:navigation.facebook')}
+        href="https://www.facebook.com/groups/covidbulgaria"
+        icon="fab fa-fw fa-facebook"
+      />
     </Navbar>
   );
 };

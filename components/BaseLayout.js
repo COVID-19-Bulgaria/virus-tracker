@@ -4,15 +4,21 @@ import { useEffect } from 'react';
 import Head from 'next/head';
 import { DefaultSeo } from 'next-seo';
 import PropTypes from 'prop-types';
+import useTranslation from 'next-translate/useTranslation';
 import Navigation from './Navigation';
 import Footer from './Footer';
-import SEO from '../next-seo.config';
+import bgSEO from '../next-seo.config';
+import enSEO from '../next-seo.en.config';
 
 const BaseLayout = ({ children }) => {
+  const { lang } = useTranslation();
+  const SEO = lang === 'bg' ? bgSEO : enSEO;
+  const privacyPath = lang === 'bg' ? '/privacy' : `/${lang}/privacy`;
+
   useEffect(() => {
-    window.tarteaucitronForceLanguage = 'bg';
+    window.tarteaucitronForceLanguage = lang;
     window.tarteaucitron.init({
-      privacyUrl: '/privacy', /* Privacy policy url */
+      privacyUrl: privacyPath, /* Privacy policy url */
 
       hashtag: '#tarteaucitron', /* Open the panel with this hashtag */
       cookieName: 'tarteaucitron', /* Cookie name */
@@ -30,12 +36,12 @@ const BaseLayout = ({ children }) => {
       moreInfoLink: true, /* Show more info link */
       useExternalCss: false, /* If false, the tarteaucitron.css file will be loaded */
 
-      readmoreLink: '/privacy', /* Change the default readmore link */
+      readmoreLink: privacyPath, /* Change the default readmore link */
     });
 
     window.tarteaucitron.user.gtagUa = 'UA-137181155-2';
     (window.tarteaucitron.job = window.tarteaucitron.job || []).push('gtag');
-  });
+  }, []);
 
   return (
     <div>
