@@ -23,6 +23,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Navigation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Navigation */ "./components/Navigation.js");
 /* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Footer */ "./components/Footer.js");
 /* harmony import */ var _next_seo_config__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../next-seo.config */ "./next-seo.config.js");
+/* harmony import */ var _next_seo_en_config__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../next-seo.en.config */ "./next-seo.en.config.js");
 
 
 var _this = undefined,
@@ -41,12 +42,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
+
 var BaseLayout = function BaseLayout(_ref) {
   var children = _ref.children;
 
   var _useTranslation = next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_5___default()(),
       lang = _useTranslation.lang;
 
+  var SEO = lang === 'bg' ? _next_seo_config__WEBPACK_IMPORTED_MODULE_8__["default"] : _next_seo_en_config__WEBPACK_IMPORTED_MODULE_9__["default"];
   var privacyPath = lang === 'bg' ? '/privacy' : "/".concat(lang, "/privacy");
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
     window.tarteaucitronForceLanguage = lang;
@@ -101,21 +104,21 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 47,
       columnNumber: 5
     }
-  }, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_3__["DefaultSeo"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _next_seo_config__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_3__["DefaultSeo"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, SEO, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 48,
       columnNumber: 7
     }
   })), __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 49,
       columnNumber: 7
     }
   }, __jsx("link", {
@@ -125,7 +128,7 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 50,
       columnNumber: 9
     }
   }), __jsx("link", {
@@ -135,7 +138,7 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 51,
       columnNumber: 9
     }
   }), __jsx("link", {
@@ -145,7 +148,7 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 52,
       columnNumber: 9
     }
   }), __jsx("link", {
@@ -154,7 +157,7 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 53,
       columnNumber: 9
     }
   }), __jsx("script", {
@@ -163,7 +166,7 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 54,
       columnNumber: 9
     }
   })), __jsx("div", {
@@ -171,14 +174,14 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 57,
       columnNumber: 7
     }
   }, __jsx(_Navigation__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56,
+      lineNumber: 58,
       columnNumber: 9
     }
   }), __jsx("div", {
@@ -187,7 +190,7 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 60,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -195,14 +198,14 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 61,
       columnNumber: 11
     }
   }, children), __jsx(_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 64,
       columnNumber: 11
     }
   }))));
@@ -462,6 +465,126 @@ CasesOverview.propTypes = {
 
 /***/ }),
 
+/***/ "./components/ExternalLink.js":
+/*!************************************!*\
+  !*** ./components/ExternalLink.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+var _this = undefined,
+    _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/ExternalLink.js";
+
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+var ExternalLink = function ExternalLink(_ref) {
+  var href = _ref.href,
+      className = _ref.className,
+      children = _ref.children;
+  return __jsx("a", {
+    href: href,
+    target: "_blank",
+    rel: "noopener noreferrer",
+    className: className,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4,
+      columnNumber: 3
+    }
+  }, children);
+};
+
+ExternalLink.propTypes = {
+  href: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
+  children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.node.isRequired,
+  className: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+};
+ExternalLink.defaultProps = {
+  className: ''
+};
+/* harmony default export */ __webpack_exports__["default"] = (ExternalLink);
+
+/***/ }),
+
+/***/ "./components/ExternalNavigationLink.js":
+/*!**********************************************!*\
+  !*** ./components/ExternalNavigationLink.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _ExternalLink__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ExternalLink */ "./components/ExternalLink.js");
+var _this = undefined,
+    _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/ExternalNavigationLink.js";
+
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+var ExternalNavigationLink = function ExternalNavigationLink(props) {
+  var title = props.title,
+      href = props.href,
+      icon = props.icon;
+  return __jsx("li", {
+    className: "nav-item",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 5
+    }
+  }, __jsx(_ExternalLink__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    href: href,
+    className: "nav-link",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 7
+    }
+  }, __jsx("i", {
+    className: icon,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 9
+    }
+  }), __jsx("span", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 9
+    }
+  }, title)));
+};
+
+ExternalNavigationLink.propTypes = {
+  title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
+  href: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
+  icon: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired
+};
+/* harmony default export */ __webpack_exports__["default"] = (ExternalNavigationLink);
+
+/***/ }),
+
 /***/ "./components/Footer.js":
 /*!******************************!*\
   !*** ./components/Footer.js ***!
@@ -583,11 +706,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _NavigationLink__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./NavigationLink */ "./components/NavigationLink.js");
+/* harmony import */ var _ExternalNavigationLink__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ExternalNavigationLink */ "./components/ExternalNavigationLink.js");
 var _this = undefined,
     _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/Navigation.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -612,7 +737,7 @@ var Navigation = function Navigation() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 17,
       columnNumber: 5
     }
   }, __jsx(next_translate_Link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -621,7 +746,7 @@ var Navigation = function Navigation() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 18,
       columnNumber: 7
     }
   }, __jsx("a", {
@@ -629,7 +754,7 @@ var Navigation = function Navigation() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 19,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -637,7 +762,7 @@ var Navigation = function Navigation() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 20,
       columnNumber: 11
     }
   }, __jsx("i", {
@@ -645,7 +770,7 @@ var Navigation = function Navigation() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 21,
       columnNumber: 13
     }
   })), __jsx("div", {
@@ -653,7 +778,7 @@ var Navigation = function Navigation() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 23,
       columnNumber: 11
     }
   }, "COVID-19 BG"))), __jsx("hr", {
@@ -661,7 +786,7 @@ var Navigation = function Navigation() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 29,
       columnNumber: 7
     }
   }), __jsx("div", {
@@ -669,7 +794,7 @@ var Navigation = function Navigation() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 31,
       columnNumber: 7
     }
   }, __jsx(next_translate_Link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -678,14 +803,14 @@ var Navigation = function Navigation() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 32,
       columnNumber: 9
     }
   }, __jsx("a", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 33,
       columnNumber: 11
     }
   }, __jsx(react_country_flag__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -694,7 +819,7 @@ var Navigation = function Navigation() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 34,
       columnNumber: 13
     }
   }))), "\xA0", __jsx(next_translate_Link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -703,14 +828,14 @@ var Navigation = function Navigation() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37,
+      lineNumber: 38,
       columnNumber: 9
     }
   }, __jsx("a", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38,
+      lineNumber: 39,
       columnNumber: 11
     }
   }, __jsx(react_country_flag__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -719,7 +844,7 @@ var Navigation = function Navigation() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 40,
       columnNumber: 13
     }
   })))), __jsx(_NavigationLink__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -729,7 +854,7 @@ var Navigation = function Navigation() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 45,
       columnNumber: 7
     }
   }), __jsx(_NavigationLink__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -739,7 +864,7 @@ var Navigation = function Navigation() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 46,
       columnNumber: 7
     }
   }), __jsx(_NavigationLink__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -749,7 +874,7 @@ var Navigation = function Navigation() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 47,
       columnNumber: 7
     }
   }), __jsx(_NavigationLink__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -759,7 +884,7 @@ var Navigation = function Navigation() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 48,
       columnNumber: 7
     }
   }), __jsx(_NavigationLink__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -769,18 +894,17 @@ var Navigation = function Navigation() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 49,
       columnNumber: 7
     }
-  }), __jsx(_NavigationLink__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }), __jsx(_ExternalNavigationLink__WEBPACK_IMPORTED_MODULE_7__["default"], {
     title: t('common:navigation.facebook'),
     href: "https://www.facebook.com/groups/covidbulgaria",
     icon: "fab fa-fw fa-facebook",
-    target: "_blank",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 51,
       columnNumber: 7
     }
   }));
@@ -1026,6 +1150,30 @@ __webpack_require__.r(__webpack_exports__);
   titleTemplate: 'COVID-19 България | %s',
   title: 'Информационен уебсайт за коронавируса в България',
   description: 'Актуална информация и графики за разпространението на коронавируса в България',
+  additionalMetaTags: [{
+    name: 'keywords',
+    content: 'коронавирус,корона,вирус,coronavirus,covid,covid-19,ковид,ковид-19,България,Bulgaria,SARS-CoV-2'
+  }, {
+    name: 'google-site-verification',
+    content: 'rCD1i89k9dNDePbcCDrVjMXVMGPktGH62eXlAabNEkw'
+  }]
+});
+
+/***/ }),
+
+/***/ "./next-seo.en.config.js":
+/*!*******************************!*\
+  !*** ./next-seo.en.config.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  titleTemplate: 'COVID-19 Bulgaria | %s',
+  title: 'Information website about the coronavirus in Bulgaria',
+  description: 'Up-to-date information and charts for the spread of coronavirus in Bulgaria',
   additionalMetaTags: [{
     name: 'keywords',
     content: 'коронавирус,корона,вирус,coronavirus,covid,covid-19,ковид,ковид-19,България,Bulgaria,SARS-CoV-2'
@@ -57811,7 +57959,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!*****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Findex.js ***!
   \*****************************************************************************************************************************/
@@ -57834,5 +57982,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
