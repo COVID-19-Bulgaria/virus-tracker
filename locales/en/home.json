@@ -8,15 +8,30 @@
         "infected": "Infected",
         "cured": "Cured",
         "fatal": "Fatal",
-        "linechart": {
+        "hospitalized": "Hospitalized",
+        "intensive_care": "Intensive care",
+        "medical_staff": "Infected medical staff",
+        "today": "Today",
+        "cases_linechart": {
             "title": "Disease timeline",
             "xtitle": "Date",
             "ytitle": "Cases"
         },
-        "barchart": {
+        "cases_barchart": {
             "title": "Daily statistics",
             "xtitle": "Date",
             "ytitle": "Cases"
+        },
+        "cases_gender_piechart": {
+            "title": "Cases by gender",
+            "male": "Male {{percentage}}%",
+            "female": "Female {{percentage}}%"
+        },
+        "cases_piechart": {
+            "title": "Cases ratio",
+            "infected": "Infected {{percentage}}%",
+            "cured": "Cured {{percentage}}%",
+            "fatal": "Fatal {{percentage}}%"
         }
     },
     "last_updated": "Last updated:"
