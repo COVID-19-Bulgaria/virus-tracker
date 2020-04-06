@@ -11,8 +11,8 @@ const CasesBarChart = (props) => {
   return (
     <ColumnChart
       data={data}
-      xtitle={t('home:charts.barchart.xtitle')}
-      ytitle={t('home:charts.barchart.ytitle')}
+      xtitle={t('home:charts.cases_barchart.xtitle')}
+      ytitle={t('home:charts.cases_barchart.ytitle')}
       colors={['#f6c23e', '#1cc88a', '#e74a3b']}
       download={{ background: '#ffffff', filename: 'COVID-19-Bulgaria_CasesBarChart' }}
       {...rest}

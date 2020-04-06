@@ -8,15 +8,30 @@
         "infected": "Заразени",
         "cured": "Излекувани",
         "fatal": "Жертви",
-        "linechart": {
+        "hospitalized": "Хоспитализирани",
+        "intensive_care": "Интензивни грижи",
+        "medical_staff": "Заразен медицински персонал",
+        "today": "Днес",
+        "cases_linechart": {
             "title": "Хронология на заразата",
             "xtitle": "Дата",
             "ytitle": "Брой засегнати"
         },
-        "barchart": {
+        "cases_barchart": {
             "title": "Статистика по дни",
             "xtitle": "Дата",
             "ytitle": "Брой засегнати"
+        },
+        "cases_gender_piechart": {
+            "title": "Разпределение по пол",
+            "male": "Мъже {{percentage}}%",
+            "female": "Жени {{percentage}}%"
+        },
+        "cases_piechart": {
+            "title": "Процентно съотношение на случаите",
+            "infected": "Заразени {{percentage}}%",
+            "cured": "Излекувани {{percentage}}%",
+            "fatal": "Жертви {{percentage}}%"
         }
     },
     "last_updated": "Последна актуализация:"

@@ -16,6 +16,8 @@ import BaseLayout from '../components/BaseLayout';
 import CasesOverview from '../components/CasesOverview';
 import CasesLineChart from '../components/CasesLineChart';
 import CasesBarChart from '../components/CasesBarChart';
+import CasesGenderPieChart from '../components/CasesGenderPieChart';
+import CasesPieChart from '../components/CasesPieChart';
 
 const Index = () => {
   const { t } = useTranslation();
@@ -74,7 +76,7 @@ const Index = () => {
               url: `https://coronavirus-bulgaria.org/static/images/open_graph_linechart.png?v=${process.env.BUILD_ID}`,
               width: 1200,
               height: 630,
-              alt: t('home:charts.linechart.title'),
+              alt: t('home:charts.cases_linechart.title'),
             },
           ],
         }}
@@ -96,27 +98,50 @@ const Index = () => {
                 infected={totalsData.infected}
                 cured={totalsData.cured}
                 fatal={totalsData.fatal}
+                hospitalized={totalsData.hospitalized}
+                intensiveCare={totalsData.intensive_care}
+                medicalStaff={totalsData.medical_staff}
               />
               <Row>
-                <Col>
+                <Col md={6}>
                   <Card className="shadow mb-4">
                     <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
-                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.linechart.title')}</h6>
+                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.cases_linechart.title')}</h6>
                     </Card.Header>
                     <Card.Body>
                       <CasesLineChart data={lineChartData} />
                     </Card.Body>
                   </Card>
                 </Col>
-              </Row>
-              <Row>
-                <Col>
+                <Col md={6}>
                   <Card className="shadow mb-4">
                     <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
-                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.barchart.title')}</h6>
+                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.cases_barchart.title')}</h6>
                     </Card.Header>
                     <Card.Body>
                       <CasesBarChart data={barChartData} />
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
+              <Row>
+                <Col md={6}>
+                  <Card className="shadow mb-4">
+                    <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.cases_gender_piechart.title')}</h6>
+                    </Card.Header>
+                    <Card.Body>
+                      <CasesGenderPieChart infected={totalsData.infected} men={totalsData.men} women={totalsData.women} />
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col md={6}>
+                  <Card className="shadow mb-4">
+                    <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.cases_piechart.title')}</h6>
+                    </Card.Header>
+                    <Card.Body>
+                      <CasesPieChart infected={totalsData.infected} cured={totalsData.cured} fatal={totalsData.fatal} />
                     </Card.Body>
                   </Card>
                 </Col>
