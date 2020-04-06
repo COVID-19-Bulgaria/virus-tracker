@@ -260,8 +260,8 @@ var CasesBarChart = function CasesBarChart(props) {
 
   return __jsx(react_chartkick__WEBPACK_IMPORTED_MODULE_4__["ColumnChart"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     data: data,
-    xtitle: t('home:charts.barchart.xtitle'),
-    ytitle: t('home:charts.barchart.ytitle'),
+    xtitle: t('home:charts.cases_barchart.xtitle'),
+    ytitle: t('home:charts.cases_barchart.ytitle'),
     colors: ['#f6c23e', '#1cc88a', '#e74a3b'],
     download: {
       background: '#ffffff',
@@ -281,6 +281,83 @@ CasesBarChart.propTypes = {
   data: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.array.isRequired
 };
 /* harmony default export */ __webpack_exports__["default"] = (CasesBarChart);
+
+/***/ }),
+
+/***/ "./components/CasesGenderPieChart.js":
+/*!*******************************************!*\
+  !*** ./components/CasesGenderPieChart.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_chartkick__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-chartkick */ "./node_modules/react-chartkick/dist/react-chartkick.esm.js");
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! chart.js */ "./node_modules/chart.js/dist/Chart.js");
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next-translate/useTranslation */ "./node_modules/next-translate/useTranslation.js");
+/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_5__);
+
+
+var _this = undefined,
+    _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/CasesGenderPieChart.js";
+
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
+
+
+
+var CasesGenderPieChart = function CasesGenderPieChart(props) {
+  var infected = props.infected,
+      men = props.men,
+      women = props.women;
+
+  var _useTranslation = next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_5___default()(),
+      t = _useTranslation.t;
+
+  var menPercentage = Math.round((men / infected + Number.EPSILON) * 100);
+  var womenPercentage = 100 - menPercentage;
+  var casesGenderPieChartData = [[t('home:charts.cases_gender_piechart.male', {
+    percentage: menPercentage
+  }), men], [t('home:charts.cases_gender_piechart.female', {
+    percentage: womenPercentage
+  }), women]];
+
+  for (var _len = arguments.length, rest = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    rest[_key - 1] = arguments[_key];
+  }
+
+  return __jsx(react_chartkick__WEBPACK_IMPORTED_MODULE_3__["PieChart"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    data: casesGenderPieChartData,
+    colors: ['#4e73df', '#e74a3b'],
+    download: {
+      background: '#ffffff',
+      filename: 'COVID-19-Bulgaria_CasesGenderPieChart'
+    }
+  }, rest, {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 5
+    }
+  }));
+};
+
+CasesGenderPieChart.propTypes = {
+  infected: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number.isRequired,
+  men: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number.isRequired,
+  women: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number.isRequired
+};
+/* harmony default export */ __webpack_exports__["default"] = (CasesGenderPieChart);
 
 /***/ }),
 
@@ -326,8 +403,8 @@ var CasesLineChart = function CasesLineChart(props) {
 
   return __jsx(react_chartkick__WEBPACK_IMPORTED_MODULE_4__["LineChart"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     data: data,
-    xtitle: t('home:charts.linechart.xtitle'),
-    ytitle: t('home:charts.linechart.ytitle'),
+    xtitle: t('home:charts.cases_linechart.xtitle'),
+    ytitle: t('home:charts.cases_linechart.ytitle'),
     colors: ['#f6c23e', '#1cc88a', '#e74a3b'],
     download: {
       background: '#ffffff',
@@ -379,19 +456,25 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 var CasesOverview = function CasesOverview(props) {
   var infected = props.infected,
+      infectedToday = props.infectedToday,
       cured = props.cured,
-      fatal = props.fatal;
+      curedToday = props.curedToday,
+      fatal = props.fatal,
+      fatalToday = props.fatalToday,
+      hospitalized = props.hospitalized,
+      intensiveCare = props.intensiveCare,
+      medicalStaff = props.medicalStaff;
 
   var _useTranslation = next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_3___default()(),
       t = _useTranslation.t;
 
-  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], {
     className: "mt-3",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
-      columnNumber: 5
+      lineNumber: 22,
+      columnNumber: 7
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
     md: 4,
@@ -399,19 +482,21 @@ var CasesOverview = function CasesOverview(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
-      columnNumber: 7
+      lineNumber: 23,
+      columnNumber: 9
     }
   }, __jsx(_OverviewCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
     title: t('home:charts.infected'),
     value: infected,
+    secondTitle: t('home:charts.today'),
+    secondValue: infectedToday,
     icon: "fa-radiation",
     variant: "warning",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
-      columnNumber: 9
+      lineNumber: 24,
+      columnNumber: 11
     }
   })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
     md: 4,
@@ -419,19 +504,21 @@ var CasesOverview = function CasesOverview(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
-      columnNumber: 7
+      lineNumber: 34,
+      columnNumber: 9
     }
   }, __jsx(_OverviewCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
     title: t('home:charts.cured'),
     value: cured,
+    secondTitle: t('home:charts.today'),
+    secondValue: curedToday,
     icon: "fa-notes-medical",
     variant: "success",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 9
+      lineNumber: 35,
+      columnNumber: 11
     }
   })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
     md: 4,
@@ -439,29 +526,186 @@ var CasesOverview = function CasesOverview(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
-      columnNumber: 7
+      lineNumber: 45,
+      columnNumber: 9
     }
   }, __jsx(_OverviewCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
     title: t('home:charts.fatal'),
     value: fatal,
+    secondTitle: t('home:charts.today'),
+    secondValue: fatalToday,
     icon: "fa-heart",
     variant: "danger",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 46,
+      columnNumber: 11
+    }
+  }))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56,
+      columnNumber: 7
+    }
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
+    md: 4,
+    className: "mb-4",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57,
       columnNumber: 9
     }
-  })));
+  }, __jsx(_OverviewCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    title: t('home:charts.medical_staff'),
+    value: medicalStaff,
+    icon: "fa-user-md",
+    variant: "warning",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58,
+      columnNumber: 11
+    }
+  })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
+    md: 4,
+    className: "mb-4",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61,
+      columnNumber: 9
+    }
+  }, __jsx(_OverviewCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    title: t('home:charts.hospitalized'),
+    value: hospitalized,
+    icon: "fa-hospital",
+    variant: "primary",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62,
+      columnNumber: 11
+    }
+  })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
+    md: 4,
+    className: "mb-4",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 9
+    }
+  }, __jsx(_OverviewCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    title: t('home:charts.intensive_care'),
+    value: intensiveCare,
+    icon: "fa-procedures",
+    variant: "primary",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66,
+      columnNumber: 11
+    }
+  }))));
 };
 
 CasesOverview.propTypes = {
   infected: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number.isRequired,
+  infectedToday: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number.isRequired,
   cured: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number.isRequired,
-  fatal: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number.isRequired
+  curedToday: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number.isRequired,
+  fatal: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number.isRequired,
+  fatalToday: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number.isRequired,
+  hospitalized: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number.isRequired,
+  intensiveCare: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number.isRequired,
+  medicalStaff: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number.isRequired
 };
 /* harmony default export */ __webpack_exports__["default"] = (CasesOverview);
+
+/***/ }),
+
+/***/ "./components/CasesPieChart.js":
+/*!*************************************!*\
+  !*** ./components/CasesPieChart.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_chartkick__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-chartkick */ "./node_modules/react-chartkick/dist/react-chartkick.esm.js");
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! chart.js */ "./node_modules/chart.js/dist/Chart.js");
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next-translate/useTranslation */ "./node_modules/next-translate/useTranslation.js");
+/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_5__);
+
+
+var _this = undefined,
+    _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/CasesPieChart.js";
+
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
+
+
+
+var CasesPieChart = function CasesPieChart(props) {
+  var infected = props.infected,
+      cured = props.cured,
+      fatal = props.fatal;
+
+  var _useTranslation = next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_5___default()(),
+      t = _useTranslation.t;
+
+  var total = infected;
+  var currentInfected = total - cured - fatal;
+  var infectedPercentage = Math.round((currentInfected / total + Number.EPSILON) * 100);
+  var curedPercentage = Math.round((cured / total + Number.EPSILON) * 100);
+  var fatalPercentage = 100 - infectedPercentage - curedPercentage;
+  var casesPieChartData = [[t('home:charts.cases_piechart.infected', {
+    percentage: infectedPercentage
+  }), currentInfected], [t('home:charts.cases_piechart.cured', {
+    percentage: curedPercentage
+  }), cured], [t('home:charts.cases_piechart.fatal', {
+    percentage: fatalPercentage
+  }), fatal]];
+
+  for (var _len = arguments.length, rest = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    rest[_key - 1] = arguments[_key];
+  }
+
+  return __jsx(react_chartkick__WEBPACK_IMPORTED_MODULE_3__["PieChart"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    data: casesPieChartData,
+    colors: ['#f6c23e', '#1cc88a', '#e74a3b'],
+    download: {
+      background: '#ffffff',
+      filename: 'COVID-19-Bulgaria_CasesPieChart'
+    }
+  }, rest, {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23,
+      columnNumber: 5
+    }
+  }));
+};
+
+CasesPieChart.propTypes = {
+  infected: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number.isRequired,
+  cured: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number.isRequired,
+  fatal: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number.isRequired
+};
+/* harmony default export */ __webpack_exports__["default"] = (CasesPieChart);
 
 /***/ }),
 
@@ -1133,7 +1377,7 @@ module.exports = JSON.parse("{\"navigation\":{\"home\":\"Начало\",\"map\":
 /*! exports provided: page_title, seo, charts, last_updated, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"page_title\":\"Начало\",\"seo\":{\"title\":\"Информационен уебсайт за коронавируса в България\",\"description\":\"Актуална информация и графики за разпространението на коронавируса в България\"},\"charts\":{\"infected\":\"Заразени\",\"cured\":\"Излекувани\",\"fatal\":\"Жертви\",\"linechart\":{\"title\":\"Хронология на заразата\",\"xtitle\":\"Дата\",\"ytitle\":\"Брой засегнати\"},\"barchart\":{\"title\":\"Статистика по дни\",\"xtitle\":\"Дата\",\"ytitle\":\"Брой засегнати\"}},\"last_updated\":\"Последна актуализация:\"}");
+module.exports = JSON.parse("{\"page_title\":\"Начало\",\"seo\":{\"title\":\"Информационен уебсайт за коронавируса в България\",\"description\":\"Актуална информация и графики за разпространението на коронавируса в България\"},\"charts\":{\"infected\":\"Заразени\",\"cured\":\"Излекувани\",\"fatal\":\"Жертви\",\"hospitalized\":\"Хоспитализирани\",\"intensive_care\":\"Интензивни грижи\",\"medical_staff\":\"Заразен медицински персонал\",\"today\":\"Днес\",\"cases_linechart\":{\"title\":\"Хронология на заразата\",\"xtitle\":\"Дата\",\"ytitle\":\"Брой засегнати\"},\"cases_barchart\":{\"title\":\"Статистика по дни\",\"xtitle\":\"Дата\",\"ytitle\":\"Брой засегнати\"},\"cases_gender_piechart\":{\"title\":\"Разпределение по пол\",\"male\":\"Мъже {{percentage}}%\",\"female\":\"Жени {{percentage}}%\"},\"cases_piechart\":{\"title\":\"Процентно съотношение на случаите\",\"infected\":\"Заразени {{percentage}}%\",\"cured\":\"Излекувани {{percentage}}%\",\"fatal\":\"Жертви {{percentage}}%\"}},\"last_updated\":\"Последна актуализация:\"}");
 
 /***/ }),
 
@@ -57634,6 +57878,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_CasesOverview__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/CasesOverview */ "./components/CasesOverview.js");
 /* harmony import */ var _components_CasesLineChart__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/CasesLineChart */ "./components/CasesLineChart.js");
 /* harmony import */ var _components_CasesBarChart__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/CasesBarChart */ "./components/CasesBarChart.js");
+/* harmony import */ var _components_CasesGenderPieChart__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/CasesGenderPieChart */ "./components/CasesGenderPieChart.js");
+/* harmony import */ var _components_CasesPieChart__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/CasesPieChart */ "./components/CasesPieChart.js");
 
 
 var _this = undefined,
@@ -57643,6 +57889,8 @@ var _this = undefined,
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 /* eslint-disable react/jsx-wrap-multilines */
+
+
 
 
 
@@ -57767,7 +58015,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 69,
       columnNumber: 5
     }
   }, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_2__["NextSeo"], {
@@ -57778,13 +58026,13 @@ var Index = function Index() {
         url: "https://coronavirus-bulgaria.org/static/images/open_graph_linechart.png?v=".concat("development"),
         width: 1200,
         height: 630,
-        alt: t('home:charts.linechart.title')
+        alt: t('home:charts.cases_linechart.title')
       }]
     },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68,
+      lineNumber: 70,
       columnNumber: 7
     }
   }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Container"], {
@@ -57792,7 +58040,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82,
+      lineNumber: 84,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -57800,7 +58048,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83,
+      lineNumber: 85,
       columnNumber: 9
     }
   }, __jsx("h1", {
@@ -57808,7 +58056,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84,
+      lineNumber: 86,
       columnNumber: 11
     }
   }, t('home:page_title'))), isLoading ? __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Spinner"], {
@@ -57817,7 +58065,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86,
+      lineNumber: 88,
       columnNumber: 22
     }
   }) : __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Badge"], {
@@ -57825,7 +58073,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89,
+      lineNumber: 91,
       columnNumber: 15
     }
   }, t('home:last_updated'), "\xA0", __jsx(react_moment__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -57833,31 +58081,35 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91,
+      lineNumber: 93,
       columnNumber: 17
     }
   }, totalsData.timestamp)), __jsx(_components_CasesOverview__WEBPACK_IMPORTED_MODULE_8__["default"], {
     infected: totalsData.infected,
     cured: totalsData.cured,
     fatal: totalsData.fatal,
+    hospitalized: totalsData.hospitalized,
+    intensiveCare: totalsData.intensive_care,
+    medicalStaff: totalsData.medical_staff,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95,
+      lineNumber: 97,
       columnNumber: 15
     }
   }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100,
+      lineNumber: 105,
       columnNumber: 15
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
+    md: 6,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101,
+      lineNumber: 106,
       columnNumber: 17
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"], {
@@ -57865,7 +58117,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102,
+      lineNumber: 107,
       columnNumber: 19
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Header, {
@@ -57873,7 +58125,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103,
+      lineNumber: 108,
       columnNumber: 21
     }
   }, __jsx("h6", {
@@ -57881,14 +58133,14 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104,
+      lineNumber: 109,
       columnNumber: 23
     }
-  }, t('home:charts.linechart.title'))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Body, {
+  }, t('home:charts.cases_linechart.title'))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Body, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106,
+      lineNumber: 111,
       columnNumber: 21
     }
   }, __jsx(_components_CasesLineChart__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -57896,21 +58148,15 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107,
+      lineNumber: 112,
       columnNumber: 23
     }
-  }))))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], {
+  })))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
+    md: 6,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112,
-      columnNumber: 15
-    }
-  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 113,
+      lineNumber: 116,
       columnNumber: 17
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"], {
@@ -57918,7 +58164,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114,
+      lineNumber: 117,
       columnNumber: 19
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Header, {
@@ -57926,7 +58172,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115,
+      lineNumber: 118,
       columnNumber: 21
     }
   }, __jsx("h6", {
@@ -57934,14 +58180,14 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116,
+      lineNumber: 119,
       columnNumber: 23
     }
-  }, t('home:charts.barchart.title'))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Body, {
+  }, t('home:charts.cases_barchart.title'))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Body, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118,
+      lineNumber: 121,
       columnNumber: 21
     }
   }, __jsx(_components_CasesBarChart__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -57949,7 +58195,112 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119,
+      lineNumber: 122,
+      columnNumber: 23
+    }
+  }))))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 127,
+      columnNumber: 15
+    }
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
+    md: 6,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 128,
+      columnNumber: 17
+    }
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"], {
+    className: "shadow mb-4",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 129,
+      columnNumber: 19
+    }
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Header, {
+    className: "py-3 d-flex flex-row align-items-center justify-content-between",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 130,
+      columnNumber: 21
+    }
+  }, __jsx("h6", {
+    className: "m-0 font-weight-bold text-primary",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 131,
+      columnNumber: 23
+    }
+  }, t('home:charts.cases_gender_piechart.title'))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Body, {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 133,
+      columnNumber: 21
+    }
+  }, __jsx(_components_CasesGenderPieChart__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    infected: totalsData.infected,
+    men: totalsData.men,
+    women: totalsData.women,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 134,
+      columnNumber: 23
+    }
+  })))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
+    md: 6,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 138,
+      columnNumber: 17
+    }
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"], {
+    className: "shadow mb-4",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 139,
+      columnNumber: 19
+    }
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Header, {
+    className: "py-3 d-flex flex-row align-items-center justify-content-between",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 140,
+      columnNumber: 21
+    }
+  }, __jsx("h6", {
+    className: "m-0 font-weight-bold text-primary",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 141,
+      columnNumber: 23
+    }
+  }, t('home:charts.cases_piechart.title'))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Body, {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 143,
+      columnNumber: 21
+    }
+  }, __jsx(_components_CasesPieChart__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    infected: totalsData.infected,
+    cured: totalsData.cured,
+    fatal: totalsData.fatal,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 144,
       columnNumber: 23
     }
   }))))))));
@@ -57959,7 +58310,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!*****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Findex.js ***!
   \*****************************************************************************************************************************/
@@ -57982,5 +58333,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
