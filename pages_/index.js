@@ -90,7 +90,7 @@ const Index = () => {
             <>
               <Badge variant="info">
                 {t('home:last_updated')}&nbsp;
-                <Moment format={t('common:date_format')}>
+                <Moment parse="YYYY-MM-DD HH:mm:ss ZZ" format={t('common:date_format')}>
                   {totalsData.timestamp}
                 </Moment>
               </Badge>
