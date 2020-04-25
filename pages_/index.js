@@ -95,12 +95,8 @@ const Index = () => {
                 </Moment>
               </Badge>
               <CasesOverview
-                infected={totalsData.infected}
-                cured={totalsData.cured}
-                fatal={totalsData.fatal}
-                hospitalized={totalsData.hospitalized}
-                intensiveCare={totalsData.intensive_care}
-                medicalStaff={totalsData.medical_staff}
+                totalsData={totalsData}
+                dateDiffCasesData={dateDiffCasesData}
               />
               <Row>
                 <Col md={6}>

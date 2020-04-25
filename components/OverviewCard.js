@@ -1,13 +1,26 @@
 import PropTypes from 'prop-types';
-import { Row, Col, Card } from 'react-bootstrap';
+import {
+  Row,
+  Col,
+  Card,
+  Badge,
+  OverlayTrigger,
+  Tooltip,
+} from 'react-bootstrap';
+import useTranslation from 'next-translate/useTranslation';
 
 const OverviewCard = (props) => {
   const {
     title,
     value,
+    today,
+    diff,
     icon,
     variant,
   } = props;
+
+  const { t } = useTranslation();
+  const diffType = diff > 0 && today >= 0 ? t('home:charts.higher') : t('home:charts.lower');
 
   return (
     <Card className={`border-left-${variant} shadow h-100 py-2`}>
@@ -19,6 +32,28 @@ const OverviewCard = (props) => {
             </div>
             <div className="h5 mb-0 font-weight-bold text-gray-800">
               {value}
+              <OverlayTrigger overlay={(
+                <Tooltip>
+                  <small>
+                    {today >= 0 && t('home:charts.new_cases_today', { count: today })}
+                    &nbsp;
+                    {t('home:charts.diff_cases', { count: Math.abs(today >= 0 ? diff : today), diffType })}
+                  </small>
+                </Tooltip>
+              )}
+              >
+                <sup>
+                  <Badge variant="light">
+                    {
+                      diff > 0 && today >= 0
+                        ? <i className="fas fa-caret-up" />
+                        : <i className="fas fa-caret-down" />
+                    }
+                    &nbsp;
+                    {today}
+                  </Badge>
+                </sup>
+              </OverlayTrigger>
             </div>
           </Col>
           <div className="col-auto">
@@ -33,6 +68,8 @@ const OverviewCard = (props) => {
 OverviewCard.propTypes = {
   title: PropTypes.string.isRequired,
   value: PropTypes.number.isRequired,
+  today: PropTypes.number.isRequired,
+  diff: PropTypes.number.isRequired,
   icon: PropTypes.string.isRequired,
   variant: PropTypes.string.isRequired,
 };
