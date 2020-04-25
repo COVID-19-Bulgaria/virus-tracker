@@ -1,21 +1,34 @@
 import PropTypes from 'prop-types';
 import { Row, Col } from 'react-bootstrap';
 import useTranslation from 'next-translate/useTranslation';
+import moment from 'moment';
 import OverviewCard from './OverviewCard';
 
 const CasesOverview = (props) => {
   const {
-    infected,
-    infectedToday,
-    cured,
-    curedToday,
-    fatal,
-    fatalToday,
-    hospitalized,
-    intensiveCare,
-    medicalStaff,
+    totalsData,
+    dateDiffCasesData,
   } = props;
   const { t } = useTranslation();
+
+  const currentDate = moment(totalsData.timestamp, 'YYYY-MM-DD HH:mm:ss ZZ').format('YYYY-MM-DD');
+  const yesterdayDate = moment(totalsData.timestamp, 'YYYY-MM-DD HH:mm:ss ZZ').subtract(1, 'days').format('YYYY-MM-DD');
+
+  const infectedToday = dateDiffCasesData['infected'][currentDate].cases;
+  const curedToday = dateDiffCasesData['cured'][currentDate].cases;
+  const fatalToday = dateDiffCasesData['fatal'][currentDate].cases;
+  const hospitalizedToday = dateDiffCasesData['hospitalized'][currentDate].cases;
+  const intensiveCareToday = dateDiffCasesData['intensive_care'][currentDate].cases;
+  const medicalStaffToday = dateDiffCasesData['medical_staff'][currentDate].cases;
+
+  const infectedYesterday = dateDiffCasesData['infected'][yesterdayDate].cases;
+  const curedYesterday = dateDiffCasesData['cured'][yesterdayDate].cases;
+  const fatalYesterday = dateDiffCasesData['fatal'][yesterdayDate].cases;
+  const hospitalizedYesterday = dateDiffCasesData['hospitalized'][yesterdayDate].cases;
+  const intensiveCareYesterday = dateDiffCasesData['intensive_care'][yesterdayDate].cases;
+  const medicalStaffYesterday = dateDiffCasesData['medical_staff'][yesterdayDate].cases;
+
+  const calculateDiff = (casesToday, casesYesterday) => (casesYesterday < 0 ? casesToday : casesToday - casesYesterday);
 
   return (
     <>
@@ -23,9 +36,9 @@ const CasesOverview = (props) => {
         <Col md={4} className="mb-4">
           <OverviewCard
             title={t('home:charts.infected')}
-            value={infected}
-            secondTitle={t('home:charts.today')}
-            secondValue={infectedToday}
+            value={totalsData.infected}
+            today={infectedToday}
+            diff={calculateDiff(infectedToday, infectedYesterday)}
             icon="fa-radiation"
             variant="warning"
           />
@@ -34,9 +47,9 @@ const CasesOverview = (props) => {
         <Col md={4} className="mb-4">
           <OverviewCard
             title={t('home:charts.cured')}
-            value={cured}
-            secondTitle={t('home:charts.today')}
-            secondValue={curedToday}
+            value={totalsData.cured}
+            today={curedToday}
+            diff={calculateDiff(curedToday, curedYesterday)}
             icon="fa-notes-medical"
             variant="success"
           />
@@ -45,9 +58,9 @@ const CasesOverview = (props) => {
         <Col md={4} className="mb-4">
           <OverviewCard
             title={t('home:charts.fatal')}
-            value={fatal}
-            secondTitle={t('home:charts.today')}
-            secondValue={fatalToday}
+            value={totalsData.fatal}
+            today={fatalToday}
+            diff={calculateDiff(fatalToday, fatalYesterday)}
             icon="fa-heart"
             variant="danger"
           />
@@ -55,15 +68,36 @@ const CasesOverview = (props) => {
       </Row>
       <Row>
         <Col md={4} className="mb-4">
-          <OverviewCard title={t('home:charts.medical_staff')} value={medicalStaff} icon="fa-user-md" variant="warning" />
+          <OverviewCard
+            title={t('home:charts.medical_staff')}
+            value={totalsData.medical_staff}
+            today={medicalStaffToday}
+            diff={calculateDiff(medicalStaffToday, medicalStaffYesterday)}
+            icon="fa-user-md"
+            variant="warning"
+          />
         </Col>
 
         <Col md={4} className="mb-4">
-          <OverviewCard title={t('home:charts.hospitalized')} value={hospitalized} icon="fa-hospital" variant="primary" />
+          <OverviewCard
+            title={t('home:charts.hospitalized')}
+            value={totalsData.hospitalized}
+            today={hospitalizedToday}
+            diff={calculateDiff(hospitalizedToday, hospitalizedYesterday)}
+            icon="fa-hospital"
+            variant="primary"
+          />
         </Col>
 
         <Col md={4} className="mb-4">
-          <OverviewCard title={t('home:charts.intensive_care')} value={intensiveCare} icon="fa-procedures" variant="primary" />
+          <OverviewCard
+            title={t('home:charts.intensive_care')}
+            value={totalsData.intensive_care}
+            today={intensiveCareToday}
+            diff={calculateDiff(intensiveCareToday, intensiveCareYesterday)}
+            icon="fa-procedures"
+            variant="primary"
+          />
         </Col>
       </Row>
     </>
@@ -71,15 +105,23 @@ const CasesOverview = (props) => {
 };
 
 CasesOverview.propTypes = {
-  infected: PropTypes.number.isRequired,
-  infectedToday: PropTypes.number.isRequired,
-  cured: PropTypes.number.isRequired,
-  curedToday: PropTypes.number.isRequired,
-  fatal: PropTypes.number.isRequired,
-  fatalToday: PropTypes.number.isRequired,
-  hospitalized: PropTypes.number.isRequired,
-  intensiveCare: PropTypes.number.isRequired,
-  medicalStaff: PropTypes.number.isRequired,
+  totalsData: PropTypes.shape({
+    infected: PropTypes.number,
+    cured: PropTypes.number,
+    fatal: PropTypes.number,
+    hospitalized: PropTypes.number,
+    intensive_care: PropTypes.number,
+    medical_staff: PropTypes.number,
+    timestamp: PropTypes.string,
+  }).isRequired,
+  dateDiffCasesData: PropTypes.shape({
+    infected: PropTypes.object,
+    cured: PropTypes.object,
+    fatal: PropTypes.object,
+    hospitalized: PropTypes.object,
+    intensive_care: PropTypes.object,
+    medical_staff: PropTypes.object,
+  }).isRequired,
 };
 
 export default CasesOverview;
