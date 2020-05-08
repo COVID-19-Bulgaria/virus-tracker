@@ -29,7 +29,7 @@ const BaseLayout = ({ children }) => {
 
       adblocker: false, /* Show a Warning if an adblocker is detected */
       AcceptAllCta: true, /* Show the accept all button when highPrivacy on */
-      highPrivacy: false, /* Disable auto consent */
+      highPrivacy: true, /* Disable auto consent */
       handleBrowserDNTRequest: false, /* If Do Not Track == 1, disallow all */
 
       removeCredit: true, /* Remove credit link */
