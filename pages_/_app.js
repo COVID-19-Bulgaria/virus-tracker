@@ -11,7 +11,7 @@ const CustomApp = ({ Component, pageProps }) => {
     const currentPath = `?u=${encodeURIComponent(window.location.pathname)}`;
     const referrer = document.referrer ? `&r=${encodeURIComponent(document.referrer)}` : '';
     const analyticsPixel = new Image(1, 1);
-    analyticsPixel.src = `http://stats.coronavirus-bulgaria.org/stats.gif${currentPath}${referrer}`;
+    analyticsPixel.src = `https://stats.coronavirus-bulgaria.org/stats.gif${currentPath}${referrer}`;
     // }
   }, [Component]);
 
