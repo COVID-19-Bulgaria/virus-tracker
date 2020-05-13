@@ -4,13 +4,10 @@ import {
   Row,
   Col,
   Accordion,
-  Button,
 } from 'react-bootstrap';
 import useTranslation from 'next-translate/useTranslation';
-import Trans from 'next-translate/Trans';
 import BaseLayout from '../components/BaseLayout';
 import CollapsibleCard from '../components/CollapsibleCard';
-import ExternalLink from '../components/ExternalLink';
 
 const Privacy = () => {
   const { t } = useTranslation();
@@ -33,31 +30,6 @@ const Privacy = () => {
               </CollapsibleCard>
               <CollapsibleCard anchor="usage" title={t('privacy:usage.title')}>
                 {t('privacy:usage.text')}
-              </CollapsibleCard>
-              <CollapsibleCard anchor="cookies" title={t('privacy:cookies.title')}>
-                {t('privacy:cookies.text')}
-              </CollapsibleCard>
-              <CollapsibleCard anchor="partners" title={t('privacy:partners.title')}>
-                {t('privacy:partners.text')}
-                <ul>
-                  <li>
-                    Google Ireland Ltd. - Google Analytics, Google Tag Manager -
-                    <ExternalLink href="https://safety.google/privacy/">
-                      https://safety.google/privacy/
-                    </ExternalLink>
-                  </li>
-                </ul>
-              </CollapsibleCard>
-              <CollapsibleCard anchor="preferences" title={t('privacy:preferences.title')}>
-                <div>
-                  <Trans
-                    i18nKey="privacy:preferences.text"
-                    components={[<br />]}
-                  />
-                </div>
-                <Button className="mt-2" onClick={() => window.tarteaucitron.userInterface.openPanel()}>
-                  {t('privacy:preferences.button')}
-                </Button>
               </CollapsibleCard>
               <CollapsibleCard anchor="changes" title={t('privacy:changes.title')}>
                 {t('privacy:changes.text')}
