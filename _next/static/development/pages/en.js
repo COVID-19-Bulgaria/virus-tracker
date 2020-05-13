@@ -58354,7 +58354,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fen&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Fen%2Findex.js ***!
   \************************************************************************************************************************************/
@@ -58377,5 +58377,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=en.js.map
