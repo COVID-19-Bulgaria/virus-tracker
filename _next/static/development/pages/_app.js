@@ -4149,29 +4149,37 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
+
 var CustomApp = function CustomApp(_ref) {
   var Component = _ref.Component,
       pageProps = _ref.pageProps;
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
+    // if (window.location.hostname === 'coronavirus-bulgaria.org') {
+    var currentPath = "?u=".concat(encodeURIComponent(window.location.pathname));
+    var referrer = document.referrer ? "&r=".concat(encodeURIComponent(document.referrer)) : '';
+    var analyticsPixel = new Image(1, 1);
+    analyticsPixel.src = "http://stats.coronavirus-bulgaria.org/stats.gif".concat(currentPath).concat(referrer); // }
+  }, [Component]);
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_2__["DefaultSeo"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _next_seo_config__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
-      columnNumber: 5
+      lineNumber: 20,
+      columnNumber: 7
     }
   })), __jsx(_components_Favicon__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 5
+      lineNumber: 21,
+      columnNumber: 7
     }
   }), __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
-      columnNumber: 5
+      lineNumber: 22,
+      columnNumber: 7
     }
   })));
 };

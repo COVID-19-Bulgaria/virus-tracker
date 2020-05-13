@@ -32,9 +32,6 @@ var _this = undefined,
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
-/* eslint-disable react/no-unescaped-entities */
-
-
 
 
 
@@ -50,75 +47,25 @@ var BaseLayout = function BaseLayout(_ref) {
       lang = _useTranslation.lang;
 
   var SEO = lang === 'bg' ? _next_seo_config__WEBPACK_IMPORTED_MODULE_8__["default"] : _next_seo_en_config__WEBPACK_IMPORTED_MODULE_9__["default"];
-  var privacyPath = lang === 'bg' ? '/privacy' : "/".concat(lang, "/privacy");
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    window.tarteaucitronForceLanguage = lang;
-    window.tarteaucitron.init({
-      privacyUrl: privacyPath,
-
-      /* Privacy policy url */
-      hashtag: '#tarteaucitron',
-
-      /* Open the panel with this hashtag */
-      cookieName: 'tarteaucitron',
-
-      /* Cookie name */
-      orientation: 'bottom',
-
-      /* Banner position (top - bottom) */
-      showAlertSmall: false,
-
-      /* Show the small banner on bottom right */
-      cookieslist: false,
-
-      /* Show the cookie list */
-      adblocker: false,
-
-      /* Show a Warning if an adblocker is detected */
-      AcceptAllCta: true,
-
-      /* Show the accept all button when highPrivacy on */
-      highPrivacy: true,
-
-      /* Disable auto consent */
-      handleBrowserDNTRequest: false,
-
-      /* If Do Not Track == 1, disallow all */
-      removeCredit: true,
-
-      /* Remove credit link */
-      moreInfoLink: true,
-
-      /* Show more info link */
-      useExternalCss: false,
-
-      /* If false, the tarteaucitron.css file will be loaded */
-      readmoreLink: privacyPath
-      /* Change the default readmore link */
-
-    });
-    window.tarteaucitron.user.gtagUa = 'UA-137181155-2';
-    (window.tarteaucitron.job = window.tarteaucitron.job || []).push('gtag');
-  }, []);
   return __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 15,
       columnNumber: 5
     }
   }, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_3__["DefaultSeo"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, SEO, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 16,
       columnNumber: 7
     }
   })), __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 17,
       columnNumber: 7
     }
   }, __jsx("link", {
@@ -128,7 +75,7 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 18,
       columnNumber: 9
     }
   }), __jsx("link", {
@@ -138,7 +85,7 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 19,
       columnNumber: 9
     }
   }), __jsx("link", {
@@ -148,7 +95,7 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 20,
       columnNumber: 9
     }
   }), __jsx("link", {
@@ -157,16 +104,7 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
-      columnNumber: 9
-    }
-  }), __jsx("script", {
-    type: "text/javascript",
-    src: "/static/tarteaucitronjs/tarteaucitron.js",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 21,
       columnNumber: 9
     }
   })), __jsx("div", {
@@ -174,14 +112,14 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 24,
       columnNumber: 7
     }
   }, __jsx(_Navigation__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 25,
       columnNumber: 9
     }
   }), __jsx("div", {
@@ -190,7 +128,7 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 27,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -198,14 +136,14 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61,
+      lineNumber: 28,
       columnNumber: 11
     }
   }, children), __jsx(_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64,
+      lineNumber: 31,
       columnNumber: 11
     }
   }))));
@@ -872,7 +810,7 @@ module.exports = JSON.parse("{\"navigation\":{\"home\":\"Начало\",\"map\":
 /*! exports provided: page_title, seo, policy, data, usage, cookies, partners, preferences, changes, last_updated, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"page_title\":\"Политика за поверителност\",\"seo\":{\"title\":\"Политика за поверителност\"},\"policy\":{\"title\":\"Каква е политиката ни относно поверителността?\",\"text\":\"Ние приемаме поверителността на потребителите си изключително сериозно и не споделяме или продаваме личната Ви информация на трети лица или несвързани компании. Ангажираме се да спазваме правото Ви на лично пространство и конфиденциалност. Информация на трети страни може да бъде предоставена само и единствено ако тя е изискана от компетентни органи, по процедурите посочени в нормативната уредба на Република България.\"},\"data\":{\"title\":\"Каква информация събираме от посетителите?\",\"text\":\"За всеки посетител събираме статистическа информация включваща тип на устройството, операционна система, версия и модел на използвания браузър, прекарано време в страниците, местоположение и др. За част от действията, извършени посредством функционалността на системата, се запазва и IP адресът на посетителя. Не се съхранява демогафска информация за посетителите от типа на пол, възраст, изповядвана религия, интереси, модели за поведение и др.\"},\"usage\":{\"title\":\"За какви цели използваме информацията?\",\"text\":\"Събираната от нас информация се използва за подобряване на предоставените услуги, статистически отчети и обратна връзка.\"},\"cookies\":{\"title\":\"Бисквитки\",\"text\":\"Използваме бисквитки (\\\"Cookies\\\"), за да анализираме потребителското поведение и да подобрим предлаганите функционалности. Бисквитките съдържат малко количество информация, записано в регистрите на Вашия уеб браузър, и по никакъв начин не могат да навредят на работата на системата Ви или да инсталират вреден софтуер. Бисквитките могат да бъдат изискани и достъпени само от уебсайта, от който са издадени.\"},\"partners\":{\"title\":\"На кого споделяме вашите лични данни?\",\"text\":\"Не споделяме или продаваме личната Ви информация на трети лица или несвързани компании. Въпреки това уебсайтът функционира, използвайки определени услуги на други компании. Споделянето на личната Ви информация се осъществява когато Вие предоставите Вашето разрешение.\"},\"preferences\":{\"title\":\"Управление на услуги\",\"text\":\"Даваме възможност на потребителите да променят предпочитанията си за нашите услуги.<0 />Кликнете на бутона, за да промените предпочитанията си:\",\"button\":\"Управление на услуги\"},\"changes\":{\"title\":\"Промяна в политиката за поверителност\",\"text\":\"Запазваме си правото да извършваме промени по политиката за поверителност. Промените ще бъдат оповестявани на текущата страница. Потребителят следва проактивно да се информира за актуалната политика за поверителност.\"},\"last_updated\":\"Дата на последна промяна: 13.03.2020г.\"}");
+module.exports = JSON.parse("{\"page_title\":\"Политика за поверителност\",\"seo\":{\"title\":\"Политика за поверителност\"},\"policy\":{\"title\":\"Каква е политиката ни относно поверителността?\",\"text\":\"Ние приемаме поверителността на потребителите си изключително сериозно и не споделяме или продаваме личната Ви информация на трети лица или несвързани компании. Ангажираме се да спазваме правото Ви на лично пространство и конфиденциалност. Информация на трети страни може да бъде предоставена само и единствено ако тя е изискана от компетентни органи, по процедурите посочени в нормативната уредба на Република България.\"},\"data\":{\"title\":\"Каква информация събираме от посетителите?\",\"text\":\"За всеки посетител събираме статистическа информация включваща тип на устройството, операционна система, версия и модел на използвания браузър, прекарано време в страниците, местоположение, анонимизиран (непълен) IP адрес и др. Тази информация е анонимизирана и не се обвързва с определен посетител. Не се използват бисквитки и не се съхранява демогафска информация за посетителите от типа на пол, възраст, изповядвана религия, интереси, модели за поведение и др.\"},\"usage\":{\"title\":\"За какви цели използваме информацията?\",\"text\":\"Събираната от нас информация се използва за подобряване на предоставените услуги, статистически отчети и обратна връзка.\"},\"cookies\":{\"title\":\"Бисквитки\",\"text\":\"Използваме бисквитки (\\\"Cookies\\\"), за да анализираме потребителското поведение и да подобрим предлаганите функционалности. Бисквитките съдържат малко количество информация, записано в регистрите на Вашия уеб браузър, и по никакъв начин не могат да навредят на работата на системата Ви или да инсталират вреден софтуер. Бисквитките могат да бъдат изискани и достъпени само от уебсайта, от който са издадени.\"},\"partners\":{\"title\":\"На кого споделяме вашите лични данни?\",\"text\":\"Не споделяме или продаваме личната Ви информация на трети лица или несвързани компании. Въпреки това уебсайтът функционира, използвайки определени услуги на други компании. Споделянето на личната Ви информация се осъществява когато Вие предоставите Вашето разрешение.\"},\"preferences\":{\"title\":\"Управление на услуги\",\"text\":\"Даваме възможност на потребителите да променят предпочитанията си за нашите услуги.<0 />Кликнете на бутона, за да промените предпочитанията си:\",\"button\":\"Управление на услуги\"},\"changes\":{\"title\":\"Промяна в политиката за поверителност\",\"text\":\"Запазваме си правото да извършваме промени по политиката за поверителност. Промените ще бъдат оповестявани на текущата страница. Потребителят следва проактивно да се информира за актуалната политика за поверителност.\"},\"last_updated\":\"Дата на последна промяна: 13.05.2020г.\"}");
 
 /***/ }),
 
@@ -3261,18 +3199,6 @@ var _interopRequireWildcard=__webpack_require__(/*! @babel/runtime/helpers/inter
 
 "use strict";
 var _interopRequireDefault=__webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");Object.defineProperty(exports,"__esModule",{value:!0}),exports["default"]=Link;var _react=_interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js")),_extends2=_interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js")),_objectWithoutProperties2=_interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js")),_link=_interopRequireDefault(__webpack_require__(/*! next/link */ "./node_modules/next/link.js")),_useTranslation=_interopRequireDefault(__webpack_require__(/*! ./useTranslation */ "./node_modules/next-translate/useTranslation.js")),_fixAs=_interopRequireDefault(__webpack_require__(/*! ./_helpers/fixAs */ "./node_modules/next-translate/_helpers/fixAs.js")),_fixHref=_interopRequireDefault(__webpack_require__(/*! ./_helpers/fixHref */ "./node_modules/next-translate/_helpers/fixHref.js")),__jsx=_react["default"].createElement;function Link(a){var b=a.children,c=a.href,d=a.as,e=a.lang,f=a.noLang,g=(0,_objectWithoutProperties2["default"])(a,["children","href","as","lang","noLang"]),h=(0,_useTranslation["default"])(),i=e||h.lang;return __jsx(_link["default"],(0,_extends2["default"])({href:f?c:(0,_fixHref["default"])(c,i),as:f?d:(0,_fixAs["default"])(d,c,i)},g),b)}
-
-/***/ }),
-
-/***/ "./node_modules/next-translate/Trans.js":
-/*!**********************************************!*\
-  !*** ./node_modules/next-translate/Trans.js ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-var _interopRequireDefault=__webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js"),_interopRequireWildcard=__webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");Object.defineProperty(exports,"__esModule",{value:!0}),exports["default"]=Trans;var _react=_interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js")),_slicedToArray2=_interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js")),_useTranslation2=_interopRequireDefault(__webpack_require__(/*! ./useTranslation */ "./node_modules/next-translate/useTranslation.js")),__jsx=_react["default"].createElement;function _createForOfIteratorHelper(a){if("undefined"==typeof Symbol||null==a[Symbol.iterator]){if(Array.isArray(a)||(a=_unsupportedIterableToArray(a))){var b=0,c=function(){};return{s:c,n:function n(){return b>=a.length?{done:!0}:{done:!1,value:a[b++]}},e:function e(a){throw a},f:c}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var d,e,f=!0,g=!1;return{s:function s(){d=a[Symbol.iterator]()},n:function n(){var a=d.next();return f=a.done,a},e:function e(a){g=!0,e=a},f:function f(){try{f||null==d["return"]||d["return"]()}finally{if(g)throw e}}}}function _unsupportedIterableToArray(a,b){if(a){if("string"==typeof a)return _arrayLikeToArray(a,b);var c=Object.prototype.toString.call(a).slice(8,-1);return"Object"===c&&a.constructor&&(c=a.constructor.name),"Map"===c||"Set"===c?Array.from(c):"Arguments"===c||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(c)?_arrayLikeToArray(a,b):void 0}}function _arrayLikeToArray(a,b){(null==b||b>a.length)&&(b=a.length);for(var c=0,d=Array(b);c<b;c++)d[c]=a[c];return d}var tagRe=/<(\d+)>(.*?)<\/\1>|<(\d+)\/>/,nlRe=/(?:\r\n|\r|\n)/g;function getElements(a){if(!a.length)return[];var b=a.slice(0,4),c=(0,_slicedToArray2["default"])(b,4),d=c[0],e=c[1],f=c[2],g=c[3];return[[parseInt(d||f),e||"",g]].concat(getElements(a.slice(4,a.length)))}function formatElements(a){var b=1<arguments.length&&arguments[1]!==void 0?arguments[1]:[],c=a.replace(nlRe,"").split(tagRe);if(1===c.length)return a;var d=[],e=c.shift();e&&d.push(e);var f,g=_createForOfIteratorHelper(getElements(c));try{for(g.s();!(f=g.n()).done;){var h=(0,_slicedToArray2["default"])(f.value,3),i=h[0],j=h[1],k=h[2],l=b[i]||__jsx(_react.Fragment,null);d.push((0,_react.cloneElement)(l,{key:i},j?formatElements(j,b):l.props.children)),k&&d.push(k)}}catch(a){g.e(a)}finally{g.f()}return d}function Trans(a){var b=a.i18nKey,c=a.values,d=a.components,e=(0,_useTranslation2["default"])(),f=e.t,g=(0,_react.useMemo)(function(){var a=f(b,c);return d&&0!==d.length?formatElements(a,d):a},[b,c,d]);return g}
 
 /***/ }),
 
@@ -21868,11 +21794,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
 /* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next-translate/useTranslation */ "./node_modules/next-translate/useTranslation.js");
 /* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var next_translate_Trans__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next-translate/Trans */ "./node_modules/next-translate/Trans.js");
-/* harmony import */ var next_translate_Trans__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_translate_Trans__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_BaseLayout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/BaseLayout */ "./components/BaseLayout.js");
-/* harmony import */ var _components_CollapsibleCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/CollapsibleCard */ "./components/CollapsibleCard.js");
-/* harmony import */ var _components_ExternalLink__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ExternalLink */ "./components/ExternalLink.js");
+/* harmony import */ var _components_BaseLayout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/BaseLayout */ "./components/BaseLayout.js");
+/* harmony import */ var _components_CollapsibleCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/CollapsibleCard */ "./components/CollapsibleCard.js");
 var _this = undefined,
     _jsxFileName = "/Users/Veselin/Work/virus-tracker/pages_/privacy.js";
 
@@ -21884,17 +21807,15 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-
-
 var Privacy = function Privacy() {
   var _useTranslation = next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_3___default()(),
       t = _useTranslation.t;
 
-  return __jsx(_components_BaseLayout__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  return __jsx(_components_BaseLayout__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 16,
       columnNumber: 5
     }
   }, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_1__["NextSeo"], {
@@ -21902,7 +21823,7 @@ var Privacy = function Privacy() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 17,
       columnNumber: 7
     }
   }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Container"], {
@@ -21910,7 +21831,7 @@ var Privacy = function Privacy() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 18,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -21918,7 +21839,7 @@ var Privacy = function Privacy() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 19,
       columnNumber: 9
     }
   }, __jsx("h1", {
@@ -21926,7 +21847,7 @@ var Privacy = function Privacy() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 20,
       columnNumber: 11
     }
   }, t('privacy:page_title'))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], {
@@ -21934,14 +21855,14 @@ var Privacy = function Privacy() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 22,
       columnNumber: 9
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 23,
       columnNumber: 11
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Accordion"], {
@@ -21949,126 +21870,43 @@ var Privacy = function Privacy() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 24,
       columnNumber: 13
     }
-  }, __jsx(_components_CollapsibleCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, __jsx(_components_CollapsibleCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
     anchor: "policy",
     title: t('privacy:policy.title'),
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 15
+    }
+  }, t('privacy:policy.text')), __jsx(_components_CollapsibleCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    anchor: "data",
+    title: t('privacy:data.title'),
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28,
       columnNumber: 15
     }
-  }, t('privacy:policy.text')), __jsx(_components_CollapsibleCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    anchor: "data",
-    title: t('privacy:data.title'),
+  }, t('privacy:data.text')), __jsx(_components_CollapsibleCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    anchor: "usage",
+    title: t('privacy:usage.title'),
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31,
       columnNumber: 15
     }
-  }, t('privacy:data.text')), __jsx(_components_CollapsibleCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    anchor: "usage",
-    title: t('privacy:usage.title'),
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34,
-      columnNumber: 15
-    }
-  }, t('privacy:usage.text')), __jsx(_components_CollapsibleCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    anchor: "cookies",
-    title: t('privacy:cookies.title'),
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37,
-      columnNumber: 15
-    }
-  }, t('privacy:cookies.text')), __jsx(_components_CollapsibleCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    anchor: "partners",
-    title: t('privacy:partners.title'),
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40,
-      columnNumber: 15
-    }
-  }, t('privacy:partners.text'), __jsx("ul", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42,
-      columnNumber: 17
-    }
-  }, __jsx("li", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43,
-      columnNumber: 19
-    }
-  }, "Google Ireland Ltd. - Google Analytics, Google Tag Manager -", __jsx(_components_ExternalLink__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    href: "https://safety.google/privacy/",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45,
-      columnNumber: 21
-    }
-  }, "https://safety.google/privacy/")))), __jsx(_components_CollapsibleCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    anchor: "preferences",
-    title: t('privacy:preferences.title'),
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 51,
-      columnNumber: 15
-    }
-  }, __jsx("div", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52,
-      columnNumber: 17
-    }
-  }, __jsx(next_translate_Trans__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    i18nKey: "privacy:preferences.text",
-    components: [__jsx("br", {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 55,
-        columnNumber: 34
-      }
-    })],
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 53,
-      columnNumber: 19
-    }
-  })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Button"], {
-    className: "mt-2",
-    onClick: function onClick() {
-      return window.tarteaucitron.userInterface.openPanel();
-    },
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 58,
-      columnNumber: 17
-    }
-  }, t('privacy:preferences.button'))), __jsx(_components_CollapsibleCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, t('privacy:usage.text')), __jsx(_components_CollapsibleCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
     anchor: "changes",
     title: t('privacy:changes.title'),
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 34,
       columnNumber: 15
     }
   }, t('privacy:changes.text'))), __jsx("div", {
@@ -22076,14 +21914,14 @@ var Privacy = function Privacy() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 38,
       columnNumber: 13
     }
   }, __jsx("small", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 38,
       columnNumber: 35
     }
   }, t('privacy:last_updated')))))));
@@ -22093,7 +21931,7 @@ var Privacy = function Privacy() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 2:
 /*!**************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fprivacy&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Fprivacy.js ***!
   \**************************************************************************************************************************************/
@@ -22116,5 +21954,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=privacy.js.map
