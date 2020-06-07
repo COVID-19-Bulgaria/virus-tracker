@@ -8,9 +8,11 @@
         "infected": "Infected",
         "cured": "Cured",
         "fatal": "Fatal",
+        "active": "Active cases",
         "hospitalized": "Hospitalized",
         "intensive_care": "Intensive care",
         "medical_staff": "Infected medical staff",
+        "pcr_tests": "PCR tests",
         "new_cases_today": "{{count}} new cases have been announced today.",
         "new_cases_today_0": "No new cases have been announced today.",
         "new_cases_today_1": "A single new case has been announced today.",
@@ -38,6 +40,11 @@
             "infected": "Infected {{percentage}}%",
             "cured": "Cured {{percentage}}%",
             "fatal": "Fatal {{percentage}}%"
+        },
+        "active_cases_linechart": {
+            "title": "Active cases",
+            "xtitle": "Date",
+            "ytitle": "Cases"
         }
     },
     "last_updated": "Last updated:"

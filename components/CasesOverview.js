@@ -14,19 +14,21 @@ const CasesOverview = (props) => {
   const currentDate = moment(totalsData.timestamp, 'YYYY-MM-DD HH:mm:ss ZZ').format('YYYY-MM-DD');
   const yesterdayDate = moment(totalsData.timestamp, 'YYYY-MM-DD HH:mm:ss ZZ').subtract(1, 'days').format('YYYY-MM-DD');
 
-  const infectedToday = dateDiffCasesData['infected'][currentDate].cases;
-  const curedToday = dateDiffCasesData['cured'][currentDate].cases;
-  const fatalToday = dateDiffCasesData['fatal'][currentDate].cases;
-  const hospitalizedToday = dateDiffCasesData['hospitalized'][currentDate].cases;
-  const intensiveCareToday = dateDiffCasesData['intensive_care'][currentDate].cases;
-  const medicalStaffToday = dateDiffCasesData['medical_staff'][currentDate].cases;
+  const infectedToday = dateDiffCasesData.infected[currentDate].cases;
+  const curedToday = dateDiffCasesData.cured[currentDate].cases;
+  const fatalToday = dateDiffCasesData.fatal[currentDate].cases;
+  const hospitalizedToday = dateDiffCasesData.hospitalized[currentDate].cases;
+  const intensiveCareToday = dateDiffCasesData.intensive_care[currentDate].cases;
+  const medicalStaffToday = dateDiffCasesData.medical_staff[currentDate].cases;
+  const pcrTestsToday = dateDiffCasesData.pcr_tests[currentDate].cases;
 
-  const infectedYesterday = dateDiffCasesData['infected'][yesterdayDate].cases;
-  const curedYesterday = dateDiffCasesData['cured'][yesterdayDate].cases;
-  const fatalYesterday = dateDiffCasesData['fatal'][yesterdayDate].cases;
-  const hospitalizedYesterday = dateDiffCasesData['hospitalized'][yesterdayDate].cases;
-  const intensiveCareYesterday = dateDiffCasesData['intensive_care'][yesterdayDate].cases;
-  const medicalStaffYesterday = dateDiffCasesData['medical_staff'][yesterdayDate].cases;
+  const infectedYesterday = dateDiffCasesData.infected[yesterdayDate].cases;
+  const curedYesterday = dateDiffCasesData.cured[yesterdayDate].cases;
+  const fatalYesterday = dateDiffCasesData.fatal[yesterdayDate].cases;
+  const hospitalizedYesterday = dateDiffCasesData.hospitalized[yesterdayDate].cases;
+  const intensiveCareYesterday = dateDiffCasesData.intensive_care[yesterdayDate].cases;
+  const medicalStaffYesterday = dateDiffCasesData.medical_staff[yesterdayDate].cases;
+  const pcrTestsYesterday = dateDiffCasesData.pcr_tests[yesterdayDate].cases;
 
   const calculateDiff = (casesToday, casesYesterday) => (casesYesterday < 0 ? casesToday : casesToday - casesYesterday);
 
@@ -67,7 +69,7 @@ const CasesOverview = (props) => {
         </Col>
       </Row>
       <Row>
-        <Col md={4} className="mb-4">
+        <Col md={3} className="mb-4">
           <OverviewCard
             title={t('home:charts.medical_staff')}
             value={totalsData.medical_staff}
@@ -78,7 +80,7 @@ const CasesOverview = (props) => {
           />
         </Col>
 
-        <Col md={4} className="mb-4">
+        <Col md={3} className="mb-4">
           <OverviewCard
             title={t('home:charts.hospitalized')}
             value={totalsData.hospitalized}
@@ -89,13 +91,24 @@ const CasesOverview = (props) => {
           />
         </Col>
 
-        <Col md={4} className="mb-4">
+        <Col md={3} className="mb-4">
           <OverviewCard
             title={t('home:charts.intensive_care')}
             value={totalsData.intensive_care}
             today={intensiveCareToday}
             diff={calculateDiff(intensiveCareToday, intensiveCareYesterday)}
             icon="fa-procedures"
+            variant="primary"
+          />
+        </Col>
+
+        <Col md={3} className="mb-4">
+          <OverviewCard
+            title={t('home:charts.pcr_tests')}
+            value={totalsData.pcr_tests}
+            today={pcrTestsToday}
+            diff={calculateDiff(pcrTestsToday, pcrTestsYesterday)}
+            icon="fa-vials"
             variant="primary"
           />
         </Col>
@@ -112,6 +125,7 @@ CasesOverview.propTypes = {
     hospitalized: PropTypes.number,
     intensive_care: PropTypes.number,
     medical_staff: PropTypes.number,
+    pcr_tests: PropTypes.number,
     timestamp: PropTypes.string,
   }).isRequired,
   dateDiffCasesData: PropTypes.shape({
@@ -121,6 +135,7 @@ CasesOverview.propTypes = {
     hospitalized: PropTypes.object,
     intensive_care: PropTypes.object,
     medical_staff: PropTypes.object,
+    pcr_tests: PropTypes.object,
   }).isRequired,
 };
 

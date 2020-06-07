@@ -8,9 +8,11 @@
         "infected": "Заразени",
         "cured": "Излекувани",
         "fatal": "Жертви",
+        "active": "Активни случаи",
         "hospitalized": "Хоспитализирани",
         "intensive_care": "Интензивни грижи",
         "medical_staff": "Заразен медицински персонал",
+        "pcr_tests": "Направени PCR тестове",
         "new_cases_today": "Днес са съобщени {{count}} нови случая.",
         "new_cases_today_0": "Днес не са съобщени нови случаи.",
         "new_cases_today_1": "Днес е съобщен 1 нов случай.",
@@ -38,6 +40,11 @@
             "infected": "Заразени {{percentage}}%",
             "cured": "Излекувани {{percentage}}%",
             "fatal": "Жертви {{percentage}}%"
+        },
+        "active_cases_linechart": {
+            "title": "Активни случаи",
+            "xtitle": "Дата",
+            "ytitle": "Брой засегнати"
         }
     },
     "last_updated": "Последна актуализация:"

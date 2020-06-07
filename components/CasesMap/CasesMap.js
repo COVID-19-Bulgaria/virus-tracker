@@ -4,15 +4,11 @@ import MapMarker from './MapMarker';
 import MapCustomizations from './MapCustomizations.json';
 
 const CasesMap = ({ data, ...rest }) => {
-  const tooltipText = (location, infected, cured, fatal) => (
+  const tooltipText = (location, infected) => (
     <>
       <strong>{location}</strong>
       <br />
       {`Заразени: ${infected}`}
-      <br />
-      {`Излекувани: ${cured}`}
-      <br />
-      {`Жертви: ${fatal}`}
       <br />
     </>
   );
@@ -23,8 +19,6 @@ const CasesMap = ({ data, ...rest }) => {
         Object.entries(data).map(([location, {
           coordinates,
           infected,
-          cured,
-          fatal,
         }]) => {
           let circleProps = {};
 
@@ -36,7 +30,7 @@ const CasesMap = ({ data, ...rest }) => {
             <MapMarker
               key={location}
               coordinates={coordinates}
-              tooltip={tooltipText(location, infected, cured, fatal)}
+              tooltip={tooltipText(location, infected)}
               circleProps={circleProps}
             />
           );
