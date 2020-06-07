@@ -16,8 +16,8 @@ import BaseLayout from '../components/BaseLayout';
 import CasesOverview from '../components/CasesOverview';
 import CasesLineChart from '../components/CasesLineChart';
 import CasesBarChart from '../components/CasesBarChart';
-import CasesGenderPieChart from '../components/CasesGenderPieChart';
 import CasesPieChart from '../components/CasesPieChart';
+import ActiveCasesLineChart from '../components/ActiveCasesLineChart';
 
 const Index = () => {
   const { t } = useTranslation();
@@ -25,6 +25,7 @@ const Index = () => {
   const [totalsData, setTotalsData] = useState({});
   const [dateCasesData, setDateCasesData] = useState({});
   const [dateDiffCasesData, setDateDiffCasesData] = useState({});
+  const [dateActiveCasesData, setDateActiveCasesData] = useState({});
 
   const prepareChartData = (dataset) => {
     if (dataset == null) return [];
@@ -43,6 +44,9 @@ const Index = () => {
 
         const dateDiffCasesDataset = await fetch('https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DateDiffCasesDataset.json');
         setDateDiffCasesData(await dateDiffCasesDataset.json());
+
+        const dateActiveCasesDataset = await fetch('https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DateActiveCasesDataset.json');
+        setDateActiveCasesData(await dateActiveCasesDataset.json());
 
         setIsLoading(false);
       } catch (error) {
@@ -64,6 +68,8 @@ const Index = () => {
     { name: t('home:charts.cured'), data: prepareChartData(dateDiffCasesData.cured) },
     { name: t('home:charts.fatal'), data: prepareChartData(dateDiffCasesData.fatal) },
   ];
+
+  const activeCasesLineChartData = prepareChartData(dateActiveCasesData.active);
 
   return (
     <BaseLayout>
@@ -124,10 +130,10 @@ const Index = () => {
                 <Col md={6}>
                   <Card className="shadow mb-4">
                     <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
-                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.cases_gender_piechart.title')}</h6>
+                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.active_cases_linechart.title')}</h6>
                     </Card.Header>
                     <Card.Body>
-                      <CasesGenderPieChart infected={totalsData.infected} men={totalsData.men} women={totalsData.women} />
+                      <ActiveCasesLineChart data={activeCasesLineChartData} />
                     </Card.Body>
                   </Card>
                 </Col>
