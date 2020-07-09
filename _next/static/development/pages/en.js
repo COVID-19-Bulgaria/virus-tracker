@@ -573,6 +573,7 @@ var CasesOverview = function CasesOverview(props) {
     value: totalsData.pcr_tests,
     today: pcrTestsToday,
     diff: calculateDiff(pcrTestsToday, pcrTestsYesterday),
+    diffTranslationPrefix: "pcr_tests_diff",
     icon: "fa-vials",
     variant: "primary",
     __self: _this,
@@ -1278,7 +1279,8 @@ var OverviewCard = function OverviewCard(props) {
       today = props.today,
       diff = props.diff,
       icon = props.icon,
-      variant = props.variant;
+      variant = props.variant,
+      diffTranslationPrefix = props.diffTranslationPrefix;
 
   var _useTranslation = next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_3___default()(),
       t = _useTranslation.t;
@@ -1289,14 +1291,14 @@ var OverviewCard = function OverviewCard(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 27,
       columnNumber: 5
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Card"].Body, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 28,
       columnNumber: 7
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], {
@@ -1305,7 +1307,7 @@ var OverviewCard = function OverviewCard(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 29,
       columnNumber: 9
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
@@ -1313,7 +1315,7 @@ var OverviewCard = function OverviewCard(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 30,
       columnNumber: 11
     }
   }, __jsx("div", {
@@ -1321,7 +1323,7 @@ var OverviewCard = function OverviewCard(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 31,
       columnNumber: 13
     }
   }, title), __jsx("div", {
@@ -1329,7 +1331,7 @@ var OverviewCard = function OverviewCard(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 34,
       columnNumber: 13
     }
   }, value, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["OverlayTrigger"], {
@@ -1337,33 +1339,33 @@ var OverviewCard = function OverviewCard(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36,
+        lineNumber: 37,
         columnNumber: 17
       }
     }, __jsx("small", {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37,
+        lineNumber: 38,
         columnNumber: 19
       }
-    }, today >= 0 && t('home:charts.new_cases_today', {
+    }, today >= 0 && t("home:charts.".concat(diffTranslationPrefix ? "".concat(diffTranslationPrefix, ".") : '', "new_cases_today"), {
       count: today
-    }), "\xA0", t('home:charts.diff_cases', {
+    }), "\xA0", t("home:charts.".concat(diffTranslationPrefix ? "".concat(diffTranslationPrefix, ".") : '', "diff_cases"), {
       count: Math.abs(today >= 0 ? diff : today),
       diffType: diffType
     }))),
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35,
+      lineNumber: 36,
       columnNumber: 15
     }
   }, __jsx("sup", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 46,
       columnNumber: 17
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Badge"], {
@@ -1371,7 +1373,7 @@ var OverviewCard = function OverviewCard(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 47,
       columnNumber: 19
     }
   }, diff > 0 && today >= 0 ? __jsx("i", {
@@ -1379,7 +1381,7 @@ var OverviewCard = function OverviewCard(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 50,
       columnNumber: 27
     }
   }) : __jsx("i", {
@@ -1387,7 +1389,7 @@ var OverviewCard = function OverviewCard(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 51,
       columnNumber: 27
     }
   }), "\xA0", today))))), __jsx("div", {
@@ -1395,7 +1397,7 @@ var OverviewCard = function OverviewCard(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 60,
       columnNumber: 11
     }
   }, __jsx("i", {
@@ -1403,7 +1405,7 @@ var OverviewCard = function OverviewCard(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 61,
       columnNumber: 13
     }
   })))));
@@ -1415,9 +1417,79 @@ OverviewCard.propTypes = {
   today: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number.isRequired,
   diff: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number.isRequired,
   icon: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
-  variant: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired
+  variant: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
+  diffTranslationPrefix: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+};
+OverviewCard.defaultProps = {
+  diffTranslationPrefix: ''
 };
 /* harmony default export */ __webpack_exports__["default"] = (OverviewCard);
+
+/***/ }),
+
+/***/ "./components/PositiveTestsPercentageChart.js":
+/*!****************************************************!*\
+  !*** ./components/PositiveTestsPercentageChart.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_chartkick__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-chartkick */ "./node_modules/react-chartkick/dist/react-chartkick.esm.js");
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! chart.js */ "./node_modules/chart.js/dist/Chart.js");
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next-translate/useTranslation */ "./node_modules/next-translate/useTranslation.js");
+/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+var _this = undefined,
+    _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/PositiveTestsPercentageChart.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
+
+
+
+
+
+var PositiveTestsPercentageChart = function PositiveTestsPercentageChart(props) {
+  var data = props.data,
+      rest = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["data"]);
+
+  var _useTranslation = next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_6___default()(),
+      t = _useTranslation.t;
+
+  return __jsx(react_chartkick__WEBPACK_IMPORTED_MODULE_4__["ColumnChart"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    data: data,
+    xtitle: t('home:charts.positive_tests_percentage_barchart.xtitle'),
+    ytitle: t('home:charts.positive_tests_percentage_barchart.ytitle'),
+    colors: ['#4e73df'],
+    download: {
+      background: '#ffffff',
+      filename: 'COVID-19-PositiveTestsPercentageChart'
+    }
+  }, rest, {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 5
+    }
+  }));
+};
+
+PositiveTestsPercentageChart.propTypes = {
+  data: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.array.isRequired
+};
+/* harmony default export */ __webpack_exports__["default"] = (PositiveTestsPercentageChart);
 
 /***/ }),
 
@@ -1439,7 +1511,7 @@ module.exports = JSON.parse("{\"navigation\":{\"home\":\"Home\",\"map\":\"Spread
 /*! exports provided: page_title, seo, charts, last_updated, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"page_title\":\"Home\",\"seo\":{\"title\":\"Information website about the coronavirus in Bulgaria\",\"description\":\"Up-to-date information and charts for the spread of coronavirus in Bulgaria\"},\"charts\":{\"infected\":\"Infected\",\"cured\":\"Cured\",\"fatal\":\"Fatal\",\"active\":\"Active cases\",\"hospitalized\":\"Hospitalized\",\"intensive_care\":\"Intensive care\",\"medical_staff\":\"Infected medical staff\",\"pcr_tests\":\"PCR tests\",\"new_cases_today\":\"{{count}} new cases have been announced today.\",\"new_cases_today_0\":\"No new cases have been announced today.\",\"new_cases_today_1\":\"A single new case has been announced today.\",\"diff_cases\":\"The number of new cases is {{count}} {{diffType}} than yesterday.\",\"diff_cases_0\":\"The number of new cases is the same as yesterday.\",\"higher\":\"more\",\"lower\":\"less\",\"cases_linechart\":{\"title\":\"Disease timeline\",\"xtitle\":\"Date\",\"ytitle\":\"Cases\"},\"cases_barchart\":{\"title\":\"Daily statistics\",\"xtitle\":\"Date\",\"ytitle\":\"Cases\"},\"cases_gender_piechart\":{\"title\":\"Cases by gender\",\"male\":\"Male {{percentage}}%\",\"female\":\"Female {{percentage}}%\"},\"cases_piechart\":{\"title\":\"Cases ratio\",\"infected\":\"Infected {{percentage}}%\",\"cured\":\"Cured {{percentage}}%\",\"fatal\":\"Fatal {{percentage}}%\"},\"active_cases_linechart\":{\"title\":\"Active cases\",\"xtitle\":\"Date\",\"ytitle\":\"Cases\"}},\"last_updated\":\"Last updated:\"}");
+module.exports = JSON.parse("{\"page_title\":\"Home\",\"seo\":{\"title\":\"Information website about the coronavirus in Bulgaria\",\"description\":\"Up-to-date information and charts for the spread of coronavirus in Bulgaria\"},\"charts\":{\"infected\":\"Infected\",\"cured\":\"Cured\",\"fatal\":\"Fatal\",\"active\":\"Active cases\",\"hospitalized\":\"Hospitalized\",\"intensive_care\":\"Intensive care\",\"medical_staff\":\"Infected medical staff\",\"pcr_tests\":\"PCR tests\",\"new_cases_today\":\"{{count}} new cases have been announced today.\",\"new_cases_today_0\":\"No new cases have been announced today.\",\"new_cases_today_1\":\"A single new case has been announced today.\",\"diff_cases\":\"The number of new cases is {{count}} {{diffType}} than yesterday.\",\"diff_cases_0\":\"The number of new cases is the same as yesterday.\",\"higher\":\"more\",\"lower\":\"less\",\"pcr_tests_diff\":{\"new_cases_today\":\"During the last 24 hours {{count}} tests have been performed.\",\"new_cases_today_0\":\"No tests have been performed for the last 24 hours.\",\"new_cases_today_1\":\"During the last 24 hours a single test has been performed.\",\"diff_cases\":\"The number of performed tests is {{count}} {{diffType}} than yesterday.\",\"diff_cases_0\":\"The number of performed tests is the same as yesterday.\"},\"cases_linechart\":{\"title\":\"Disease timeline\",\"xtitle\":\"Date\",\"ytitle\":\"Cases\"},\"cases_barchart\":{\"title\":\"Daily statistics\",\"xtitle\":\"Date\",\"ytitle\":\"Cases\"},\"cases_gender_piechart\":{\"title\":\"Cases by gender\",\"male\":\"Male {{percentage}}%\",\"female\":\"Female {{percentage}}%\"},\"cases_piechart\":{\"title\":\"Cases ratio\",\"infected\":\"Infected {{percentage}}%\",\"cured\":\"Cured {{percentage}}%\",\"fatal\":\"Fatal {{percentage}}%\"},\"active_cases_linechart\":{\"title\":\"Active cases\",\"xtitle\":\"Date\",\"ytitle\":\"Cases\"},\"positive_tests_percentage_barchart\":{\"title\":\"Positive tests\",\"xtitle\":\"Date\",\"ytitle\":\"Percentage\"}},\"last_updated\":\"Last updated:\"}");
 
 /***/ }),
 
@@ -57942,6 +58014,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_CasesBarChart__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/CasesBarChart */ "./components/CasesBarChart.js");
 /* harmony import */ var _components_CasesPieChart__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/CasesPieChart */ "./components/CasesPieChart.js");
 /* harmony import */ var _components_ActiveCasesLineChart__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/ActiveCasesLineChart */ "./components/ActiveCasesLineChart.js");
+/* harmony import */ var _components_PositiveTestsPercentageChart__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/PositiveTestsPercentageChart */ "./components/PositiveTestsPercentageChart.js");
 
 
 var _this = undefined,
@@ -57951,6 +58024,7 @@ var _this = undefined,
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 /* eslint-disable react/jsx-wrap-multilines */
+
 
 
 
@@ -57988,16 +58062,20 @@ var Index = function Index() {
       dateActiveCasesData = _useState5[0],
       setDateActiveCasesData = _useState5[1];
 
-  var prepareChartData = function prepareChartData(dataset) {
+  var _useState6 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])({}),
+      datePositiveTestsPercentageData = _useState6[0],
+      setDatePositiveTestsPercentageData = _useState6[1];
+
+  var prepareChartData = function prepareChartData(dataset, dataAttribute) {
     if (dataset == null) return [];
     return Object.fromEntries(Object.entries(dataset).map(function (entry) {
-      return [entry[0], entry[1].cases];
+      return [entry[0], entry[1][dataAttribute]];
     }));
   };
 
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
     var fetchData = function fetchData() {
-      var totalsDataset, dateCasesDataset, dateDiffCasesDataset, dateActiveCasesDataset;
+      var totalsDataset, dateCasesDataset, dateDiffCasesDataset, dateActiveCasesDataset, datePositiveTestsPercentageDataset;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function fetchData$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -58051,50 +58129,63 @@ var Index = function Index() {
             case 31:
               _context.t7 = _context.sent;
               (0, _context.t6)(_context.t7);
+              _context.next = 35;
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()('https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DatePositiveTestsDataset.json'));
+
+            case 35:
+              datePositiveTestsPercentageDataset = _context.sent;
+              _context.t8 = setDatePositiveTestsPercentageData;
+              _context.next = 39;
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(datePositiveTestsPercentageDataset.json());
+
+            case 39:
+              _context.t9 = _context.sent;
+              (0, _context.t8)(_context.t9);
               setIsLoading(false);
-              _context.next = 38;
+              _context.next = 46;
               break;
 
-            case 36:
-              _context.prev = 36;
-              _context.t8 = _context["catch"](0);
+            case 44:
+              _context.prev = 44;
+              _context.t10 = _context["catch"](0);
 
-            case 38:
+            case 46:
             case "end":
               return _context.stop();
           }
         }
-      }, null, null, [[0, 36]], Promise);
+      }, null, null, [[0, 44]], Promise);
     };
 
     fetchData();
   }, []);
   var lineChartData = [{
     name: t('home:charts.infected'),
-    data: prepareChartData(dateCasesData.infected)
+    data: prepareChartData(dateCasesData.infected, 'cases')
   }, {
     name: t('home:charts.cured'),
-    data: prepareChartData(dateCasesData.cured)
+    data: prepareChartData(dateCasesData.cured, 'cases')
   }, {
     name: t('home:charts.fatal'),
-    data: prepareChartData(dateCasesData.fatal)
+    data: prepareChartData(dateCasesData.fatal, 'cases')
   }];
   var barChartData = [{
     name: t('home:charts.infected'),
-    data: prepareChartData(dateDiffCasesData.infected)
+    data: prepareChartData(dateDiffCasesData.infected, 'cases')
   }, {
     name: t('home:charts.cured'),
-    data: prepareChartData(dateDiffCasesData.cured)
+    data: prepareChartData(dateDiffCasesData.cured, 'cases')
   }, {
     name: t('home:charts.fatal'),
-    data: prepareChartData(dateDiffCasesData.fatal)
+    data: prepareChartData(dateDiffCasesData.fatal, 'cases')
   }];
-  var activeCasesLineChartData = prepareChartData(dateActiveCasesData.active);
+  var activeCasesLineChartData = prepareChartData(dateActiveCasesData.active, 'cases');
+  var positiveTestsPercentageBarChartData = prepareChartData(datePositiveTestsPercentageData, 'percentage');
   return __jsx(_components_BaseLayout__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
+      lineNumber: 81,
       columnNumber: 5
     }
   }, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_2__["NextSeo"], {
@@ -58111,7 +58202,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 82,
       columnNumber: 7
     }
   }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Container"], {
@@ -58119,7 +58210,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90,
+      lineNumber: 96,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -58127,7 +58218,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91,
+      lineNumber: 97,
       columnNumber: 9
     }
   }, __jsx("h1", {
@@ -58135,7 +58226,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92,
+      lineNumber: 98,
       columnNumber: 11
     }
   }, t('home:page_title'))), isLoading ? __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Spinner"], {
@@ -58144,7 +58235,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94,
+      lineNumber: 100,
       columnNumber: 22
     }
   }) : __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Badge"], {
@@ -58152,7 +58243,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97,
+      lineNumber: 103,
       columnNumber: 15
     }
   }, t('home:last_updated'), "\xA0", __jsx(react_moment__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -58161,7 +58252,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99,
+      lineNumber: 105,
       columnNumber: 17
     }
   }, totalsData.timestamp)), __jsx(_components_CasesOverview__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -58170,14 +58261,14 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103,
+      lineNumber: 109,
       columnNumber: 15
     }
   }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107,
+      lineNumber: 113,
       columnNumber: 15
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
@@ -58185,7 +58276,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108,
+      lineNumber: 114,
       columnNumber: 17
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"], {
@@ -58193,7 +58284,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109,
+      lineNumber: 115,
       columnNumber: 19
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Header, {
@@ -58201,7 +58292,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110,
+      lineNumber: 116,
       columnNumber: 21
     }
   }, __jsx("h6", {
@@ -58209,14 +58300,14 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111,
+      lineNumber: 117,
       columnNumber: 23
     }
   }, t('home:charts.cases_linechart.title'))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Body, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113,
+      lineNumber: 119,
       columnNumber: 21
     }
   }, __jsx(_components_CasesLineChart__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -58224,7 +58315,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114,
+      lineNumber: 120,
       columnNumber: 23
     }
   })))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
@@ -58232,7 +58323,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118,
+      lineNumber: 124,
       columnNumber: 17
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"], {
@@ -58240,7 +58331,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119,
+      lineNumber: 125,
       columnNumber: 19
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Header, {
@@ -58248,7 +58339,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120,
+      lineNumber: 126,
       columnNumber: 21
     }
   }, __jsx("h6", {
@@ -58256,14 +58347,14 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121,
+      lineNumber: 127,
       columnNumber: 23
     }
   }, t('home:charts.cases_barchart.title'))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Body, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123,
+      lineNumber: 129,
       columnNumber: 21
     }
   }, __jsx(_components_CasesBarChart__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -58271,14 +58362,14 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124,
+      lineNumber: 130,
       columnNumber: 23
     }
   }))))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129,
+      lineNumber: 135,
       columnNumber: 15
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
@@ -58286,7 +58377,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130,
+      lineNumber: 136,
       columnNumber: 17
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"], {
@@ -58294,7 +58385,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131,
+      lineNumber: 137,
       columnNumber: 19
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Header, {
@@ -58302,7 +58393,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132,
+      lineNumber: 138,
       columnNumber: 21
     }
   }, __jsx("h6", {
@@ -58310,14 +58401,14 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133,
+      lineNumber: 139,
       columnNumber: 23
     }
   }, t('home:charts.active_cases_linechart.title'))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Body, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135,
+      lineNumber: 141,
       columnNumber: 21
     }
   }, __jsx(_components_ActiveCasesLineChart__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -58325,7 +58416,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136,
+      lineNumber: 142,
       columnNumber: 23
     }
   })))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
@@ -58333,7 +58424,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140,
+      lineNumber: 146,
       columnNumber: 17
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"], {
@@ -58341,7 +58432,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141,
+      lineNumber: 147,
       columnNumber: 19
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Header, {
@@ -58349,7 +58440,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142,
+      lineNumber: 148,
       columnNumber: 21
     }
   }, __jsx("h6", {
@@ -58357,14 +58448,14 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143,
+      lineNumber: 149,
       columnNumber: 23
     }
   }, t('home:charts.cases_piechart.title'))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Body, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145,
+      lineNumber: 151,
       columnNumber: 21
     }
   }, __jsx(_components_CasesPieChart__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -58374,7 +58465,60 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146,
+      lineNumber: 152,
+      columnNumber: 23
+    }
+  }))))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 157,
+      columnNumber: 15
+    }
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 158,
+      columnNumber: 17
+    }
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"], {
+    className: "shadow mb-4",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 159,
+      columnNumber: 19
+    }
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Header, {
+    className: "py-3 d-flex flex-row align-items-center justify-content-between",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 160,
+      columnNumber: 21
+    }
+  }, __jsx("h6", {
+    className: "m-0 font-weight-bold text-primary",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 161,
+      columnNumber: 23
+    }
+  }, t('home:charts.positive_tests_percentage_barchart.title'))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Body, {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 163,
+      columnNumber: 21
+    }
+  }, __jsx(_components_PositiveTestsPercentageChart__WEBPACK_IMPORTED_MODULE_13__["default"], {
+    data: positiveTestsPercentageBarChartData,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 164,
       columnNumber: 23
     }
   }))))))));
@@ -58384,7 +58528,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fen&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Fen%2Findex.js ***!
   \************************************************************************************************************************************/
@@ -58407,5 +58551,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=en.js.map
