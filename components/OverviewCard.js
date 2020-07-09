@@ -17,6 +17,7 @@ const OverviewCard = (props) => {
     diff,
     icon,
     variant,
+    diffTranslationPrefix,
   } = props;
 
   const { t } = useTranslation();
@@ -35,9 +36,9 @@ const OverviewCard = (props) => {
               <OverlayTrigger overlay={(
                 <Tooltip>
                   <small>
-                    {today >= 0 && t('home:charts.new_cases_today', { count: today })}
+                    {today >= 0 && t(`home:charts.${diffTranslationPrefix ? `${diffTranslationPrefix}.` : ''}new_cases_today`, { count: today })}
                     &nbsp;
-                    {t('home:charts.diff_cases', { count: Math.abs(today >= 0 ? diff : today), diffType })}
+                    {t(`home:charts.${diffTranslationPrefix ? `${diffTranslationPrefix}.` : ''}diff_cases`, { count: Math.abs(today >= 0 ? diff : today), diffType })}
                   </small>
                 </Tooltip>
               )}
@@ -72,6 +73,11 @@ OverviewCard.propTypes = {
   diff: PropTypes.number.isRequired,
   icon: PropTypes.string.isRequired,
   variant: PropTypes.string.isRequired,
+  diffTranslationPrefix: PropTypes.string,
+};
+
+OverviewCard.defaultProps = {
+  diffTranslationPrefix: '',
 };
 
 export default OverviewCard;
