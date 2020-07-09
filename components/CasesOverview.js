@@ -108,6 +108,7 @@ const CasesOverview = (props) => {
             value={totalsData.pcr_tests}
             today={pcrTestsToday}
             diff={calculateDiff(pcrTestsToday, pcrTestsYesterday)}
+            diffTranslationPrefix="pcr_tests_diff"
             icon="fa-vials"
             variant="primary"
           />

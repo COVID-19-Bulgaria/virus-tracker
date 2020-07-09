@@ -18,6 +18,7 @@ import CasesLineChart from '../components/CasesLineChart';
 import CasesBarChart from '../components/CasesBarChart';
 import CasesPieChart from '../components/CasesPieChart';
 import ActiveCasesLineChart from '../components/ActiveCasesLineChart';
+import PositiveTestsPercentageChart from '../components/PositiveTestsPercentageChart';
 
 const Index = () => {
   const { t } = useTranslation();
@@ -26,11 +27,12 @@ const Index = () => {
   const [dateCasesData, setDateCasesData] = useState({});
   const [dateDiffCasesData, setDateDiffCasesData] = useState({});
   const [dateActiveCasesData, setDateActiveCasesData] = useState({});
+  const [datePositiveTestsPercentageData, setDatePositiveTestsPercentageData] = useState({});
 
-  const prepareChartData = (dataset) => {
+  const prepareChartData = (dataset, dataAttribute) => {
     if (dataset == null) return [];
 
-    return Object.fromEntries(Object.entries(dataset).map(entry => [entry[0], entry[1].cases]));
+    return Object.fromEntries(Object.entries(dataset).map(entry => [entry[0], entry[1][dataAttribute]]));
   };
 
   useEffect(() => {
@@ -48,6 +50,9 @@ const Index = () => {
         const dateActiveCasesDataset = await fetch('https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DateActiveCasesDataset.json');
         setDateActiveCasesData(await dateActiveCasesDataset.json());
 
+        const datePositiveTestsPercentageDataset = await fetch('https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DatePositiveTestsDataset.json');
+        setDatePositiveTestsPercentageData(await datePositiveTestsPercentageDataset.json());
+
         setIsLoading(false);
       } catch (error) {
         // Empty
@@ -58,18 +63,19 @@ const Index = () => {
   }, []);
 
   const lineChartData = [
-    { name: t('home:charts.infected'), data: prepareChartData(dateCasesData.infected) },
-    { name: t('home:charts.cured'), data: prepareChartData(dateCasesData.cured) },
-    { name: t('home:charts.fatal'), data: prepareChartData(dateCasesData.fatal) },
+    { name: t('home:charts.infected'), data: prepareChartData(dateCasesData.infected, 'cases') },
+    { name: t('home:charts.cured'), data: prepareChartData(dateCasesData.cured, 'cases') },
+    { name: t('home:charts.fatal'), data: prepareChartData(dateCasesData.fatal, 'cases') },
   ];
 
   const barChartData = [
-    { name: t('home:charts.infected'), data: prepareChartData(dateDiffCasesData.infected) },
-    { name: t('home:charts.cured'), data: prepareChartData(dateDiffCasesData.cured) },
-    { name: t('home:charts.fatal'), data: prepareChartData(dateDiffCasesData.fatal) },
+    { name: t('home:charts.infected'), data: prepareChartData(dateDiffCasesData.infected, 'cases') },
+    { name: t('home:charts.cured'), data: prepareChartData(dateDiffCasesData.cured, 'cases') },
+    { name: t('home:charts.fatal'), data: prepareChartData(dateDiffCasesData.fatal, 'cases') },
   ];
 
-  const activeCasesLineChartData = prepareChartData(dateActiveCasesData.active);
+  const activeCasesLineChartData = prepareChartData(dateActiveCasesData.active, 'cases');
+  const positiveTestsPercentageBarChartData = prepareChartData(datePositiveTestsPercentageData, 'percentage');
 
   return (
     <BaseLayout>
@@ -144,6 +150,18 @@ const Index = () => {
                     </Card.Header>
                     <Card.Body>
                       <CasesPieChart infected={totalsData.infected} cured={totalsData.cured} fatal={totalsData.fatal} />
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Card className="shadow mb-4">
+                    <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.positive_tests_percentage_barchart.title')}</h6>
+                    </Card.Header>
+                    <Card.Body>
+                      <PositiveTestsPercentageChart data={positiveTestsPercentageBarChartData} />
                     </Card.Body>
                   </Card>
                 </Col>

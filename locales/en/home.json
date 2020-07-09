@@ -20,6 +20,13 @@
         "diff_cases_0": "The number of new cases is the same as yesterday.",
         "higher": "more",
         "lower": "less",
+        "pcr_tests_diff": {
+            "new_cases_today": "During the last 24 hours {{count}} tests have been performed.",
+            "new_cases_today_0": "No tests have been performed for the last 24 hours.",
+            "new_cases_today_1": "During the last 24 hours a single test has been performed.",
+            "diff_cases": "The number of performed tests is {{count}} {{diffType}} than yesterday.",
+            "diff_cases_0": "The number of performed tests is the same as yesterday."
+        },
         "cases_linechart": {
             "title": "Disease timeline",
             "xtitle": "Date",
@@ -45,6 +52,11 @@
             "title": "Active cases",
             "xtitle": "Date",
             "ytitle": "Cases"
+        },
+        "positive_tests_percentage_barchart": {
+            "title": "Positive tests",
+            "xtitle": "Date",
+            "ytitle": "Percentage"
         }
     },
     "last_updated": "Last updated:"
