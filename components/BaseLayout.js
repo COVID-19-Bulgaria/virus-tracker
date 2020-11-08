@@ -6,6 +6,7 @@ import Navigation from './Navigation';
 import Footer from './Footer';
 import bgSEO from '../next-seo.config';
 import enSEO from '../next-seo.en.config';
+import { CookieConsent } from './CookieConsent';
 
 const BaseLayout = ({ children }) => {
   const { lang } = useTranslation();
@@ -14,6 +15,7 @@ const BaseLayout = ({ children }) => {
   return (
     <div>
       <DefaultSeo {...SEO} />
+      <CookieConsent />
       <Head>
         <link rel="stylesheet" type="text/css" href="/static/css/sb-admin-2.min.css" />
         <link rel="stylesheet" type="text/css" href="/static/fontawesome-free/css/all.min.css" />
