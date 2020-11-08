@@ -29,6 +29,7 @@ const Index = () => {
   const [dateActiveCasesData, setDateActiveCasesData] = useState({});
   const [datePositiveTestsPercentageData, setDatePositiveTestsPercentageData] = useState({});
 
+
   const prepareChartData = (dataset, dataAttribute) => {
     if (dataset == null) return [];
 

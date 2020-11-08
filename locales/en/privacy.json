@@ -9,7 +9,7 @@
     },
     "data": {
         "title": "What information do we collect from visitors?",
-        "text": "For each visitor, we collect statistical information including device type, operating system, version and model of browser used, time spent on pages, location, anonymized (incomplete) IP address and more. This information is anonymized and cannot be correlated to a specific visitor. Cookies are not used and demographic information about visitors by type of gender, age, professed religion, interests, behaviors, etc. is not stored."
+        "text": "After a visitor explicitly opts-in, we collect statistical information including device type, operating system, version and model of browser used, time spent on pages, location, anonymized (incomplete) IP address and more. This information is anonymized and cannot be correlated to a specific visitor. Information about visitors by type of gender, age, professed religion, interests, behaviors, etc. is not stored."
     },
     "usage": {
         "title": "For what purposes do we use the information?",
@@ -32,5 +32,5 @@
         "title": "Change in privacy policy",
         "text": "We reserve the right to make any changes to our privacy policy. Changes will be announced on the current page. The user should proactively check the current privacy policy for updates."
     },
-    "last_updated": "Last updated: 13/05/2020"
+    "last_updated": "Last updated: 08/11/2020"
 }
