@@ -24,7 +24,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/ActiveCasesLineChart.js";
+    _jsxFileName = "/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/components/ActiveCasesLineChart.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
@@ -90,13 +90,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Footer */ "./components/Footer.js");
 /* harmony import */ var _next_seo_config__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../next-seo.config */ "./next-seo.config.js");
 /* harmony import */ var _next_seo_en_config__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../next-seo.en.config */ "./next-seo.en.config.js");
+/* harmony import */ var _CookieConsent__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./CookieConsent */ "./components/CookieConsent.js");
 
 
 var _this = undefined,
-    _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/BaseLayout.js";
+    _jsxFileName = "/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/components/BaseLayout.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 
@@ -117,21 +119,28 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 16,
       columnNumber: 5
     }
   }, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_3__["DefaultSeo"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, SEO, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 17,
       columnNumber: 7
     }
-  })), __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  })), __jsx(_CookieConsent__WEBPACK_IMPORTED_MODULE_10__["CookieConsent"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 18,
+      columnNumber: 7
+    }
+  }), __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
       columnNumber: 7
     }
   }, __jsx("link", {
@@ -141,7 +150,7 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 20,
       columnNumber: 9
     }
   }), __jsx("link", {
@@ -151,7 +160,7 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 21,
       columnNumber: 9
     }
   }), __jsx("link", {
@@ -161,7 +170,7 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 22,
       columnNumber: 9
     }
   }), __jsx("link", {
@@ -170,7 +179,7 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 23,
       columnNumber: 9
     }
   })), __jsx("div", {
@@ -178,14 +187,14 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 26,
       columnNumber: 7
     }
   }, __jsx(_Navigation__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 27,
       columnNumber: 9
     }
   }), __jsx("div", {
@@ -194,7 +203,7 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 29,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -202,14 +211,14 @@ var BaseLayout = function BaseLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 30,
       columnNumber: 11
     }
   }, children), __jsx(_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 33,
       columnNumber: 11
     }
   }))));
@@ -246,7 +255,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/CasesBarChart.js";
+    _jsxFileName = "/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/components/CasesBarChart.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
@@ -312,7 +321,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/CasesLineChart.js";
+    _jsxFileName = "/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/components/CasesLineChart.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
@@ -374,7 +383,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _OverviewCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./OverviewCard */ "./components/OverviewCard.js");
 var _this = undefined,
-    _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/CasesOverview.js";
+    _jsxFileName = "/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/components/CasesOverview.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -632,7 +641,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/CasesPieChart.js";
+    _jsxFileName = "/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/components/CasesPieChart.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
@@ -692,6 +701,179 @@ CasesPieChart.propTypes = {
 
 /***/ }),
 
+/***/ "./components/CookieConsent.js":
+/*!*************************************!*\
+  !*** ./components/CookieConsent.js ***!
+  \*************************************/
+/*! exports provided: CookieConsent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CookieConsent", function() { return CookieConsent; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "./node_modules/next/dist/next-server/lib/head.js");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next-translate/useTranslation */ "./node_modules/next-translate/useTranslation.js");
+/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_2__);
+var _this = undefined,
+    _jsxFileName = "/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/components/CookieConsent.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+var CookieConsent = function CookieConsent() {
+  var _useTranslation = next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_2___default()(),
+      lang = _useTranslation.lang;
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    var config = {
+      acceptAll: true,
+      htmlTexts: true,
+      translations: {
+        zz: {
+          privacyPolicyUrl: '/privacy'
+        },
+        en: {
+          consentNotice: {
+            description: 'We use cookies to improve user experience. Choose what cookies you allow us to use. You can read more in our <a href="/privacy">Privacy Policy</a>.',
+            learnMore: 'Show Details'
+          },
+          purposes: {
+            security: 'Security',
+            analytics: 'Analytics'
+          },
+          ok: 'Accept All',
+          decline: 'Decline All'
+        },
+        bg: {
+          acceptAll: 'Приемам всички',
+          acceptSelected: 'Приемам избраните',
+          close: 'Изход',
+          consentModal: {
+            description: 'Можете да прегледате и изберете кои външни услуги да функционират и да събират информация.',
+            title: 'Предлагани услуги'
+          },
+          consentNotice: {
+            changeDescription: 'Има новости по бисквитките от външни услуги от последното Ви посещение и е необходимо да преразгледате решението си.',
+            description: 'Този сайт използва бисквитки и Ви дава право да изберете записването на определени или всички. За повече информация посетете нашата <a href="/privacy">Политика за поверителност</a>.',
+            learnMore: 'Избор'
+          },
+          contextualConsent: {
+            acceptAlways: 'Винаги',
+            acceptOnce: 'Да',
+            description: 'Искате ли да заредим съдържание от външна услуга {title}?'
+          },
+          decline: 'Отказвам всички',
+          ok: 'Приемам всички',
+          poweredBy: 'Реализирано с Klaro!',
+          privacyPolicy: {
+            name: 'Политика за поверителност',
+            text: 'За повече информация, моля прочетете нашата {privacyPolicy}.'
+          },
+          purposeItem: {
+            service: 'услуга',
+            services: 'услуги'
+          },
+          purposes: {
+            security: 'Сигурност',
+            analytics: 'Аналитични'
+          },
+          save: 'Запиши',
+          service: {
+            disableAll: {
+              description: 'Можете да приемете или отхвърлите всички услуги.',
+              title: 'Приемам / Отхвърлям всички услуги'
+            },
+            optOut: {
+              description: 'Тези услуги за включени по подразбиране, но можете да ги откажете',
+              title: '(възможност за отказ)'
+            },
+            purpose: 'предназначение',
+            purposes: 'предназначения',
+            required: {
+              description: 'Тези услуги са задължителни за работата на уебсайта.',
+              title: '(задължителни)'
+            }
+          }
+        }
+      },
+      services: [{
+        name: 'googleAnalytics',
+        title: 'Google Analytics',
+        purposes: ['analytics']
+      }, {
+        name: 'cloudflare',
+        title: 'Cloudflare',
+        purposes: ['security'],
+        required: true
+      }],
+      lang: lang
+    }; // we assign the Klaro module to the window, so that we can access it in JS
+    // window.klaro = Klaro;
+
+    window.klaroConfig = config; // we set up Klaro with the config
+
+    window.klaro.setup(config);
+  }, []);
+  return __jsx("div", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 107,
+      columnNumber: 5
+    }
+  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 108,
+      columnNumber: 7
+    }
+  }, __jsx("script", {
+    defer: true,
+    src: "/static/klaro.js",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 109,
+      columnNumber: 9
+    }
+  }), __jsx("script", {
+    async: true,
+    type: "text/plain",
+    "data-type": "text/javascript",
+    "data-name": "googleAnalytics",
+    "data-src": "https://www.googletagmanager.com/gtag/js?id=G-JCGPV01TVD",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 110,
+      columnNumber: 9
+    }
+  }), __jsx("script", {
+    type: "text/plain",
+    "data-type": "text/javascript",
+    "data-name": "googleAnalytics",
+    dangerouslySetInnerHTML: {
+      __html: "window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n  \n            gtag('config', 'G-JCGPV01TVD');"
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 111,
+      columnNumber: 9
+    }
+  })));
+};
+
+
+
+/***/ }),
+
 /***/ "./components/ExternalLink.js":
 /*!************************************!*\
   !*** ./components/ExternalLink.js ***!
@@ -706,7 +888,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 var _this = undefined,
-    _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/ExternalLink.js";
+    _jsxFileName = "/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/components/ExternalLink.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -757,7 +939,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _ExternalLink__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ExternalLink */ "./components/ExternalLink.js");
 var _this = undefined,
-    _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/ExternalNavigationLink.js";
+    _jsxFileName = "/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/components/ExternalNavigationLink.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -829,7 +1011,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next-translate/useTranslation */ "./node_modules/next-translate/useTranslation.js");
 /* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_3__);
 var _this = undefined,
-    _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/Footer.js";
+    _jsxFileName = "/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/components/Footer.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -935,7 +1117,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NavigationLink__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./NavigationLink */ "./components/NavigationLink.js");
 /* harmony import */ var _ExternalNavigationLink__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ExternalNavigationLink */ "./components/ExternalNavigationLink.js");
 var _this = undefined,
-    _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/Navigation.js";
+    _jsxFileName = "/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/components/Navigation.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -1166,7 +1348,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/NavigationLink.js";
+    _jsxFileName = "/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/components/NavigationLink.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
@@ -1265,7 +1447,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next-translate/useTranslation */ "./node_modules/next-translate/useTranslation.js");
 /* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_3__);
 var _this = undefined,
-    _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/OverviewCard.js";
+    _jsxFileName = "/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/components/OverviewCard.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -1451,7 +1633,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/PositiveTestsPercentageChart.js";
+    _jsxFileName = "/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/components/PositiveTestsPercentageChart.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
@@ -40204,10 +40386,10 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Findex.js!./":
-/*!*************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Findex.js ***!
-  \*************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fveselinstoyanov%2FWork%2Fcoronavirus-bulgaria.org%2Fvirus-tracker%2Fpages%2Findex.js!./":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fveselinstoyanov%2FWork%2Fcoronavirus-bulgaria.org%2Fvirus-tracker%2Fpages%2Findex.js ***!
+  \************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -40246,6 +40428,10 @@ var _possibleConstructorReturn = __webpack_require__(/*! @babel/runtime/helpers/
 var _getPrototypeOf = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
 
 var _inherits = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+
+function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
@@ -40347,12 +40533,14 @@ var listenToIntersections = function listenToIntersections(el, cb) {
 var Link = /*#__PURE__*/function (_react$Component) {
   _inherits(Link, _react$Component);
 
+  var _super = _createSuper(Link);
+
   function Link(props) {
     var _this;
 
     _classCallCheck(this, Link);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Link).call(this, props));
+    _this = _super.call(this, props);
     _this.p = void 0;
 
     _this.cleanUpListeners = function () {};
@@ -40592,6 +40780,12 @@ exports["default"] = _default;
 
 var _construct = __webpack_require__(/*! @babel/runtime/helpers/construct */ "./node_modules/@babel/runtime/helpers/construct.js");
 
+function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -40721,12 +40915,12 @@ exports.createRouter = createRouter;
 function makePublicRouterInstance(router) {
   var _router = router;
   var instance = {};
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
+
+  var _iterator = _createForOfIteratorHelper(urlPropertyFields),
+      _step;
 
   try {
-    for (var _iterator = urlPropertyFields[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
       var property = _step.value;
 
       if (typeof _router[property] === 'object') {
@@ -40739,18 +40933,9 @@ function makePublicRouterInstance(router) {
     } // Events is a static property on the router, the router doesn't have to be initialized to use it
 
   } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
+    _iterator.e(err);
   } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-        _iterator["return"]();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
-    }
+    _iterator.f();
   }
 
   instance.events = _router2["default"].events;
@@ -42144,17 +42329,21 @@ exports.getRouteRegex = getRouteRegex;
 
 var _classCallCheck = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
 
-var _possibleConstructorReturn = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
-
-var _getPrototypeOf = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-
 var _assertThisInitialized = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
 
 var _createClass = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
 
+var _possibleConstructorReturn = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+
+var _getPrototypeOf = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+
 var _inherits = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
 
 var _toConsumableArray = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/toConsumableArray.js");
+
+function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -42179,6 +42368,8 @@ exports["default"] = function () {
   return (/*#__PURE__*/function (_react_1$Component) {
       _inherits(_class, _react_1$Component);
 
+      var _super = _createSuper(_class);
+
       _createClass(_class, null, [{
         key: "rewind",
         // Used when server rendering
@@ -42195,7 +42386,7 @@ exports["default"] = function () {
 
         _classCallCheck(this, _class);
 
-        _this = _possibleConstructorReturn(this, _getPrototypeOf(_class).call(this, props));
+        _this = _super.call(this, props);
 
         if (isServer) {
           mountedInstances.add(_assertThisInitialized(_this));
@@ -57935,7 +58126,7 @@ var _locales_bg_common_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__
 var _locales_bg_home_json__WEBPACK_IMPORTED_MODULE_6___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../locales/bg/home.json */ "./locales/bg/home.json", 1);
 /* empty/unused harmony star reexport */
 
-var _jsxFileName = "/Users/Veselin/Work/virus-tracker/pages/index.js";
+var _jsxFileName = "/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -58018,7 +58209,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "/Users/Veselin/Work/virus-tracker/pages_/index.js";
+    _jsxFileName = "/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/pages_/index.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
@@ -58185,7 +58376,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81,
+      lineNumber: 82,
       columnNumber: 5
     }
   }, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_2__["NextSeo"], {
@@ -58202,7 +58393,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82,
+      lineNumber: 83,
       columnNumber: 7
     }
   }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Container"], {
@@ -58210,7 +58401,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96,
+      lineNumber: 97,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -58218,7 +58409,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97,
+      lineNumber: 98,
       columnNumber: 9
     }
   }, __jsx("h1", {
@@ -58226,7 +58417,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98,
+      lineNumber: 99,
       columnNumber: 11
     }
   }, t('home:page_title'))), isLoading ? __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Spinner"], {
@@ -58235,7 +58426,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100,
+      lineNumber: 101,
       columnNumber: 22
     }
   }) : __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Badge"], {
@@ -58243,7 +58434,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103,
+      lineNumber: 104,
       columnNumber: 15
     }
   }, t('home:last_updated'), "\xA0", __jsx(react_moment__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -58252,7 +58443,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105,
+      lineNumber: 106,
       columnNumber: 17
     }
   }, totalsData.timestamp)), __jsx(_components_CasesOverview__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -58261,14 +58452,14 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109,
+      lineNumber: 110,
       columnNumber: 15
     }
   }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113,
+      lineNumber: 114,
       columnNumber: 15
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
@@ -58276,7 +58467,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114,
+      lineNumber: 115,
       columnNumber: 17
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"], {
@@ -58284,7 +58475,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115,
+      lineNumber: 116,
       columnNumber: 19
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Header, {
@@ -58292,7 +58483,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116,
+      lineNumber: 117,
       columnNumber: 21
     }
   }, __jsx("h6", {
@@ -58300,14 +58491,14 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117,
+      lineNumber: 118,
       columnNumber: 23
     }
   }, t('home:charts.cases_linechart.title'))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Body, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119,
+      lineNumber: 120,
       columnNumber: 21
     }
   }, __jsx(_components_CasesLineChart__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -58315,7 +58506,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120,
+      lineNumber: 121,
       columnNumber: 23
     }
   })))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
@@ -58323,7 +58514,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124,
+      lineNumber: 125,
       columnNumber: 17
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"], {
@@ -58331,7 +58522,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125,
+      lineNumber: 126,
       columnNumber: 19
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Header, {
@@ -58339,7 +58530,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126,
+      lineNumber: 127,
       columnNumber: 21
     }
   }, __jsx("h6", {
@@ -58347,14 +58538,14 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127,
+      lineNumber: 128,
       columnNumber: 23
     }
   }, t('home:charts.cases_barchart.title'))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Body, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129,
+      lineNumber: 130,
       columnNumber: 21
     }
   }, __jsx(_components_CasesBarChart__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -58362,14 +58553,14 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130,
+      lineNumber: 131,
       columnNumber: 23
     }
   }))))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135,
+      lineNumber: 136,
       columnNumber: 15
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
@@ -58377,7 +58568,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136,
+      lineNumber: 137,
       columnNumber: 17
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"], {
@@ -58385,7 +58576,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137,
+      lineNumber: 138,
       columnNumber: 19
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Header, {
@@ -58393,7 +58584,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138,
+      lineNumber: 139,
       columnNumber: 21
     }
   }, __jsx("h6", {
@@ -58401,14 +58592,14 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 139,
+      lineNumber: 140,
       columnNumber: 23
     }
   }, t('home:charts.active_cases_linechart.title'))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Body, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141,
+      lineNumber: 142,
       columnNumber: 21
     }
   }, __jsx(_components_ActiveCasesLineChart__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -58416,7 +58607,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142,
+      lineNumber: 143,
       columnNumber: 23
     }
   })))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
@@ -58424,7 +58615,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146,
+      lineNumber: 147,
       columnNumber: 17
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"], {
@@ -58432,7 +58623,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147,
+      lineNumber: 148,
       columnNumber: 19
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Header, {
@@ -58440,7 +58631,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148,
+      lineNumber: 149,
       columnNumber: 21
     }
   }, __jsx("h6", {
@@ -58448,14 +58639,14 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 149,
+      lineNumber: 150,
       columnNumber: 23
     }
   }, t('home:charts.cases_piechart.title'))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Body, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151,
+      lineNumber: 152,
       columnNumber: 21
     }
   }, __jsx(_components_CasesPieChart__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -58465,21 +58656,21 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152,
+      lineNumber: 153,
       columnNumber: 23
     }
   }))))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157,
+      lineNumber: 158,
       columnNumber: 15
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158,
+      lineNumber: 159,
       columnNumber: 17
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"], {
@@ -58487,7 +58678,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159,
+      lineNumber: 160,
       columnNumber: 19
     }
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Header, {
@@ -58495,7 +58686,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160,
+      lineNumber: 161,
       columnNumber: 21
     }
   }, __jsx("h6", {
@@ -58503,14 +58694,14 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 161,
+      lineNumber: 162,
       columnNumber: 23
     }
   }, t('home:charts.positive_tests_percentage_barchart.title'))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Card"].Body, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163,
+      lineNumber: 164,
       columnNumber: 21
     }
   }, __jsx(_components_PositiveTestsPercentageChart__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -58518,7 +58709,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 164,
+      lineNumber: 165,
       columnNumber: 23
     }
   }))))))));
@@ -58528,14 +58719,14 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 2:
-/*!*****************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Findex.js ***!
-  \*****************************************************************************************************************************/
+/***/ 3:
+/*!****************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fveselinstoyanov%2FWork%2Fcoronavirus-bulgaria.org%2Fvirus-tracker%2Fpages%2Findex.js ***!
+  \****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2FVeselin%2FWork%2Fvirus-tracker%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fveselinstoyanov%2FWork%2Fcoronavirus-bulgaria.org%2Fvirus-tracker%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fveselinstoyanov%2FWork%2Fcoronavirus-bulgaria.org%2Fvirus-tracker%2Fpages%2Findex.js!./");
 
 
 /***/ }),
@@ -58551,5 +58742,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

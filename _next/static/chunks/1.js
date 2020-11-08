@@ -18,7 +18,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/es/index.js");
 
 
-var _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/CasesMap/BulgariaMap.js";
+
+var _this = undefined,
+    _jsxFileName = "/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/components/CasesMap/BulgariaMap.js";
+
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
@@ -36,19 +39,21 @@ var BulgariaMap = function BulgariaMap(_ref) {
       height: '100%'
     }
   }, rest, {
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
+      lineNumber: 5,
+      columnNumber: 3
+    }
   }), __jsx(react_leaflet__WEBPACK_IMPORTED_MODULE_4__["TileLayer"], {
     attribution: "&copy <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors",
     url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
+      lineNumber: 6,
+      columnNumber: 5
+    }
   }), children);
 };
 
@@ -84,7 +89,7 @@ var _MapCustomizations_json__WEBPACK_IMPORTED_MODULE_7___namespace = /*#__PURE__
 
 
 var _this = undefined,
-    _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/CasesMap/CasesMap.js";
+    _jsxFileName = "/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/components/CasesMap/CasesMap.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
@@ -191,7 +196,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/es/index.js");
 
-var _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/CasesMap/MapMarker.js";
+
+var _this = undefined,
+    _jsxFileName = "/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/components/CasesMap/MapMarker.js";
+
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -206,17 +214,19 @@ var MapMarker = function MapMarker(props) {
     color: "red",
     radius: 5
   }, circleProps, {
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
+      lineNumber: 12,
+      columnNumber: 5
+    }
   }), tooltip && __jsx(react_leaflet__WEBPACK_IMPORTED_MODULE_3__["Tooltip"], {
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
+      lineNumber: 13,
+      columnNumber: 19
+    }
   }, tooltip));
 };
 

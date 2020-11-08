@@ -17,7 +17,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/Veselin/Work/virus-tracker/components/OpenGraph/MapImage.js";
+var _this = undefined,
+    _jsxFileName = "/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/components/OpenGraph/MapImage.js";
+
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
@@ -39,36 +41,39 @@ var MapImage = function MapImage(_ref) {
   var geoData = _ref.geoData;
   return __jsx("div", {
     className: "jsx-637166970" + " " + "map-container align-content-center",
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
+      lineNumber: 7,
+      columnNumber: 3
+    }
   }, __jsx("link", {
     rel: "stylesheet",
     href: "https://unpkg.com/leaflet@1.6.0/dist/leaflet.css",
     integrity: "sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==",
     crossOrigin: "",
     className: "jsx-637166970",
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
+      lineNumber: 8,
+      columnNumber: 5
+    }
   }), __jsx(CasesMap, {
     data: geoData,
     zoom: 7.5,
     zoomSnap: 0.5,
     zoomControl: false,
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
+      lineNumber: 14,
+      columnNumber: 5
+    }
   }), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
     id: "637166970",
-    __self: this
-  }, "body{margin:0;}.map-container{width:1200px;height:630px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9WZXNlbGluL1dvcmsvdmlydXMtdHJhY2tlci9jb21wb25lbnRzL09wZW5HcmFwaC9NYXBJbWFnZS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFlTyxBQUdvQixBQUlJLFNBSGYsSUFJZSxhQUNmIiwiZmlsZSI6Ii9Vc2Vycy9WZXNlbGluL1dvcmsvdmlydXMtdHJhY2tlci9jb21wb25lbnRzL09wZW5HcmFwaC9NYXBJbWFnZS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBkeW5hbWljIGZyb20gJ25leHQvZHluYW1pYyc7XG5pbXBvcnQgUHJvcFR5cGVzIGZyb20gJ3Byb3AtdHlwZXMnO1xuXG5jb25zdCBDYXNlc01hcCA9IGR5bmFtaWMoKCkgPT4gaW1wb3J0KCcuLi9DYXNlc01hcC9DYXNlc01hcCcpLCB7IHNzcjogZmFsc2UgfSk7XG5cbmNvbnN0IE1hcEltYWdlID0gKHsgZ2VvRGF0YSB9KSA9PiAoXG4gIDxkaXYgY2xhc3NOYW1lPVwibWFwLWNvbnRhaW5lciBhbGlnbi1jb250ZW50LWNlbnRlclwiPlxuICAgIDxsaW5rXG4gICAgICByZWw9XCJzdHlsZXNoZWV0XCJcbiAgICAgIGhyZWY9XCJodHRwczovL3VucGtnLmNvbS9sZWFmbGV0QDEuNi4wL2Rpc3QvbGVhZmxldC5jc3NcIlxuICAgICAgaW50ZWdyaXR5PVwic2hhNTEyLXh3RS9Bejl6cmpCSXBoQWNCYjNGNkpWcXhmNDYrQ0RMd2ZMTUhsb051NktFUUNBV2k2SGNEVWJlT2ZCSXB0Rjd0Y0N6dXNLRmpGdzJ5dXZFcERMOXdRPT1cIlxuICAgICAgY3Jvc3NPcmlnaW49XCJcIlxuICAgIC8+XG4gICAgPENhc2VzTWFwIGRhdGE9e2dlb0RhdGF9IHpvb209ezcuNX0gem9vbVNuYXA9ezAuNX0gem9vbUNvbnRyb2w9e2ZhbHNlfSAvPlxuICAgIDxzdHlsZSBqc3ggZ2xvYmFsPlxuICAgICAge2BcbiAgICAgICAgYm9keSB7XG4gICAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICB9XG5cbiAgICAgICAgLm1hcC1jb250YWluZXIge1xuICAgICAgICAgIHdpZHRoOiAxMjAwcHg7XG4gICAgICAgICAgaGVpZ2h0OiA2MzBweDtcbiAgICAgICAgfVxuICAgICAgYH1cbiAgICA8L3N0eWxlPlxuICA8L2Rpdj5cbik7XG5cbk1hcEltYWdlLnByb3BUeXBlcyA9IHtcbiAgZ2VvRGF0YTogUHJvcFR5cGVzLm9iamVjdC5pc1JlcXVpcmVkLFxufTtcblxuZXhwb3J0IGRlZmF1bHQgTWFwSW1hZ2U7XG4iXX0= */\n/*@ sourceURL=/Users/Veselin/Work/virus-tracker/components/OpenGraph/MapImage.js */"));
+    __self: _this
+  }, "body{margin:0;}.map-container{width:1200px;height:630px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy92ZXNlbGluc3RveWFub3YvV29yay9jb3JvbmF2aXJ1cy1idWxnYXJpYS5vcmcvdmlydXMtdHJhY2tlci9jb21wb25lbnRzL09wZW5HcmFwaC9NYXBJbWFnZS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFlTyxBQUdvQixBQUlJLFNBSGYsSUFJZSxhQUNmIiwiZmlsZSI6Ii9Vc2Vycy92ZXNlbGluc3RveWFub3YvV29yay9jb3JvbmF2aXJ1cy1idWxnYXJpYS5vcmcvdmlydXMtdHJhY2tlci9jb21wb25lbnRzL09wZW5HcmFwaC9NYXBJbWFnZS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBkeW5hbWljIGZyb20gJ25leHQvZHluYW1pYyc7XG5pbXBvcnQgUHJvcFR5cGVzIGZyb20gJ3Byb3AtdHlwZXMnO1xuXG5jb25zdCBDYXNlc01hcCA9IGR5bmFtaWMoKCkgPT4gaW1wb3J0KCcuLi9DYXNlc01hcC9DYXNlc01hcCcpLCB7IHNzcjogZmFsc2UgfSk7XG5cbmNvbnN0IE1hcEltYWdlID0gKHsgZ2VvRGF0YSB9KSA9PiAoXG4gIDxkaXYgY2xhc3NOYW1lPVwibWFwLWNvbnRhaW5lciBhbGlnbi1jb250ZW50LWNlbnRlclwiPlxuICAgIDxsaW5rXG4gICAgICByZWw9XCJzdHlsZXNoZWV0XCJcbiAgICAgIGhyZWY9XCJodHRwczovL3VucGtnLmNvbS9sZWFmbGV0QDEuNi4wL2Rpc3QvbGVhZmxldC5jc3NcIlxuICAgICAgaW50ZWdyaXR5PVwic2hhNTEyLXh3RS9Bejl6cmpCSXBoQWNCYjNGNkpWcXhmNDYrQ0RMd2ZMTUhsb051NktFUUNBV2k2SGNEVWJlT2ZCSXB0Rjd0Y0N6dXNLRmpGdzJ5dXZFcERMOXdRPT1cIlxuICAgICAgY3Jvc3NPcmlnaW49XCJcIlxuICAgIC8+XG4gICAgPENhc2VzTWFwIGRhdGE9e2dlb0RhdGF9IHpvb209ezcuNX0gem9vbVNuYXA9ezAuNX0gem9vbUNvbnRyb2w9e2ZhbHNlfSAvPlxuICAgIDxzdHlsZSBqc3ggZ2xvYmFsPlxuICAgICAge2BcbiAgICAgICAgYm9keSB7XG4gICAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICB9XG5cbiAgICAgICAgLm1hcC1jb250YWluZXIge1xuICAgICAgICAgIHdpZHRoOiAxMjAwcHg7XG4gICAgICAgICAgaGVpZ2h0OiA2MzBweDtcbiAgICAgICAgfVxuICAgICAgYH1cbiAgICA8L3N0eWxlPlxuICA8L2Rpdj5cbik7XG5cbk1hcEltYWdlLnByb3BUeXBlcyA9IHtcbiAgZ2VvRGF0YTogUHJvcFR5cGVzLm9iamVjdC5pc1JlcXVpcmVkLFxufTtcblxuZXhwb3J0IGRlZmF1bHQgTWFwSW1hZ2U7XG4iXX0= */\n/*@ sourceURL=/Users/veselinstoyanov/Work/coronavirus-bulgaria.org/virus-tracker/components/OpenGraph/MapImage.js */"));
 };
 
 MapImage.propTypes = {
