@@ -7,7 +7,7 @@ sitemap({
     en: 'https://coronavirus-bulgaria.org/en',
   },
   baseUrl: 'https://coronavirus-bulgaria.org',
-  pagesDirectory: path.join(__dirname, 'pages_'),
+  pagesDirectory: path.join(__dirname, 'pages'),
   targetDirectory: 'public/',
   pagesConfig: {
     '': {

@@ -4,6 +4,7 @@
         "title": "Information website about the coronavirus in Bulgaria",
         "description": "Up-to-date information and charts for the spread of coronavirus in Bulgaria"
     },
+    "info": "In this website you will find intuitive graphs about the chronological development of the COVID-19 pandemic in Bulgaria.",
     "charts": {
         "infected": "Infected",
         "cured": "Cured",
@@ -13,6 +14,8 @@
         "intensive_care": "Intensive care",
         "medical_staff": "Infected medical staff",
         "pcr_tests": "PCR tests",
+        "antigen_tests": "Antigen tests",
+        "vaccinated": "Vaccinated",
         "new_cases_today": "{{count}} new cases have been announced today.",
         "new_cases_today_0": "No new cases have been announced today.",
         "new_cases_today_1": "A single new case has been announced today.",
@@ -20,12 +23,19 @@
         "diff_cases_0": "The number of new cases is the same as yesterday.",
         "higher": "more",
         "lower": "less",
-        "pcr_tests_diff": {
+        "tests_diff": {
             "new_cases_today": "During the last 24 hours {{count}} tests have been performed.",
             "new_cases_today_0": "No tests have been performed for the last 24 hours.",
             "new_cases_today_1": "During the last 24 hours a single test has been performed.",
             "diff_cases": "The number of performed tests is {{count}} {{diffType}} than yesterday.",
             "diff_cases_0": "The number of performed tests is the same as yesterday."
+        },
+        "vaccinated_diff": {
+            "new_cases_today": "During the last 24 hours {{count}} people have been vaccinated.",
+            "new_cases_today_0": "No people have been vaccinated for the last 24 hours.",
+            "new_cases_today_1": "During the last 24 hours a single person has been vaccinated.",
+            "diff_cases": "The number of vaccinated people is {{count}} {{diffType}} than yesterday.",
+            "diff_cases_0": "The number of vaccinated people is the same as yesterday."
         },
         "cases_linechart": {
             "title": "Disease timeline",

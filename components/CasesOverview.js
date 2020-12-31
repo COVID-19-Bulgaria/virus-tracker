@@ -21,6 +21,8 @@ const CasesOverview = (props) => {
   const intensiveCareToday = dateDiffCasesData.intensive_care[currentDate].cases;
   const medicalStaffToday = dateDiffCasesData.medical_staff[currentDate].cases;
   const pcrTestsToday = dateDiffCasesData.pcr_tests[currentDate].cases;
+  const antigenTestsToday = dateDiffCasesData.antigen_tests[currentDate].cases;
+  const vaccinatedToday = dateDiffCasesData.vaccinated[currentDate].cases;
 
   const infectedYesterday = dateDiffCasesData.infected[yesterdayDate].cases;
   const curedYesterday = dateDiffCasesData.cured[yesterdayDate].cases;
@@ -29,6 +31,8 @@ const CasesOverview = (props) => {
   const intensiveCareYesterday = dateDiffCasesData.intensive_care[yesterdayDate].cases;
   const medicalStaffYesterday = dateDiffCasesData.medical_staff[yesterdayDate].cases;
   const pcrTestsYesterday = dateDiffCasesData.pcr_tests[yesterdayDate].cases;
+  const antigenTestsYesterday = dateDiffCasesData.antigen_tests[yesterdayDate].cases;
+  const vaccinatedYesterday = dateDiffCasesData.vaccinated[yesterdayDate].cases;
 
   const calculateDiff = (casesToday, casesYesterday) => (casesYesterday < 0 ? casesToday : casesToday - casesYesterday);
 
@@ -69,7 +73,7 @@ const CasesOverview = (props) => {
         </Col>
       </Row>
       <Row>
-        <Col md={3} className="mb-4">
+        <Col md={4} className="mb-4">
           <OverviewCard
             title={t('home:charts.medical_staff')}
             value={totalsData.medical_staff}
@@ -80,7 +84,7 @@ const CasesOverview = (props) => {
           />
         </Col>
 
-        <Col md={3} className="mb-4">
+        <Col md={4} className="mb-4">
           <OverviewCard
             title={t('home:charts.hospitalized')}
             value={totalsData.hospitalized}
@@ -91,7 +95,7 @@ const CasesOverview = (props) => {
           />
         </Col>
 
-        <Col md={3} className="mb-4">
+        <Col md={4} className="mb-4">
           <OverviewCard
             title={t('home:charts.intensive_care')}
             value={totalsData.intensive_care}
@@ -101,15 +105,38 @@ const CasesOverview = (props) => {
             variant="primary"
           />
         </Col>
-
-        <Col md={3} className="mb-4">
+      </Row>
+      <Row>
+        <Col md={4} className="mb-4">
           <OverviewCard
             title={t('home:charts.pcr_tests')}
             value={totalsData.pcr_tests}
             today={pcrTestsToday}
             diff={calculateDiff(pcrTestsToday, pcrTestsYesterday)}
-            diffTranslationPrefix="pcr_tests_diff"
+            diffTranslationPrefix="tests_diff"
             icon="fa-vials"
+            variant="primary"
+          />
+        </Col>
+        <Col md={4} className="mb-4">
+          <OverviewCard
+            title={t('home:charts.antigen_tests')}
+            value={totalsData.antigen_tests}
+            today={antigenTestsToday}
+            diff={calculateDiff(antigenTestsToday, antigenTestsYesterday)}
+            diffTranslationPrefix="tests_diff"
+            icon="fa-flask"
+            variant="primary"
+          />
+        </Col>
+        <Col md={4} className="mb-4">
+          <OverviewCard
+            title={t('home:charts.vaccinated')}
+            value={totalsData.vaccinated}
+            today={vaccinatedToday}
+            diff={calculateDiff(vaccinatedToday, vaccinatedYesterday)}
+            diffTranslationPrefix="vaccinated_diff"
+            icon="fa-syringe"
             variant="primary"
           />
         </Col>
@@ -127,6 +154,8 @@ CasesOverview.propTypes = {
     intensive_care: PropTypes.number,
     medical_staff: PropTypes.number,
     pcr_tests: PropTypes.number,
+    antigen_tests: PropTypes.number,
+    vaccinated: PropTypes.number,
     timestamp: PropTypes.string,
   }).isRequired,
   dateDiffCasesData: PropTypes.shape({
@@ -137,6 +166,8 @@ CasesOverview.propTypes = {
     intensive_care: PropTypes.object,
     medical_staff: PropTypes.object,
     pcr_tests: PropTypes.object,
+    antigen_tests: PropTypes.object,
+    vaccinated: PropTypes.object,
   }).isRequired,
 };
 

@@ -19,6 +19,7 @@ import CasesBarChart from '../components/CasesBarChart';
 import CasesPieChart from '../components/CasesPieChart';
 import ActiveCasesLineChart from '../components/ActiveCasesLineChart';
 import PositiveTestsPercentageChart from '../components/PositiveTestsPercentageChart';
+import AlertWithIcon from '../components/AlertWithIcon';
 
 const Index = () => {
   const { t } = useTranslation();
@@ -101,6 +102,10 @@ const Index = () => {
         {isLoading ? <Spinner animation="border" variant="primary" />
           : (
             <>
+              <AlertWithIcon variant="info" iconClass="fa fa-info fa-lg">
+                {t('home:info')}
+              </AlertWithIcon>
+
               <Badge variant="info">
                 {t('home:last_updated')}&nbsp;
                 <Moment parse="YYYY-MM-DD HH:mm:ss ZZ" format={t('common:date_format')}>
