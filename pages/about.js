@@ -17,12 +17,7 @@ const About = () => {
         </div>
         <Card className="shadow">
           <Card.Body>
-            <p>
-              <Trans
-                i18nKey="about:p1"
-                components={[<ExternalLink href="https://www.mh.government.bg/bg/informaciya-za-grazhdani/potvrdeni-sluchai-na-koronavirus-na-teritoriyata-na-r-blgariya/" />]}
-              />
-            </p>
+            <p>{t('about:p1')}</p>
             <p>{t('about:p2')}</p>
             <p>{t('about:p3')}</p>
             <p>

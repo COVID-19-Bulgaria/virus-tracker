@@ -1,6 +1,7 @@
 const webpack = require('webpack');
+const nextTranslate = require("next-translate");
 
-module.exports = {
+module.exports = nextTranslate({
   exportPathMap: () => ({
     '/': { page: '/' },
     '/privacy': { page: '/privacy' },
@@ -15,7 +16,7 @@ module.exports = {
     '/en/about': { page: '/en/about' },
     '/en/why-stay-home': { page: '/en/why-stay-home' },
   }),
-  exportTrailingSlash: true,
+  trailingSlash: true,
   target: 'serverless',
   seo: {
     title: 'COVID-19 България',
@@ -47,4 +48,4 @@ module.exports = {
   devIndicators: {
     autoPrerender: false,
   },
-};
+});

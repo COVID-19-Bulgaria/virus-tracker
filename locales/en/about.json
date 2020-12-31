@@ -3,9 +3,9 @@
     "seo": {
         "title": "About"
     },
-    "p1": "To date, the official source of statistical information on the spread of coronavirus in Bulgaria is the regular briefing of the National Operations Headquarters at the VMA. This information is also published on the <0>Ministry of Health</0>.",
-    "p2": "The media constantly reflects the information from the regular briefing and usually summarizes it at the end of the day. So, if you don't follow the news often, you will have access to aggregated rather than complete chronological information.",
-    "p3": "The purpose of this website is to track the spread of the infection in Bulgaria and to present chronologically the information in a systematic and visual way. In the future, we will extend the functionality with simulations and summary scientific information on the infection.",
+    "p1": "To date, the official source of statistical information on the spread of coronavirus in Bulgaria is the Unified Information Portal - https://coronavirus.bg.",
+    "p2": "The portal doesn't provide quality visualisations which show the historic development of the pandemic in Bulgaria in accessible and intuitive way.",
+    "p3": "The purpose of this website is to track the spread of the infection in Bulgaria and to present chronologically the information in a systematic and visual way.",
     "p4": "The website is a non-profit and open source, distributed under <0>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</0>.",
     "p5": "The source code is available at <0>GitHub</0>."
 }
