@@ -1,9 +1,13 @@
 {
-    "locales": [
+    "allLanguages": [
         "bg",
         "en"
     ],
-    "defaultLocale": "bg",
+    "defaultLanguage": "bg",
+    "currentPagesDir": "pages_",
+    "finalPagesDir": "pages",
+    "localesPath": "locales",
+    "package": false,
     "pages": {
         "*": [
             "common"

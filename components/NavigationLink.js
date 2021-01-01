@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Link from 'next/link';
+import Link from 'next-translate/Link';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 
@@ -23,7 +23,7 @@ const NavigationLink = (props) => {
 
   return (
     <li className={`nav-item ${isActivePage ? 'active' : ''}`}>
-      <Link href={href} locale={lang}>
+      <Link href={href} noLang={noLang}>
         <a className="nav-link" {...rest}>
           <i className={icon} />
           <span>{title}</span>
