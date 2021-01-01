@@ -7,7 +7,7 @@
     "build": "next-translate && node next-sitemap-generator.js && next build",
     "start": "next start",
     "export": "next export",
-    "deploy": "rm -rf node_modules/.cache && rimraf out && node next-sitemap-generator.js && next build && next export && touch out/.nojekyll && echo \"coronavirus-bulgaria.org\" > out/CNAME && gh-pages --dist out --dotfiles --message \"Automatic deploy commit\" --user \"Deploy Bot <hello@coronavirus-bulgaria.org>\""
+    "deploy": "rm -rf node_modules/.cache && rimraf out && next-translate && node next-sitemap-generator.js && next build && next export && touch out/.nojekyll && echo \"coronavirus-bulgaria.org\" > out/CNAME && gh-pages --dist out --dotfiles --message \"Automatic deploy commit\" --user \"Deploy Bot <hello@coronavirus-bulgaria.org>\""
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
