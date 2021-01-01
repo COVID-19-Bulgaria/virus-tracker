@@ -1,7 +1,6 @@
 const webpack = require('webpack');
-const nextTranslate = require("next-translate");
 
-module.exports = nextTranslate({
+module.exports = {
   exportPathMap: () => ({
     '/': { page: '/' },
     '/privacy': { page: '/privacy' },
@@ -48,4 +47,4 @@ module.exports = nextTranslate({
   devIndicators: {
     autoPrerender: false,
   },
-});
+};
