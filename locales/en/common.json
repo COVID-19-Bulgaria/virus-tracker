@@ -7,7 +7,7 @@
         "about": "About",
         "facebook": "Facebook group"
     },
-    "date_format": "DD/MM/YYYY HH:mm",
+    "date_format": "dd/MM/yyyy HH:mm",
     "footer": {
         "disclaimer": "This website should not be considered official source of information. The published data represents research efforts.",
         "privacy": "Privacy Policy"

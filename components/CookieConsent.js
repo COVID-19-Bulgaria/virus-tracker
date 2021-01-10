@@ -17,7 +17,7 @@ const CookieConsent = () => {
         en: {
           consentNotice: {
             description:
-              'We use cookies to improve user experience. Choose what cookies you allow us to use. You can read more in our <a href="/privacy">Privacy Policy</a>.',
+              'We use cookies to improve user experience. Choose what cookies you allow us to use. You can read more in our <a href="/privacy" title="Privacy Policy">Privacy Policy</a>.',
             learnMore: 'Show Details',
           },
           purposes: {
@@ -37,7 +37,7 @@ const CookieConsent = () => {
           },
           consentNotice: {
             changeDescription: 'Има новости по бисквитките от външни услуги от последното Ви посещение и е необходимо да преразгледате решението си.',
-            description: 'Този сайт използва бисквитки и Ви дава право да изберете записването на определени или всички. За повече информация посетете нашата <a href="/privacy">Политика за поверителност</a>.',
+            description: 'Този сайт използва бисквитки и Ви дава право да изберете записването на определени или всички. За повече информация посетете нашата <a href="/privacy" title="Политика за поверителност">Политика за поверителност</a>.',
             learnMore: 'Избор',
           },
           contextualConsent: {
@@ -107,6 +107,7 @@ const CookieConsent = () => {
     <div>
       <Head>
         <script defer src="/static/klaro.js" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
         <script async type="text/plain" data-type="text/javascript" data-name="googleAnalytics" data-src="https://www.googletagmanager.com/gtag/js?id=G-JCGPV01TVD"></script>
         <script
           type="text/plain"

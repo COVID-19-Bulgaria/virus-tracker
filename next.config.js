@@ -1,6 +1,10 @@
 const webpack = require('webpack');
 
-module.exports = {
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
+module.exports = withBundleAnalyzer({
   exportPathMap: () => ({
     '/': { page: '/' },
     '/privacy': { page: '/privacy' },
@@ -42,9 +46,11 @@ module.exports = {
       return entries;
     };
 
+    config.externals = [...config.externals, { moment: 'moment' }];
+
     return config;
   },
   devIndicators: {
     autoPrerender: false,
   },
-};
+});

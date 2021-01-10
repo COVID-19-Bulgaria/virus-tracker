@@ -1,7 +1,10 @@
 {
     "page_title": "Privacy Policy",
     "seo": {
-        "title": "Privacy Policy"
+        "title": "Privacy Policy",
+        "description": "Information about the privacy policy of the information website Coronavirus-Bulgaria.org.",
+        "keywords": "privacy policy,information website,information portal,coronavirus-bulgaria.org",
+        "canonical": "https://coronavirus-bulgaria.org/en/privacy/"
     },
     "policy": {
         "title": "What is our privacy policy?",

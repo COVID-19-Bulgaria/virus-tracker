@@ -1,7 +1,20 @@
 import PropTypes from 'prop-types';
 import { Row, Col } from 'react-bootstrap';
 import useTranslation from 'next-translate/useTranslation';
-import moment from 'moment';
+import {
+  faRadiation,
+  faNotesMedical,
+  faHeart,
+  faUserMd,
+  faHospital,
+  faProcedures,
+  faVials,
+  faFlask,
+  faSyringe,
+} from '@fortawesome/free-solid-svg-icons';
+import parse from 'date-fns/parse';
+import format from 'date-fns/format';
+import subDays from 'date-fns/subDays';
 import OverviewCard from './OverviewCard';
 
 const CasesOverview = (props) => {
@@ -11,8 +24,8 @@ const CasesOverview = (props) => {
   } = props;
   const { t } = useTranslation();
 
-  const currentDate = moment(totalsData.timestamp, 'YYYY-MM-DD HH:mm:ss ZZ').format('YYYY-MM-DD');
-  const yesterdayDate = moment(totalsData.timestamp, 'YYYY-MM-DD HH:mm:ss ZZ').subtract(1, 'days').format('YYYY-MM-DD');
+  const currentDate = format(parse(totalsData.timestamp, 'yyyy-MM-dd HH:mm:ss xx', new Date()), 'yyyy-MM-dd');
+  const yesterdayDate = format(subDays(parse(totalsData.timestamp, 'yyyy-MM-dd HH:mm:ss xx', new Date()), 1), 'yyyy-MM-dd');
 
   const infectedToday = dateDiffCasesData.infected[currentDate].cases;
   const curedToday = dateDiffCasesData.cured[currentDate].cases;
@@ -45,7 +58,7 @@ const CasesOverview = (props) => {
             value={totalsData.infected}
             today={infectedToday}
             diff={calculateDiff(infectedToday, infectedYesterday)}
-            icon="fa-radiation"
+            icon={faRadiation}
             variant="warning"
           />
         </Col>
@@ -56,7 +69,7 @@ const CasesOverview = (props) => {
             value={totalsData.cured}
             today={curedToday}
             diff={calculateDiff(curedToday, curedYesterday)}
-            icon="fa-notes-medical"
+            icon={faNotesMedical}
             variant="success"
           />
         </Col>
@@ -67,7 +80,7 @@ const CasesOverview = (props) => {
             value={totalsData.fatal}
             today={fatalToday}
             diff={calculateDiff(fatalToday, fatalYesterday)}
-            icon="fa-heart"
+            icon={faHeart}
             variant="danger"
           />
         </Col>
@@ -79,7 +92,7 @@ const CasesOverview = (props) => {
             value={totalsData.medical_staff}
             today={medicalStaffToday}
             diff={calculateDiff(medicalStaffToday, medicalStaffYesterday)}
-            icon="fa-user-md"
+            icon={faUserMd}
             variant="warning"
           />
         </Col>
@@ -90,7 +103,7 @@ const CasesOverview = (props) => {
             value={totalsData.hospitalized}
             today={hospitalizedToday}
             diff={calculateDiff(hospitalizedToday, hospitalizedYesterday)}
-            icon="fa-hospital"
+            icon={faHospital}
             variant="primary"
           />
         </Col>
@@ -101,7 +114,7 @@ const CasesOverview = (props) => {
             value={totalsData.intensive_care}
             today={intensiveCareToday}
             diff={calculateDiff(intensiveCareToday, intensiveCareYesterday)}
-            icon="fa-procedures"
+            icon={faProcedures}
             variant="primary"
           />
         </Col>
@@ -114,7 +127,7 @@ const CasesOverview = (props) => {
             today={pcrTestsToday}
             diff={calculateDiff(pcrTestsToday, pcrTestsYesterday)}
             diffTranslationPrefix="tests_diff"
-            icon="fa-vials"
+            icon={faVials}
             variant="primary"
           />
         </Col>
@@ -125,7 +138,7 @@ const CasesOverview = (props) => {
             today={antigenTestsToday}
             diff={calculateDiff(antigenTestsToday, antigenTestsYesterday)}
             diffTranslationPrefix="tests_diff"
-            icon="fa-flask"
+            icon={faFlask}
             variant="primary"
           />
         </Col>
@@ -136,7 +149,7 @@ const CasesOverview = (props) => {
             today={vaccinatedToday}
             diff={calculateDiff(vaccinatedToday, vaccinatedYesterday)}
             diffTranslationPrefix="vaccinated_diff"
-            icon="fa-syringe"
+            icon={faSyringe}
             variant="primary"
           />
         </Col>

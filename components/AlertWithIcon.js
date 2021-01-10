@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
 import { Alert, Row, Col } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const AlertWithIcon = (props) => {
-  const { iconClass, children, ...rest } = props;
+  const { icon, children, ...rest } = props;
 
   return (
     <Alert {...rest}>
       <Row>
         <Col xs={{ span: 'auto' }} sm={{ span: 'auto' }} className="align-self-center">
-          <i className={iconClass} />
+          <FontAwesomeIcon icon={icon} size="lg" />
         </Col>
         <Col>
           {children}
@@ -19,7 +20,7 @@ const AlertWithIcon = (props) => {
 };
 
 AlertWithIcon.propTypes = {
-  iconClass: PropTypes.string.isRequired,
+  icon: PropTypes.object.isRequired,
   children: PropTypes.node.isRequired,
 };
 

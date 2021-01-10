@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-wrap-multilines */
 import { NextSeo } from 'next-seo';
+import dynamic from 'next/dynamic';
 import {
   Container,
   Row,
@@ -8,18 +9,21 @@ import {
   Badge,
   Spinner,
 } from 'react-bootstrap';
+import { faInfo } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
 import fetch from 'isomorphic-unfetch';
-import Moment from 'react-moment';
 import useTranslation from 'next-translate/useTranslation';
+import parse from 'date-fns/parse';
+import format from 'date-fns/format';
 import BaseLayout from '../components/BaseLayout';
 import CasesOverview from '../components/CasesOverview';
-import CasesLineChart from '../components/CasesLineChart';
-import CasesBarChart from '../components/CasesBarChart';
-import CasesPieChart from '../components/CasesPieChart';
-import ActiveCasesLineChart from '../components/ActiveCasesLineChart';
-import PositiveTestsPercentageChart from '../components/PositiveTestsPercentageChart';
 import AlertWithIcon from '../components/AlertWithIcon';
+
+const CasesLineChart = dynamic(() => import('../components/CasesLineChart'));
+const CasesBarChart = dynamic(() => import('../components/CasesBarChart'));
+const CasesPieChart = dynamic(() => import('../components/CasesPieChart'));
+const ActiveCasesLineChart = dynamic(() => import('../components/ActiveCasesLineChart'));
+const PositiveTestsPercentageChart = dynamic(() => import('../components/PositiveTestsPercentageChart'));
 
 const Index = () => {
   const { t } = useTranslation();
@@ -29,7 +33,6 @@ const Index = () => {
   const [dateDiffCasesData, setDateDiffCasesData] = useState({});
   const [dateActiveCasesData, setDateActiveCasesData] = useState({});
   const [datePositiveTestsPercentageData, setDatePositiveTestsPercentageData] = useState({});
-
 
   const prepareChartData = (dataset, dataAttribute) => {
     if (dataset == null) return [];
@@ -102,15 +105,13 @@ const Index = () => {
         {isLoading ? <Spinner animation="border" variant="primary" />
           : (
             <>
-              <AlertWithIcon variant="info" iconClass="fa fa-info fa-lg">
+              <AlertWithIcon variant="info" icon={faInfo}>
                 {t('home:info')}
               </AlertWithIcon>
 
               <Badge variant="info">
                 {t('home:last_updated')}&nbsp;
-                <Moment parse="YYYY-MM-DD HH:mm:ss ZZ" format={t('common:date_format')}>
-                  {totalsData.timestamp}
-                </Moment>
+                {format(parse(totalsData.timestamp, 'yyyy-MM-dd HH:mm:ss xx', new Date()), t('common:date_format'))}
               </Badge>
               <CasesOverview
                 totalsData={totalsData}

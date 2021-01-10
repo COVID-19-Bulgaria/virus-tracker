@@ -2,7 +2,9 @@
     "page_title": "What we know about COVID-19?",
     "seo": {
         "title": "What we know about COVID-19?",
-        "description": "COVID-19 symptoms, transmission, treatment and prevention"
+        "description": "COVID-19 symptoms, transmission, treatment and prevention.",
+        "keywords": "covid symptoms,covid transmission,covid treatment,covid prevention,coronavirus,covid-19 Bulgaria",
+        "canonical": "https://coronavirus-bulgaria.org/en/what-we-know/"
     },
     "faq": {
         "covid19": {
@@ -33,7 +35,8 @@
         },
         "treatment": {
             "title": "How is the disease treated and is there prevention?",
-            "text": "There is currently no specific treatment for patients infected with coronavirus. They are being cared for. There is no vaccine for coronaviruses, including the COVID-19 strain. That is why it is very important to prevent infection or to keep the infection from spreading."
+            "text": "There is currently no specific drug that can cure patients infected with coronavirus. They are being cared for and treatment is applied to handle some of the symptoms. There are already some vaccines for coronavirus, more specifically for the COVID-19 strain. However it will take some time until the population is vaccinated. That is why it is very important to prevent infection or to keep the infection from spreading.",
+            "prevention": "Wearing masks helps"
         },
         "sources": {
             "title": "Sources and additional information"

@@ -21,7 +21,7 @@ const PositiveTestsPercentageChart = (props) => {
 };
 
 PositiveTestsPercentageChart.propTypes = {
-  data: PropTypes.array.isRequired,
+  data: PropTypes.object.isRequired,
 };
 
 export default PositiveTestsPercentageChart;

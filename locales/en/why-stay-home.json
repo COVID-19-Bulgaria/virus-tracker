@@ -2,7 +2,9 @@
     "page_title": "Why stay home?",
     "seo": {
         "title": "Why stay home?",
-        "description": "A few simulations, which show how important it is to stay home"
+        "description": "A few simulations, which show how important it is to stay home.",
+        "keywords": "covid-19 spread simulation,how is the virus transmitted,how is covid-19 transmitted,social distancing,virus exponential spread,flatten the curve,why stay home",
+        "canonical": "https://coronavirus-bulgaria.org/en/why-stay-home/"
     },
     "inspiration": "The simulations on this page are inspired by the article:",
     "p1": "In order to understand why it is important to stay home during a state of emergency, we will look at how a hypothetical virus spreads and how the actions or omissions of society would affect this spread. Let's start!",

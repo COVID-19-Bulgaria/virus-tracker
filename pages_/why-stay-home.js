@@ -4,14 +4,21 @@ import {
   Card,
   Badge,
   Figure,
+  Image
 } from 'react-bootstrap';
-import { NextSeo } from 'next-seo';
+import {
+  faInfo,
+  faLightbulb,
+  faExclamation,
+} from '@fortawesome/free-solid-svg-icons';
+import { NextSeo, ArticleJsonLd } from 'next-seo';
 import useTranslation from 'next-translate/useTranslation';
 import Trans from 'next-translate/Trans';
 import BaseLayout from '../components/BaseLayout';
 import AlertWithIcon from '../components/AlertWithIcon';
 import SimulationCounters from '../components/SimulationCounters';
 import ExternalLink from '../components/ExternalLink';
+import { ArticleJsonLdDefaults } from '../next-seo.config';
 
 const TransmissionSketch = dynamic(
   () => import('../simulations/sketches/TransmissionSketch'),
@@ -41,7 +48,16 @@ const WhyStayHome = () => {
       <NextSeo
         title={t('why-stay-home:seo.title')}
         description={t('why-stay-home:seo.description')}
+        canonical={t('why-stay-home:seo.canonical')}
+        additionalMetaTags={[
+          {
+            name: 'keywords',
+            content: t('why-stay-home:seo.keywords'),
+          },
+        ]}
         openGraph={{
+          title: t('why-stay-home:seo.title'),
+          description: t('why-stay-home:seo.description'),
           images: [
             {
               url: `https://coronavirus-bulgaria.org/static/images/open_graph_social_distancing.png?v=${process.env.BUILD_ID}`,
@@ -52,16 +68,37 @@ const WhyStayHome = () => {
           ],
         }}
       />
+      <ArticleJsonLd
+        {...ArticleJsonLdDefaults}
+        url={t('why-stay-home:seo.canonical')}
+        title={t('why-stay-home:seo.title')}
+        description={t('why-stay-home:seo.description')}
+        images={['https://coronavirus-bulgaria.org/static/images/open_graph_social_distancing.png']}
+        datePublished='2019-04-03T21:00:00.000Z'
+        dateModified='2019-04-03T21:00:00.000Z'
+      />
       <Container fluid>
         <div className="d-sm-flex align-items-center justify-content-between my-4">
           <h1 className="h3 mb-0 text-gray-800">{t('why-stay-home:page_title')}</h1>
         </div>
         <Card className="shadow">
           <Card.Body>
-            <AlertWithIcon variant="info" iconClass="fa fa-info fa-lg">
+            <Image
+              fluid
+              rounded
+              src="/static/images/covid-19-stay-home.jpg"
+              alt={t('why-stay-home:page_title')}
+              width="640"
+              height="480"
+              className="align-center"
+            />
+            <AlertWithIcon variant="info" icon={faInfo}>
               {t('why-stay-home:inspiration')}
               <br />
-              <ExternalLink href="https://www.washingtonpost.com/graphics/2020/world/corona-simulator/">
+              <ExternalLink
+                href="https://www.washingtonpost.com/graphics/2020/world/corona-simulator/"
+                title="Why outbreaks like coronavirus spread exponentially, and how to flatten the curve"
+              >
                 Why outbreaks like coronavirus spread exponentially, and how to &quot;flatten the
                 curve&quot;
               </ExternalLink>.
@@ -113,7 +150,7 @@ const WhyStayHome = () => {
 
             <p>{t('why-stay-home:p8')}</p>
 
-            <AlertWithIcon variant="info" iconClass="fa fa-lightbulb fa-lg">
+            <AlertWithIcon variant="info" icon={faLightbulb}>
               <Trans
                 i18nKey="why-stay-home:conclusion"
                 components={[<b />]}
@@ -124,10 +161,11 @@ const WhyStayHome = () => {
               <Figure.Image
                 fluid
                 src="/static/images/social_distancing.svg"
+                alt="Графика на ефекта от социално дистанциране"
               />
             </Figure>
 
-            <AlertWithIcon variant="warning" iconClass="fa fa-exclamation fa-lg">
+            <AlertWithIcon variant="warning" icon={faExclamation}>
               <Trans
                 i18nKey="why-stay-home:important"
                 components={[<b />]}

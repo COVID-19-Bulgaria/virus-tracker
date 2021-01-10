@@ -1,7 +1,10 @@
 {
     "page_title": "About",
     "seo": {
-        "title": "About"
+        "title": "About",
+        "description": "Coronavirus-Bulgaria.org is an information website with intuitive graphs about the chronological development of the COVID-19 pandemic in Bulgaria.",
+        "keywords": "covid-19 information portal,covid information website Bulgaria,coronavirus,covid,covid-19,Bulgaria",
+        "canonical": "https://coronavirus-bulgaria.org/en/about/"
     },
     "p1": "To date, the official source of statistical information on the spread of coronavirus in Bulgaria is the Unified Information Portal - https://coronavirus.bg.",
     "p2": "The portal doesn't provide quality visualisations which show the historic development of the pandemic in Bulgaria in accessible and intuitive way.",
