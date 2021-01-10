@@ -17,7 +17,27 @@ const Privacy = () => {
 
   return (
     <BaseLayout>
-      <NextSeo title={t('privacy:seo.title')} />
+      <NextSeo
+        title={t('privacy:seo.title')}
+        description={t('privacy:seo.description')}
+        canonical={t('privacy:seo.canonical')}
+        additionalMetaTags={[
+          {
+            name: 'keywords',
+            content: t('privacy:seo.keywords'),
+          },
+        ]}
+        openGraph={{
+          title: t('privacy:seo.title'),
+          description: t('privacy:seo.description'),
+          images: [
+            {
+              url: `https://coronavirus-bulgaria.org/static/images/open_graph_privacy.png?v=${process.env.BUILD_ID}`,
+              alt: t('privacy:seo.description'),
+            },
+          ],
+        }}
+      />
       <Container fluid>
         <div className="d-sm-flex align-items-center justify-content-between mt-4">
           <h1 className="h3 mb-0 text-gray-800">{t('privacy:page_title')}</h1>
@@ -42,7 +62,7 @@ const Privacy = () => {
                 <ul>
                   <li>
                     Google Ireland Ltd. - Google Analytics, Google Tag Manager -
-                    <ExternalLink href="https://safety.google/privacy/">
+                    <ExternalLink href="https://safety.google/privacy/" title="Google Services Privacy Policy">
                       https://safety.google/privacy/
                     </ExternalLink>
                   </li>

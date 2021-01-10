@@ -7,7 +7,7 @@
         "about": "За проекта",
         "facebook": "Facebook група"
     },
-    "date_format": "DD.MM.YYYY г. в HH:mm ч.",
+    "date_format": "dd.MM.yyyy г. в HH:mm ч.",
     "footer": {
         "disclaimer": "Този уебсайт не е официален източник на информация. Информацията публикувана тук е с изследователски харакер.",
         "privacy": "Поверителност"

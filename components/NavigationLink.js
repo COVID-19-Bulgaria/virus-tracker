@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import Link from 'next-translate/Link';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const NavigationLink = (props) => {
   const {
@@ -24,9 +25,12 @@ const NavigationLink = (props) => {
   return (
     <li className={`nav-item ${isActivePage ? 'active' : ''}`}>
       <Link href={href} noLang={noLang}>
-        <a className="nav-link" {...rest}>
-          <i className={icon} />
-          <span>{title}</span>
+        <a className="nav-link" title={title} {...rest}>
+          <FontAwesomeIcon icon={icon} fixedWidth size="xs" />
+          <span>
+            &nbsp;
+            {title}
+          </span>
         </a>
       </Link>
     </li>
@@ -36,7 +40,7 @@ const NavigationLink = (props) => {
 NavigationLink.propTypes = {
   title: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.object.isRequired,
 };
 
 export default NavigationLink;

@@ -7,6 +7,7 @@ import {
   OverlayTrigger,
   Tooltip,
 } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useTranslation from 'next-translate/useTranslation';
 
 const OverviewCard = (props) => {
@@ -58,7 +59,7 @@ const OverviewCard = (props) => {
             </div>
           </Col>
           <div className="col-auto">
-            <i className={`fas ${icon} fa-2x text-gray-300`} />
+            <FontAwesomeIcon icon={icon} size="2x" className="text-gray-300" />
           </div>
         </Row>
       </Card.Body>
@@ -71,7 +72,7 @@ OverviewCard.propTypes = {
   value: PropTypes.number.isRequired,
   today: PropTypes.number.isRequired,
   diff: PropTypes.number.isRequired,
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.object.isRequired,
   variant: PropTypes.string.isRequired,
   diffTranslationPrefix: PropTypes.string,
 };

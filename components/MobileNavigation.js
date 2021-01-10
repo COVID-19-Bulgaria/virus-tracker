@@ -1,4 +1,4 @@
-import { Navbar } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import Link from 'next-translate/Link';
 import useTranslation from 'next-translate/useTranslation';
 import ReactCountryFlag from 'react-country-flag';
@@ -16,7 +16,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import NavigationLink from './NavigationLink';
 import ExternalNavigationLink from './ExternalNavigationLink';
 
-const Navigation = () => {
+const MobileNavigation = () => {
   const { t, lang } = useTranslation();
   const noLang = lang === 'bg';
   const router = useRouter();
@@ -24,9 +24,9 @@ const Navigation = () => {
   const langPath = router.pathname.replace(/(en|bg)\/?/gi, '');
 
   return (
-    <Navbar as="ul" bg="gradient-primary" variant="dark" bsPrefix="sidebar" className="navbar-nav accordion d-none d-lg-flex">
+    <Navbar as="ul" variant="light" bg="white" expand="lg" className="d-lg-none">
       <Link href="/" noLang={noLang}>
-        <a className="sidebar-brand d-flex align-items-center justify-content-center" title="COVID-19 Bulgaria">
+        <a className="navbar-brand d-flex align-items-center justify-content-center" title="COVID-19 Bulgaria">
           <div className="sidebar-brand-icon">
             <FontAwesomeIcon icon={faMedkit} size="2x" />
           </div>
@@ -35,36 +35,36 @@ const Navigation = () => {
           </div>
         </a>
       </Link>
-
-      <hr className="sidebar-divider my-0" />
-
-      <div className="text-center">
+      <div>
         <Link href={langPath} noLang>
           <a title="Български">
             <ReactCountryFlag countryCode="BG" alt="Български" svg />
           </a>
         </Link>
-        &nbsp;
         <Link href={langPath} lang="en">
-          <a title="English">
+          <a title="English" className="mx-3">
             <ReactCountryFlag countryCode="GB" alt="English" svg />
           </a>
         </Link>
       </div>
+      <Navbar.Toggle aria-controls="mobile-navbar-nav" />
+      <Navbar.Collapse id="mobile-navbar-nav">
+        <Nav className="mr-auto text-center">
+          <NavigationLink title={t('common:navigation.home')} href="/" icon={faTachometerAlt} />
+          <NavigationLink title={t('common:navigation.map')} href="/map" icon={faMapMarkerAlt} />
+          <NavigationLink title={t('common:navigation.what-we-know')} href="/what-we-know" icon={faQuestionCircle} />
+          <NavigationLink title={t('common:navigation.why-stay-home')} href="/why-stay-home" icon={faHome} />
+          <NavigationLink title={t('common:navigation.about')} href="/about" icon={faInfoCircle} />
 
-      <NavigationLink title={t('common:navigation.home')} href="/" icon={faTachometerAlt} />
-      <NavigationLink title={t('common:navigation.map')} href="/map" icon={faMapMarkerAlt} />
-      <NavigationLink title={t('common:navigation.what-we-know')} href="/what-we-know" icon={faQuestionCircle} />
-      <NavigationLink title={t('common:navigation.why-stay-home')} href="/why-stay-home" icon={faHome} />
-      <NavigationLink title={t('common:navigation.about')} href="/about" icon={faInfoCircle} />
-
-      <ExternalNavigationLink
-        title={t('common:navigation.facebook')}
-        href="https://www.facebook.com/groups/covidbulgaria"
-        icon={faFacebook}
-      />
+          <ExternalNavigationLink
+            title={t('common:navigation.facebook')}
+            href="https://www.facebook.com/groups/covidbulgaria"
+            icon={faFacebook}
+          />
+        </Nav>
+      </Navbar.Collapse>
     </Navbar>
   );
 };
 
-export default Navigation;
+export default MobileNavigation;

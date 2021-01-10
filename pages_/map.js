@@ -49,7 +49,16 @@ const Map = () => {
       <NextSeo
         title={t('map:seo.title')}
         description={t('map:seo.description')}
+        canonical={t('map:seo.canonical')}
+        additionalMetaTags={[
+          {
+            name: 'keywords',
+            content: t('map:seo.keywords'),
+          },
+        ]}
         openGraph={{
+          title: t('map:seo.title'),
+          description: t('map:seo.description'),
           images: [
             {
               url: `https://coronavirus-bulgaria.org/static/images/open_graph_map.png?v=${process.env.BUILD_ID}`,

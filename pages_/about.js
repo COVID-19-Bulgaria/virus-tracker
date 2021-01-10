@@ -10,7 +10,27 @@ const About = () => {
 
   return (
     <BaseLayout>
-      <NextSeo title={t('about:seo.title')} />
+      <NextSeo
+        title={t('about:seo.title')}
+        description={t('about:seo.description')}
+        canonical={t('about:seo.canonical')}
+        additionalMetaTags={[
+          {
+            name: 'keywords',
+            content: t('about:seo.keywords'),
+          },
+        ]}
+        openGraph={{
+          title: t('about:seo.title'),
+          description: t('about:seo.description'),
+          images: [
+            {
+              url: `https://coronavirus-bulgaria.org/static/images/open_graph_about.png?v=${process.env.BUILD_ID}`,
+              alt: t('about:seo.description'),
+            },
+          ],
+        }}
+      />
       <Container fluid>
         <div className="d-sm-flex align-items-center justify-content-between my-4">
           <h1 className="h3 mb-0 text-gray-800">{t('about:page_title')}</h1>
@@ -23,11 +43,11 @@ const About = () => {
             <p>
               <Trans
                 i18nKey="about:p4"
-                components={[<ExternalLink href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />]}
+                components={[<ExternalLink href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)" />]}
               />
               <Trans
                 i18nKey="about:p5"
-                components={[<ExternalLink href="https://github.com/COVID-19-Bulgaria/virus-tracker" />]}
+                components={[<ExternalLink href="https://github.com/COVID-19-Bulgaria/virus-tracker" title="GitHub virus-tracker repository" />]}
               />
             </p>
           </Card.Body>
