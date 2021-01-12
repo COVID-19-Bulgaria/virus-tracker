@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://coronavirus-bulgaria.org/</loc><changefreq>hourly</changefreq><priority>1.0</priority><lastmod>2021-01-12T19:26:10.174Z</lastmod></url>
-<url><loc>https://coronavirus-bulgaria.org/about/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:26:10.174Z</lastmod></url>
-<url><loc>https://coronavirus-bulgaria.org/en/</loc><changefreq>hourly</changefreq><priority>1.0</priority><lastmod>2021-01-12T19:26:10.174Z</lastmod></url>
-<url><loc>https://coronavirus-bulgaria.org/en/about/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:26:10.174Z</lastmod></url>
-<url><loc>https://coronavirus-bulgaria.org/en/map/</loc><changefreq>daily</changefreq><priority>0.8</priority><lastmod>2021-01-12T19:26:10.174Z</lastmod></url>
-<url><loc>https://coronavirus-bulgaria.org/en/open-graph-linechart/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:26:10.174Z</lastmod></url>
-<url><loc>https://coronavirus-bulgaria.org/en/open-graph-map/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:26:10.174Z</lastmod></url>
-<url><loc>https://coronavirus-bulgaria.org/en/privacy/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:26:10.174Z</lastmod></url>
-<url><loc>https://coronavirus-bulgaria.org/en/what-we-know/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:26:10.174Z</lastmod></url>
-<url><loc>https://coronavirus-bulgaria.org/en/why-stay-home/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:26:10.174Z</lastmod></url>
-<url><loc>https://coronavirus-bulgaria.org/map/</loc><changefreq>daily</changefreq><priority>0.8</priority><lastmod>2021-01-12T19:26:10.174Z</lastmod></url>
-<url><loc>https://coronavirus-bulgaria.org/open-graph-linechart/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:26:10.174Z</lastmod></url>
-<url><loc>https://coronavirus-bulgaria.org/open-graph-map/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:26:10.174Z</lastmod></url>
-<url><loc>https://coronavirus-bulgaria.org/privacy/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:26:10.174Z</lastmod></url>
-<url><loc>https://coronavirus-bulgaria.org/what-we-know/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:26:10.174Z</lastmod></url>
-<url><loc>https://coronavirus-bulgaria.org/why-stay-home/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:26:10.174Z</lastmod></url>
+<url><loc>https://coronavirus-bulgaria.org/</loc><changefreq>hourly</changefreq><priority>1.0</priority><lastmod>2021-01-12T19:30:13.014Z</lastmod></url>
+<url><loc>https://coronavirus-bulgaria.org/about/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:30:13.017Z</lastmod></url>
+<url><loc>https://coronavirus-bulgaria.org/en/</loc><changefreq>hourly</changefreq><priority>1.0</priority><lastmod>2021-01-12T19:30:13.017Z</lastmod></url>
+<url><loc>https://coronavirus-bulgaria.org/en/about/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:30:13.017Z</lastmod></url>
+<url><loc>https://coronavirus-bulgaria.org/en/map/</loc><changefreq>daily</changefreq><priority>0.8</priority><lastmod>2021-01-12T19:30:13.017Z</lastmod></url>
+<url><loc>https://coronavirus-bulgaria.org/en/open-graph-linechart/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:30:13.017Z</lastmod></url>
+<url><loc>https://coronavirus-bulgaria.org/en/open-graph-map/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:30:13.017Z</lastmod></url>
+<url><loc>https://coronavirus-bulgaria.org/en/privacy/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:30:13.017Z</lastmod></url>
+<url><loc>https://coronavirus-bulgaria.org/en/what-we-know/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:30:13.017Z</lastmod></url>
+<url><loc>https://coronavirus-bulgaria.org/en/why-stay-home/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:30:13.017Z</lastmod></url>
+<url><loc>https://coronavirus-bulgaria.org/map/</loc><changefreq>daily</changefreq><priority>0.8</priority><lastmod>2021-01-12T19:30:13.017Z</lastmod></url>
+<url><loc>https://coronavirus-bulgaria.org/open-graph-linechart/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:30:13.017Z</lastmod></url>
+<url><loc>https://coronavirus-bulgaria.org/open-graph-map/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:30:13.017Z</lastmod></url>
+<url><loc>https://coronavirus-bulgaria.org/privacy/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:30:13.017Z</lastmod></url>
+<url><loc>https://coronavirus-bulgaria.org/what-we-know/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:30:13.017Z</lastmod></url>
+<url><loc>https://coronavirus-bulgaria.org/why-stay-home/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2021-01-12T19:30:13.017Z</lastmod></url>
 </urlset>
