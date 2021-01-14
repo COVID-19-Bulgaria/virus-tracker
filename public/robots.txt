@@ -1,4 +1,10 @@
+# *
 User-agent: *
-Allow: /*
+Allow: /
+
+# Host
+Host: https://coronavirus-bulgaria.org
+
+# Sitemaps
 Sitemap: https://coronavirus-bulgaria.org/sitemap.xml
 Sitemap: https://coronavirus-bulgaria.org/image-sitemap.xml

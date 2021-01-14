@@ -2,7 +2,7 @@ const SEO = {
   titleTemplate: 'COVID-19 Bulgaria | %s',
   title: 'Information website about the coronavirus in Bulgaria',
   description: 'Up-to-date information and charts for the spread of coronavirus in Bulgaria',
-  canonical: 'https://coronavirus-bulgaria.org/en',
+  canonical: 'https://coronavirus-bulgaria.org/en/',
   additionalMetaTags: [
     {
       name: 'keywords',

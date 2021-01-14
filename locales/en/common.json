@@ -1,15 +1,35 @@
 {
     "navigation": {
-        "home": "Home",
-        "map": "Spread",
-        "what-we-know": "What we know",
-        "why-stay-home": "Why stay home",
-        "about": "About",
-        "facebook": "Facebook group"
+        "home": {
+            "title": "Home",
+            "as": "/"
+        },
+        "map": {
+            "title": "Map",
+            "as": "map"
+        },
+        "what-we-know": {
+            "title": "What we know",
+            "as": "what-we-know"
+        },
+        "why-stay-home": {
+            "title": "Why stay home",
+            "as": "why-stay-home"
+        },
+        "about": {
+            "title": "About",
+            "as": "about"
+        },
+        "facebook": {
+            "title": "Facebook group"
+        }
     },
     "date_format": "dd/MM/yyyy HH:mm",
     "footer": {
         "disclaimer": "This website should not be considered official source of information. The published data represents research efforts.",
-        "privacy": "Privacy Policy"
+        "privacy": {
+            "title": "Privacy Policy",
+            "as": "privacy"
+        }
     }
 }

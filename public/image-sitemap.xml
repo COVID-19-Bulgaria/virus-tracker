@@ -8,25 +8,25 @@
     </image:image>
   </url>
   <url>
-    <loc>https://coronavirus-bulgaria.org/en</loc>
+    <loc>https://coronavirus-bulgaria.org/en/</loc>
     <image:image>
       <image:loc>https://coronavirus-bulgaria.org/static/images/open_graph_linechart.png</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://coronavirus-bulgaria.org/map</loc>
+    <loc>https://coronavirus-bulgaria.org/map/</loc>
     <image:image>
       <image:loc>https://coronavirus-bulgaria.org/static/images/open_graph_map.png</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://coronavirus-bulgaria.org/en/map</loc>
+    <loc>https://coronavirus-bulgaria.org/en/map/</loc>
     <image:image>
       <image:loc>https://coronavirus-bulgaria.org/static/images/open_graph_map.png</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://coronavirus-bulgaria.org/what-we-know</loc>
+    <loc>https://coronavirus-bulgaria.org/what-we-know/</loc>
     <image:image>
       <image:loc>https://coronavirus-bulgaria.org/static/images/open_graph_faq.png</image:loc>
     </image:image>
@@ -47,7 +47,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://coronavirus-bulgaria.org/en/what-we-know</loc>
+    <loc>https://coronavirus-bulgaria.org/en/what-we-know/</loc>
     <image:image>
       <image:loc>https://coronavirus-bulgaria.org/static/images/open_graph_faq.png</image:loc>
     </image:image>
@@ -68,7 +68,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://coronavirus-bulgaria.org/why-stay-home</loc>
+    <loc>https://coronavirus-bulgaria.org/why-stay-home/</loc>
     <image:image>
       <image:loc>https://coronavirus-bulgaria.org/static/images/covid-19-stay-home.jpg</image:loc>
     </image:image>
@@ -77,7 +77,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://coronavirus-bulgaria.org/en/why-stay-home</loc>
+    <loc>https://coronavirus-bulgaria.org/en/why-stay-home/</loc>
     <image:image>
       <image:loc>https://coronavirus-bulgaria.org/static/images/covid-19-stay-home.jpg</image:loc>
     </image:image>
@@ -86,25 +86,25 @@
     </image:image>
   </url>
   <url>
-    <loc>https://coronavirus-bulgaria.org/about</loc>
+    <loc>https://coronavirus-bulgaria.org/about/</loc>
     <image:image>
       <image:loc>https://coronavirus-bulgaria.org/static/images/open_graph_about.png</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://coronavirus-bulgaria.org/en/about</loc>
+    <loc>https://coronavirus-bulgaria.org/en/about/</loc>
     <image:image>
       <image:loc>https://coronavirus-bulgaria.org/static/images/open_graph_about.png</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://coronavirus-bulgaria.org/privacy</loc>
+    <loc>https://coronavirus-bulgaria.org/privacy/</loc>
     <image:image>
       <image:loc>https://coronavirus-bulgaria.org/static/images/open_graph_privacy.png</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://coronavirus-bulgaria.org/en/privacy</loc>
+    <loc>https://coronavirus-bulgaria.org/en/privacy/</loc>
     <image:image>
       <image:loc>https://coronavirus-bulgaria.org/static/images/open_graph_privacy.png</image:loc>
     </image:image>

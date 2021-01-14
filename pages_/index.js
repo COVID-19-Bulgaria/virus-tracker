@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-wrap-multilines */
 import { NextSeo } from 'next-seo';
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
 import {
   Container,
   Row,
@@ -82,8 +83,19 @@ const Index = () => {
   const activeCasesLineChartData = prepareChartData(dateActiveCasesData.active, 'cases');
   const positiveTestsPercentageBarChartData = prepareChartData(datePositiveTestsPercentageData, 'percentage');
 
+  const preloadResources = [
+    'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/TotalsDataset.json',
+    'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DateCasesDataset.json',
+    'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DateDiffCasesDataset.json',
+    'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DateActiveCasesDataset.json',
+    'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DatePositiveTestsDataset.json'
+  ];
+
   return (
     <BaseLayout>
+      <Head>
+        {preloadResources.map((resource) => <link key={resource} rel="preload" as="fetch" href={resource} crossOrigin="anonymous" />)}
+      </Head>
       <NextSeo
         title={t('home:seo.title')}
         description={t('home:seo.description')}
