@@ -8,7 +8,9 @@ const NavigationLink = (props) => {
   const {
     title,
     href,
+    as,
     icon,
+    prefetch,
     ...rest
   } = props;
 
@@ -24,7 +26,7 @@ const NavigationLink = (props) => {
 
   return (
     <li className={`nav-item ${isActivePage ? 'active' : ''}`}>
-      <Link href={href} noLang={noLang}>
+      <Link href={href} as={as} noLang={noLang} prefetch={prefetch}>
         <a className="nav-link" title={title} {...rest}>
           <FontAwesomeIcon icon={icon} fixedWidth size="xs" />
           <span>
@@ -40,7 +42,13 @@ const NavigationLink = (props) => {
 NavigationLink.propTypes = {
   title: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
+  as: PropTypes.string.isRequired,
   icon: PropTypes.object.isRequired,
+  prefetch: PropTypes.bool,
+};
+
+NavigationLink.defaultProps = {
+  prefetch: true,
 };
 
 export default NavigationLink;

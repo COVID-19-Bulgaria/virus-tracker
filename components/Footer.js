@@ -18,7 +18,7 @@ const Footer = () => {
           <span>{t('common:footer.disclaimer')}</span>
 
           <div className="mt-2">
-            <Link href="/privacy" noLang={noLang}><a title={t('common:footer.privacy')}>{t('common:footer.privacy')}</a></Link>
+            <Link href="/privacy" as={t('common:footer.privacy.as')} noLang={noLang} prefetch={false}><a title={t('common:footer.privacy.title')}>{t('common:footer.privacy.title')}</a></Link>
           </div>
         </div>
       </Container>

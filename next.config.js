@@ -5,13 +5,13 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 module.exports = withBundleAnalyzer({
-  exportPathMap: () => ({
+  exportPathMap: async () => ({
     '/': { page: '/' },
-    '/privacy': { page: '/privacy' },
-    '/map': { page: '/map' },
-    '/what-we-know': { page: '/what-we-know' },
-    '/about': { page: '/about' },
-    '/why-stay-home': { page: '/why-stay-home' },
+    '/поверителност': { page: '/privacy' },
+    '/интерактивна-карта': { page: '/map' },
+    '/какво-знаем-за-коронавируса': { page: '/what-we-know' },
+    '/за-проекта': { page: '/about' },
+    '/социално-дистанциране': { page: '/why-stay-home' },
     '/en': { page: '/en' },
     '/en/privacy': { page: '/en/privacy' },
     '/en/map': { page: '/en/map' },
