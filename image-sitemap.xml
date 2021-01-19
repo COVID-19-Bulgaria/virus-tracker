@@ -14,7 +14,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://coronavirus-bulgaria.org/map/</loc>
+    <loc>https://coronavirus-bulgaria.org/интерактивна-карта/</loc>
     <image:image>
       <image:loc>https://coronavirus-bulgaria.org/static/images/open_graph_map.png</image:loc>
     </image:image>
@@ -26,7 +26,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://coronavirus-bulgaria.org/what-we-know/</loc>
+    <loc>https://coronavirus-bulgaria.org/какво-знаем-за-коронавируса/</loc>
     <image:image>
       <image:loc>https://coronavirus-bulgaria.org/static/images/open_graph_faq.png</image:loc>
     </image:image>
@@ -68,7 +68,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://coronavirus-bulgaria.org/why-stay-home/</loc>
+    <loc>https://coronavirus-bulgaria.org/социално-дистанциране/</loc>
     <image:image>
       <image:loc>https://coronavirus-bulgaria.org/static/images/covid-19-stay-home.jpg</image:loc>
     </image:image>
@@ -86,7 +86,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://coronavirus-bulgaria.org/about/</loc>
+    <loc>https://coronavirus-bulgaria.org/за-проекта/</loc>
     <image:image>
       <image:loc>https://coronavirus-bulgaria.org/static/images/open_graph_about.png</image:loc>
     </image:image>
@@ -98,7 +98,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://coronavirus-bulgaria.org/privacy/</loc>
+    <loc>https://coronavirus-bulgaria.org/поверителност/</loc>
     <image:image>
       <image:loc>https://coronavirus-bulgaria.org/static/images/open_graph_privacy.png</image:loc>
     </image:image>
