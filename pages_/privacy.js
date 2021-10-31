@@ -13,7 +13,7 @@ import CollapsibleCard from '../components/CollapsibleCard';
 import ExternalLink from '../components/ExternalLink';
 
 const Privacy = () => {
-  const { t } = useTranslation();
+  const { t, lang } = useTranslation();
 
   return (
     <BaseLayout>
@@ -32,7 +32,7 @@ const Privacy = () => {
           description: t('privacy:seo.description'),
           images: [
             {
-              url: `https://coronavirus-bulgaria.org/static/images/open_graph_privacy.png?v=${process.env.BUILD_ID}`,
+              url: `https://coronavirus-bulgaria.org/static/images/open_graph/${lang}/open_graph_privacy.png?v=${process.env.BUILD_ID}`,
               alt: t('privacy:seo.description'),
             },
           ],

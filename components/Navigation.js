@@ -9,11 +9,13 @@ import {
   faQuestionCircle,
   faHome,
   faInfoCircle,
+  faFlask,
+  faIdCard,
+  faChartLine,
+  faSyringe,
 } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import NavigationLink from './NavigationLink';
-import ExternalNavigationLink from './ExternalNavigationLink';
 
 const Navigation = () => {
   const { t, lang } = useTranslation();
@@ -49,16 +51,14 @@ const Navigation = () => {
       </div>
 
       <NavigationLink title={t('common:navigation.home.title')} href="/" as={t('common:navigation.home.as')} icon={faTachometerAlt} prefetch={false} />
+      <NavigationLink title={t('common:navigation.tests.title')} href="/tests" as={t('common:navigation.tests.as')} icon={faFlask} prefetch={false} />
+      <NavigationLink title={t('common:navigation.demographics.title')} href="/demographics" as={t('common:navigation.demographics.as')} icon={faIdCard} prefetch={false} />
       <NavigationLink title={t('common:navigation.map.title')} href="/map" as={t('common:navigation.map.as')} icon={faMapMarkerAlt} prefetch={false} />
+      <NavigationLink title={t('common:navigation.vaccination.title')} href="/vaccination" as={t('common:navigation.vaccination.as')} icon={faSyringe} prefetch={false} />
+      <NavigationLink title={t('common:navigation.forecast.title')} href="/forecast" as={t('common:navigation.forecast.as')} icon={faChartLine} prefetch={false} />
       <NavigationLink title={t('common:navigation.what-we-know.title')} href="/what-we-know" as={t('common:navigation.what-we-know.as')} icon={faQuestionCircle} prefetch={false} />
       <NavigationLink title={t('common:navigation.why-stay-home.title')} href="/why-stay-home" as={t('common:navigation.why-stay-home.as')} icon={faHome} prefetch={false} />
       <NavigationLink title={t('common:navigation.about.title')} href="/about" as={t('common:navigation.about.as')} icon={faInfoCircle} prefetch={false} />
-
-      <ExternalNavigationLink
-        title={t('common:navigation.facebook.title')}
-        href="https://www.facebook.com/groups/covidbulgaria"
-        icon={faFacebook}
-      />
     </Navbar>
   );
 };

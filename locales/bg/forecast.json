@@ -1,0 +1,16 @@
+{
+    "page_title": "Прогноза",
+    "seo": {
+        "title": "Прогноза",
+        "description": "Прогноза за развитието на COVID-19 в България.",
+        "keywords": "прогноза за развитието на covid-19 в България,репродуктивно число,моментно репродуктивно число,14 дневна прогноза на заболеваемостта,коронавирус,ковид,ковид-19,covid,covid-19,България",
+        "canonical": "https://coronavirus-bulgaria.org/прогноза/"
+    },
+    "charts": {
+        "weekly_14_days_forecast": {
+            "title": "14-дневна прогноза за заболеваемостта",
+            "info": "Прогнозата се основава на метода, описан в следната научна статия:",
+            "scientific_paper_1": "Zhao H., Merchant N. N., McNulty A., Radcliff T. A., Cote M. J., Fischer R. S. B., et al.. (2021). COVID-19: Short term prediction model using daily incidence data. PLoS ONE, 16(4 April), 1–14. doi: 10.1371/journal.pone.0250110"
+        }
+    }
+}

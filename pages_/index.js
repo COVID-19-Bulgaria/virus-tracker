@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-wrap-multilines */
 import { NextSeo } from 'next-seo';
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import {
   Container,
@@ -19,27 +18,13 @@ import format from 'date-fns/format';
 import BaseLayout from '../components/BaseLayout';
 import CasesOverview from '../components/CasesOverview';
 import AlertWithIcon from '../components/AlertWithIcon';
-
-const CasesLineChart = dynamic(() => import('../components/CasesLineChart'));
-const CasesBarChart = dynamic(() => import('../components/CasesBarChart'));
-const CasesPieChart = dynamic(() => import('../components/CasesPieChart'));
-const ActiveCasesLineChart = dynamic(() => import('../components/ActiveCasesLineChart'));
-const PositiveTestsPercentageChart = dynamic(() => import('../components/PositiveTestsPercentageChart'));
+import LanguageChart from '../components/charts/LanguageChart';
 
 const Index = () => {
-  const { t } = useTranslation();
+  const { t, lang } = useTranslation();
   const [isLoading, setIsLoading] = useState(true);
   const [totalsData, setTotalsData] = useState({});
-  const [dateCasesData, setDateCasesData] = useState({});
   const [dateDiffCasesData, setDateDiffCasesData] = useState({});
-  const [dateActiveCasesData, setDateActiveCasesData] = useState({});
-  const [datePositiveTestsPercentageData, setDatePositiveTestsPercentageData] = useState({});
-
-  const prepareChartData = (dataset, dataAttribute) => {
-    if (dataset == null) return [];
-
-    return Object.fromEntries(Object.entries(dataset).map(entry => [entry[0], entry[1][dataAttribute]]));
-  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -47,17 +32,8 @@ const Index = () => {
         const totalsDataset = await fetch('https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/TotalsDataset.json');
         setTotalsData(await totalsDataset.json());
 
-        const dateCasesDataset = await fetch('https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DateCasesDataset.json');
-        setDateCasesData(await dateCasesDataset.json());
-
         const dateDiffCasesDataset = await fetch('https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DateDiffCasesDataset.json');
         setDateDiffCasesData(await dateDiffCasesDataset.json());
-
-        const dateActiveCasesDataset = await fetch('https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DateActiveCasesDataset.json');
-        setDateActiveCasesData(await dateActiveCasesDataset.json());
-
-        const datePositiveTestsPercentageDataset = await fetch('https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DatePositiveTestsDataset.json');
-        setDatePositiveTestsPercentageData(await datePositiveTestsPercentageDataset.json());
 
         setIsLoading(false);
       } catch (error) {
@@ -68,27 +44,9 @@ const Index = () => {
     fetchData();
   }, []);
 
-  const lineChartData = [
-    { name: t('home:charts.infected'), data: prepareChartData(dateCasesData.infected, 'cases') },
-    { name: t('home:charts.cured'), data: prepareChartData(dateCasesData.cured, 'cases') },
-    { name: t('home:charts.fatal'), data: prepareChartData(dateCasesData.fatal, 'cases') },
-  ];
-
-  const barChartData = [
-    { name: t('home:charts.infected'), data: prepareChartData(dateDiffCasesData.infected, 'cases') },
-    { name: t('home:charts.cured'), data: prepareChartData(dateDiffCasesData.cured, 'cases') },
-    { name: t('home:charts.fatal'), data: prepareChartData(dateDiffCasesData.fatal, 'cases') },
-  ];
-
-  const activeCasesLineChartData = prepareChartData(dateActiveCasesData.active, 'cases');
-  const positiveTestsPercentageBarChartData = prepareChartData(datePositiveTestsPercentageData, 'percentage');
-
   const preloadResources = [
     'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/TotalsDataset.json',
-    'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DateCasesDataset.json',
-    'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DateDiffCasesDataset.json',
-    'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DateActiveCasesDataset.json',
-    'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DatePositiveTestsDataset.json'
+    'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DateDiffCasesDataset.json'
   ];
 
   return (
@@ -105,7 +63,7 @@ const Index = () => {
               url: `https://coronavirus-bulgaria.org/static/images/open_graph_linechart.png?v=${process.env.BUILD_ID}`,
               width: 1200,
               height: 630,
-              alt: t('home:charts.cases_linechart.title'),
+              alt: t('home:charts.historical_cases.title'),
             },
           ],
         }}
@@ -118,7 +76,9 @@ const Index = () => {
           : (
             <>
               <AlertWithIcon variant="info" icon={faInfo}>
-                {t('home:info')}
+                {t('home:info.p1')}
+                <br />
+                <strong>{t('home:info.new')}:</strong> {t('home:info.p2')}
               </AlertWithIcon>
 
               <Badge variant="info">
@@ -130,57 +90,57 @@ const Index = () => {
                 dateDiffCasesData={dateDiffCasesData}
               />
               <Row>
-                <Col md={6}>
-                  <Card className="shadow mb-4">
+                <Col md={6} className="mb-4">
+                  <Card className="shadow h-100">
                     <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
-                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.cases_linechart.title')}</h6>
+                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.historical_cases.title')}</h6>
                     </Card.Header>
                     <Card.Body>
-                      <CasesLineChart data={lineChartData} />
+                      <LanguageChart id="historical_cases" lang={lang} />
                     </Card.Body>
                   </Card>
                 </Col>
-                <Col md={6}>
-                  <Card className="shadow mb-4">
+                <Col md={6} className="mb-4">
+                  <Card className="shadow h-100">
                     <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
-                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.cases_barchart.title')}</h6>
+                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.active_cases.title')}</h6>
                     </Card.Header>
                     <Card.Body>
-                      <CasesBarChart data={barChartData} />
-                    </Card.Body>
-                  </Card>
-                </Col>
-              </Row>
-              <Row>
-                <Col md={6}>
-                  <Card className="shadow mb-4">
-                    <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
-                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.active_cases_linechart.title')}</h6>
-                    </Card.Header>
-                    <Card.Body>
-                      <ActiveCasesLineChart data={activeCasesLineChartData} />
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col md={6}>
-                  <Card className="shadow mb-4">
-                    <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
-                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.cases_piechart.title')}</h6>
-                    </Card.Header>
-                    <Card.Body>
-                      <CasesPieChart infected={totalsData.infected} cured={totalsData.cured} fatal={totalsData.fatal} />
+                      <LanguageChart id="active_cases" lang={lang} />
                     </Card.Body>
                   </Card>
                 </Col>
               </Row>
               <Row>
-                <Col>
-                  <Card className="shadow mb-4">
+                <Col md={6} className="mb-4">
+                  <Card className="shadow h-100">
                     <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
-                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.positive_tests_percentage_barchart.title')}</h6>
+                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.weekly_infected_cured_cases.title')}</h6>
                     </Card.Header>
                     <Card.Body>
-                      <PositiveTestsPercentageChart data={positiveTestsPercentageBarChartData} />
+                      <LanguageChart id="weekly_infected_cured_cases" lang={lang} />
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col md={6} className="mb-4">
+                  <Card className="shadow h-100">
+                    <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.weekly_hospitalized_intensive_fatal_cases.title')}</h6>
+                    </Card.Header>
+                    <Card.Body>
+                      <LanguageChart id="weekly_hospitalized_intensive_fatal_cases" lang={lang} />
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
+              <Row>
+                <Col className="mb-4">
+                  <Card className="shadow h-100">
+                    <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.date_tests_positivity.title')}</h6>
+                    </Card.Header>
+                    <Card.Body>
+                      <LanguageChart id="date_tests_positivity" lang={lang} />
                     </Card.Body>
                   </Card>
                 </Col>

@@ -12,7 +12,8 @@ const Footer = () => {
       <Container className="my-auto">
         <div className="copyright text-center my-auto">
           <div className="mb-2">
-            &copy; Coronavirus-Bulgaria.org<br />
+            &copy; Coronavirus-Bulgaria.org
+            <br />
             {currentYear > 2020 ? `2020 - ${currentYear}` : '2020'}
           </div>
           <span>{t('common:footer.disclaimer')}</span>

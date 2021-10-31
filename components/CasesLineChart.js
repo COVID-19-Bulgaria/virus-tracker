@@ -12,8 +12,8 @@ const CasesLineChart = (props) => {
   return (
     <LineChart
       data={data}
-      xtitle={t('home:charts.cases_linechart.xtitle')}
-      ytitle={t('home:charts.cases_linechart.ytitle')}
+      xtitle="Дата"
+      ytitle="Брой случаи"
       colors={['#f6c23e', '#1cc88a', '#e74a3b']}
       download={{ background: '#ffffff', filename: 'COVID-19-Bulgaria_CasesLineChart' }}
       library={{

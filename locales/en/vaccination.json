@@ -1,0 +1,17 @@
+{
+    "page_title": "Vaccination",
+    "seo": {
+        "title": "Vaccination",
+        "description": "Statistics about vaccination against COVID-19 in Bulgaria.",
+        "keywords": "vaccination statistics covid-19 bulgaria,pfizer vaccination,moderna vaccination,astra zenecca vaccination,janssen vaccination,coronavirus,covid,covid-19,Bulgaria",
+        "canonical": "https://coronavirus-bulgaria.org/en/vaccination/"
+    },
+    "charts": {
+        "date_vaccination_timeline": {
+            "title": "Vaccination timeline by day"
+        },
+        "weekly_vaccination_timeline": {
+            "title": "Vaccination timeline by week"
+        }
+    }
+}

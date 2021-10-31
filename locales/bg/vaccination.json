@@ -1,0 +1,17 @@
+{
+    "page_title": "Ваксинация",
+    "seo": {
+        "title": "Ваксинация",
+        "description": "Статистика за ваксинацията срещу COVID-19 в България.",
+        "keywords": "статистика за ваксинацията срещу covid-19,ваксинация pfizer,ваксинация moderna,ваксинация astra zenecca,ваксинация janssen,коронавирус,ковид,ковид-19,covid,covid-19,България",
+        "canonical": "https://coronavirus-bulgaria.org/ваксинация/"
+    },
+    "charts": {
+        "date_vaccination_timeline": {
+            "title": "Хронология на ваксинацията по дни"
+        },
+        "weekly_vaccination_timeline": {
+            "title": "Хронология на ваксинацията по седмици"
+        }
+    }
+}
