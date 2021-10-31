@@ -1,0 +1,23 @@
+{
+    "page_title": "Тестове",
+    "seo": {
+        "title": "Тестове",
+        "description": "Статистика за направените PCR и антигенни тестове за COVID-19 в България.",
+        "keywords": "статистика тестове covid-19,статистика pcr,статистика antigen,графика тестове,коронавирус,ковид,ковид-19,covid,covid-19,България",
+        "canonical": "https://coronavirus-bulgaria.org/тестове/"
+    },
+    "charts": {
+        "date_tests_positivity": {
+            "title": "Положителни тестове по дни"
+        },
+        "weekly_tests_positivity": {
+            "title": "Позитивност на направените тестове (PCR + антигенни) по седмици"
+        },
+        "weekly_pcr_tests_positivity": {
+            "title": "Позитивност на PCR тестовете по седмици"
+        },
+        "weekly_antigen_tests_positivity": {
+            "title": "Позитивност на антигенните тестове по седмици"
+        }
+    }
+}

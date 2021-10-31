@@ -4,8 +4,28 @@ const pathConfig = {
     priority: '1.0',
     changefreq: 'hourly',
   },
+  '/tests': {
+    loc: '/тестове',
+    priority: '0.8',
+    changefreq: 'daily',
+  },
+  '/demographics': {
+    loc: '/демография',
+    priority: '0.8',
+    changefreq: 'daily',
+  },
   '/map': {
     loc: '/интерактивна-карта',
+    priority: '0.8',
+    changefreq: 'daily',
+  },
+  '/forecast': {
+    loc: '/прогноза',
+    priority: '0.8',
+    changefreq: 'daily',
+  },
+  '/vaccination': {
+    loc: '/ваксинация',
     priority: '0.8',
     changefreq: 'daily',
   },
@@ -34,10 +54,50 @@ const pathConfig = {
     priority: '1.0',
     changefreq: 'hourly',
   },
+  '/en/tests': {
+    loc: '/en/tests',
+    priority: '0.8',
+    changefreq: 'daily',
+  },
+  '/en/demographics': {
+    loc: '/en/demographics',
+    priority: '0.8',
+    changefreq: 'daily',
+  },
   '/en/map': {
     loc: '/en/map',
     priority: '0.8',
     changefreq: 'daily',
+  },
+  '/en/forecast': {
+    loc: '/en/forecast',
+    priority: '0.8',
+    changefreq: 'daily',
+  },
+  '/en/vaccination': {
+    loc: '/en/vaccination',
+    priority: '0.8',
+    changefreq: 'daily',
+  },
+  '/en/what-we-know': {
+    loc: '/en/what-we-know',
+    priority: '0.7',
+    changefreq: 'weekly',
+  },
+  '/en/why-stay-home': {
+    loc: '/en/why-stay-home',
+    priority: '0.7',
+    changefreq: 'weekly',
+  },
+  '/en/about': {
+    loc: '/en/about',
+    priority: '0.7',
+    changefreq: 'weekly',
+  },
+  '/en/privacy': {
+    loc: '/en/privacy',
+    priority: '0.7',
+    changefreq: 'weekly',
   },
 };
 

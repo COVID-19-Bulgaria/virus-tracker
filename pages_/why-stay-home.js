@@ -41,7 +41,7 @@ const StayHomeSketch = dynamic(
 );
 
 const WhyStayHome = () => {
-  const { t } = useTranslation();
+  const { t, lang } = useTranslation();
 
   return (
     <BaseLayout>
@@ -60,7 +60,7 @@ const WhyStayHome = () => {
           description: t('why-stay-home:seo.description'),
           images: [
             {
-              url: `https://coronavirus-bulgaria.org/static/images/open_graph_social_distancing.png?v=${process.env.BUILD_ID}`,
+              url: `https://coronavirus-bulgaria.org/static/images/open_graph/${lang}/open_graph_social_distancing.png?v=${process.env.BUILD_ID}`,
               width: 1200,
               height: 630,
               alt: t('why-stay-home:seo.title'),

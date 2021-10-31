@@ -1,0 +1,23 @@
+{
+    "page_title": "Tests",
+    "seo": {
+        "title": "Tests",
+        "description": "COVID-19 PCR and Antigen tests statistics in Bulgaria.",
+        "keywords": "covid-19 testing statistics,statistics pcr,statistics antigen,testing charts,coronavirus,covid,covid-19,Bulgaria",
+        "canonical": "https://coronavirus-bulgaria.org/en/tests/"
+    },
+    "charts": {
+        "date_tests_positivity": {
+            "title": "Positive tests by day"
+        },
+        "weekly_tests_positivity": {
+            "title": "Tests positivity (PCR + Antigen) by week"
+        },
+        "weekly_pcr_tests_positivity": {
+            "title": "PCR tests positivity by week"
+        },
+        "weekly_antigen_tests_positivity": {
+            "title": "Antigen tests positivity by week"
+        }
+    }
+}

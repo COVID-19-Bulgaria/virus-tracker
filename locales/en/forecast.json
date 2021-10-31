@@ -1,0 +1,16 @@
+{
+    "page_title": "Forecast",
+    "seo": {
+        "title": "Forecast",
+        "description": "Forecast about the COVID-19 spread in Bulgaria.",
+        "keywords": "covid-19 spread forecast,reproduction number,effective reproduction number,14 days incidence forecast,coronavirus,covid,covid-19,Bulgaria",
+        "canonical": "https://coronavirus-bulgaria.org/en/forecast/"
+    },
+    "charts": {
+        "weekly_14_days_forecast": {
+            "title": "14-days incidence forecast",
+            "info": "The forecast is based on the model described in the following scientific paper:",
+            "scientific_paper_1": "Zhao H., Merchant N. N., McNulty A., Radcliff T. A., Cote M. J., Fischer R. S. B., et al.. (2021). COVID-19: Short term prediction model using daily incidence data. PLoS ONE, 16(4 April), 1–14. doi: 10.1371/journal.pone.0250110"
+        }
+    }
+}

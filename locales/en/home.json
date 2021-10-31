@@ -4,7 +4,11 @@
         "title": "Information website about the coronavirus in Bulgaria",
         "description": "Up-to-date information and charts for the spread of coronavirus in Bulgaria"
     },
-    "info": "In this website you will find intuitive graphs about the chronological development of the COVID-19 pandemic in Bulgaria.",
+    "info": {
+        "new": "NEW",
+        "p1": "In this website you will find intuitive graphs about the chronological development of the COVID-19 pandemic in Bulgaria.",
+        "p2": "Check out the new visualisations about the disease spread in the pages \"Tests\", \"Demographics\", \"Map\", \"Vaccination\", and \"Forecast\"."
+    },
     "charts": {
         "infected": "Infected",
         "cured": "Cured",
@@ -37,36 +41,26 @@
             "diff_cases": "The number of vaccinated people is {{count}} {{diffType}} than yesterday.",
             "diff_cases_0": "The number of vaccinated people is the same as yesterday."
         },
-        "cases_linechart": {
-            "title": "Disease timeline",
-            "xtitle": "Date",
-            "ytitle": "Cases"
+        "historical_cases": {
+            "title": "Disease timeline"
         },
-        "cases_barchart": {
-            "title": "Daily statistics",
-            "xtitle": "Date",
-            "ytitle": "Cases"
+        "active_cases": {
+            "title": "Active cases"
         },
-        "cases_gender_piechart": {
-            "title": "Cases by gender",
-            "male": "Male {{percentage}}%",
-            "female": "Female {{percentage}}%"
+        "weekly_infected_cured_cases": {
+            "title": "Disease timeline of infected and cured cases by week"
+        },
+        "weekly_hospitalized_intensive_fatal_cases": {
+            "title": "Disease timeline of hospitalized, intensive care and fatal cases by week"
+        },
+        "date_tests_positivity": {
+            "title": "Positive tests"
         },
         "cases_piechart": {
             "title": "Cases ratio",
             "infected": "Infected {{percentage}}%",
             "cured": "Cured {{percentage}}%",
             "fatal": "Fatal {{percentage}}%"
-        },
-        "active_cases_linechart": {
-            "title": "Active cases",
-            "xtitle": "Date",
-            "ytitle": "Cases"
-        },
-        "positive_tests_percentage_barchart": {
-            "title": "Positive tests",
-            "xtitle": "Date",
-            "ytitle": "Percentage"
         }
     },
     "last_updated": "Last updated:"

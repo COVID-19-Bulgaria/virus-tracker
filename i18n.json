@@ -18,8 +18,20 @@
         "/about": [
             "about"
         ],
+        "/tests": [
+            "tests"
+        ],
+        "/demographics": [
+            "demographics"
+        ],
         "/map": [
             "map"
+        ],
+        "/forecast": [
+            "forecast"
+        ],
+        "/vaccination": [
+            "vaccination"
         ],
         "/privacy": [
             "privacy"

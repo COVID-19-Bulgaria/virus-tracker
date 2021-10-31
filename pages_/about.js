@@ -6,7 +6,7 @@ import BaseLayout from '../components/BaseLayout';
 import ExternalLink from '../components/ExternalLink';
 
 const About = () => {
-  const { t } = useTranslation();
+  const { t, lang } = useTranslation();
 
   return (
     <BaseLayout>
@@ -25,7 +25,7 @@ const About = () => {
           description: t('about:seo.description'),
           images: [
             {
-              url: `https://coronavirus-bulgaria.org/static/images/open_graph_about.png?v=${process.env.BUILD_ID}`,
+              url: `https://coronavirus-bulgaria.org/static/images/open_graph/${lang}/open_graph_about.png?v=${process.env.BUILD_ID}`,
               alt: t('about:seo.description'),
             },
           ],

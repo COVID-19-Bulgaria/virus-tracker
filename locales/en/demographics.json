@@ -1,0 +1,17 @@
+{
+    "page_title": "Demographics",
+    "seo": {
+        "title": "Demographics",
+        "description": "Demographic statistics about the COVID-19 spread in Bulgaria.",
+        "keywords": "demographic statistics covid-19 bulgaria,covid-19 incidence by age,age charts,coronavirus,covid,covid-19,Bulgaria",
+        "canonical": "https://coronavirus-bulgaria.org/en/demographics/"
+    },
+    "charts": {
+        "date_cases_age": {
+            "title": "Disease timeline by age group"
+        },
+        "week_cases_age": {
+            "title": "Weekly new cases by age group"
+        }
+    }
+}

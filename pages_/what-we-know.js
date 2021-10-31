@@ -16,7 +16,7 @@ import { ArticleJsonLdDefaults } from '../next-seo.config';
 import FigureCaption from 'react-bootstrap/FigureCaption';
 
 const WhatWeKnow = () => {
-  const { t } = useTranslation();
+  const { t, lang } = useTranslation();
 
   return (
     <BaseLayout>
@@ -35,7 +35,7 @@ const WhatWeKnow = () => {
           description: t('what-we-know:seo.description'),
           images: [
             {
-              url: `https://coronavirus-bulgaria.org/static/images/open_graph_faq.png?v=${process.env.BUILD_ID}`,
+              url: `https://coronavirus-bulgaria.org/static/images/open_graph/${lang}/open_graph_what_we_know.png?v=${process.env.BUILD_ID}`,
               alt: t('what-we-know:seo.title'),
             },
           ],

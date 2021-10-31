@@ -4,9 +4,25 @@
             "title": "Home",
             "as": "/"
         },
+        "tests": {
+            "title": "Tests",
+            "as": "tests"
+        },
+        "demographics": {
+            "title": "Demographics",
+            "as": "demographics"
+        },
         "map": {
             "title": "Map",
             "as": "map"
+        },
+        "vaccination": {
+            "title": "Vaccination",
+            "as": "vaccination"
+        },
+        "forecast": {
+            "title": "Forecast",
+            "as": "forecast"
         },
         "what-we-know": {
             "title": "What we know",

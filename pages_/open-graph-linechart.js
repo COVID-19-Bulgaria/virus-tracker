@@ -15,15 +15,13 @@ OpenGraphLineChart.propTypes = {
   dateCasesData: PropTypes.object.isRequired,
 };
 
-export default OpenGraphLineChart;
-
-export const getServerProps = async () => {
+OpenGraphLineChart.getInitialProps = async () => {
   const dateCasesDataset = await fetch('https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-database/master/Bulgaria/DateCasesDataset.json');
   const dateCasesData = await dateCasesDataset.json();
 
   return {
-    props: {
-      dateCasesData,
-    }
+    dateCasesData,
   };
 };
+
+export default OpenGraphLineChart;
