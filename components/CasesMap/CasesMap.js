@@ -1,41 +1,22 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 import BulgariaMap from './BulgariaMap';
-import MapMarker from './MapMarker';
-import MapCustomizations from './MapCustomizations.json';
+import Legend from './Legend';
+import MapRegions from './MapRegions';
+import RegionsGeoJSON from './regions_geojson.json';
+import RegionsNameMappingJSON from './regions_name_mapping.json';
 
 const CasesMap = ({ data, ...rest }) => {
-  const tooltipText = (location, infected) => (
-    <>
-      <strong>{location}</strong>
-      <br />
-      {`Заразени: ${infected}`}
-      <br />
-    </>
-  );
+  const [map, setMap] = useState(null);
 
   return (
-    <BulgariaMap {...rest}>
-      {
-        Object.entries(data).map(([location, {
-          coordinates,
-          infected,
-        }]) => {
-          let circleProps = {};
-
-          if (MapCustomizations[location] && MapCustomizations[location].circleProps) {
-            circleProps = MapCustomizations[location].circleProps;
-          }
-
-          return (
-            <MapMarker
-              key={location}
-              coordinates={coordinates}
-              tooltip={tooltipText(location, infected)}
-              circleProps={circleProps}
-            />
-          );
-        })
-      }
+    <BulgariaMap whenCreated={setMap} {...rest}>
+      <Legend map={map} />
+      <MapRegions
+        geoJson={RegionsGeoJSON}
+        regionsNameMapping={RegionsNameMappingJSON}
+        regionsDataset={data}
+      />
     </BulgariaMap>
   );
 };

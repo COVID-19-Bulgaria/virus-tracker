@@ -6,6 +6,17 @@
         "keywords": "covid-19 spread in Bulgaria map,Bulgaria covid map,covid spread in Bulgaria,covid spread in Bulgaria by city,covid transmission in Bulgaria,covid-19 interactive map Bulgaria",
         "canonical": "https://coronavirus-bulgaria.org/en/map/"
     },
+    "legend": "Legend",
+    "region_tooltip": {
+        "infected": "Infected",
+        "newly_infected": "New cases",
+        "infected_14d_100k": "14-days incidence / 100k",
+        "doses": "Administered vaccine doses",
+        "new_doses": "Administered vaccine doses for 24h",
+        "fully_vaccinated": "Fully vaccinated",
+        "booster": "Administered booster doses",
+        "new_booster": "Administered booster doses for 24h"
+    },
     "charts": {
         "weekly_places_cases": {
             "title": "Weekly new cases by region"
