@@ -75,7 +75,7 @@ const Map = () => {
           <h1 className="h3 mb-0 text-gray-800">{t('map:page_title')}</h1>
         </div>
         <Row className="mt-3">
-          <Col className="mb-4" style={{ height: '400px' }}>
+          <Col className="mb-4" style={{ height: '500px' }}>
             {isLoading
               ? <Spinner animation="border" variant="primary" />
               : <CasesMap data={geoData} zoom={zoom} whenReady={fixZoom} zoomSnap={0.5} />}

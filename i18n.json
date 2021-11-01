@@ -44,6 +44,9 @@
         ],
         "/open-graph-linechart": [
             "home"
+        ],
+        "/open-graph-map": [
+            "map"
         ]
     }
 }
