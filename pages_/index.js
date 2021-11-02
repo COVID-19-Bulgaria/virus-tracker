@@ -115,10 +115,10 @@ const Index = () => {
                 <Col md={6} className="mb-4">
                   <Card className="shadow h-100">
                     <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
-                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.weekly_infected_cured_cases.title')}</h6>
+                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.historical_hospitalized_intensive_care_cases.title')}</h6>
                     </Card.Header>
                     <Card.Body>
-                      <LanguageChart id="weekly_infected_cured_cases" lang={lang} />
+                      <LanguageChart id="historical_hospitalized_intensive_care_cases" lang={lang} />
                     </Card.Body>
                   </Card>
                 </Col>
@@ -134,7 +134,17 @@ const Index = () => {
                 </Col>
               </Row>
               <Row>
-                <Col className="mb-4">
+                <Col md={6} className="mb-4">
+                  <Card className="shadow h-100">
+                    <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.weekly_infected_cured_cases.title')}</h6>
+                    </Card.Header>
+                    <Card.Body>
+                      <LanguageChart id="weekly_infected_cured_cases" lang={lang} />
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col md={6} className="mb-4">
                   <Card className="shadow h-100">
                     <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
                       <h6 className="m-0 font-weight-bold text-primary">{t('home:charts.date_tests_positivity.title')}</h6>
