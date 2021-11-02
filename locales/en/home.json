@@ -19,7 +19,7 @@
         "medical_staff": "Infected medical staff",
         "pcr_tests": "PCR tests",
         "antigen_tests": "Antigen tests",
-        "vaccinated": "Vaccinated",
+        "vaccinated": "Administered vaccine doses",
         "new_cases_today": "{{count}} new cases have been announced today.",
         "new_cases_today_0": "No new cases have been announced today.",
         "new_cases_today_1": "A single new case has been announced today.",
@@ -38,8 +38,8 @@
             "new_cases_today": "During the last 24 hours {{count}} people have been vaccinated.",
             "new_cases_today_0": "No people have been vaccinated for the last 24 hours.",
             "new_cases_today_1": "During the last 24 hours a single person has been vaccinated.",
-            "diff_cases": "The number of vaccinated people is {{count}} {{diffType}} than yesterday.",
-            "diff_cases_0": "The number of vaccinated people is the same as yesterday."
+            "diff_cases": "The number of administered doses is {{count}} {{diffType}} than yesterday.",
+            "diff_cases_0": "The number of administered doses is the same as yesterday."
         },
         "historical_cases": {
             "title": "Disease timeline"
@@ -52,6 +52,9 @@
         },
         "weekly_hospitalized_intensive_fatal_cases": {
             "title": "Disease timeline of hospitalized, intensive care and fatal cases by week"
+        },
+        "historical_hospitalized_intensive_care_cases": {
+            "title": "Disease timeline of hospitalized and intensive care cases"
         },
         "date_tests_positivity": {
             "title": "Positive tests"

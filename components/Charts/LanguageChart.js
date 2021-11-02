@@ -10,6 +10,10 @@ const CHARTS_SRC = {
     bg: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/bg/HistoricalCases.svg',
     en: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/en/HistoricalCases.svg',
   },
+  historical_hospitalized_intensive_care_cases: {
+    bg: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/bg/HistoricalHospitalizedIntensiveCareCases.svg',
+    en: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/en/HistoricalHospitalizedIntensiveCareCases.svg',
+  },
   date_tests_positivity: {
     bg: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/bg/DateTestsPositivity.svg',
     en: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/en/DateTestsPositivity.svg',
@@ -75,6 +79,7 @@ LanguageChart.propTypes = {
   id: PropTypes.oneOf([
     'active_cases',
     'historical_cases',
+    'historical_hospitalized_intensive_care_cases',
     'date_tests_positivity',
     'date_cases_age',
     'date_vaccination_timeline',
