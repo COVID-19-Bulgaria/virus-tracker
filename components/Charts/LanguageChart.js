@@ -86,6 +86,10 @@ const CHARTS_SRC = {
     bg: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/bg/VaccinatedByAgeFatalPercentage.svg',
     en: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/en/VaccinatedByAgeFatalPercentage.svg',
   },
+  vaccinated_fatal_percentage: {
+    bg: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/bg/VaccinatedFatalPercentage.svg',
+    en: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/en/VaccinatedFatalPercentage.svg',
+  },
 };
 
 const LanguageChart = (props) => {
@@ -118,6 +122,7 @@ LanguageChart.propTypes = {
     'vaccinated_by_age_intensive_care',
     'vaccinated_by_age_fatal',
     'vaccinated_by_age_fatal_percentage',
+    'vaccinated_fatal_percentage',
   ]).isRequired,
   lang: PropTypes.oneOf(['bg', 'en']).isRequired,
 };
