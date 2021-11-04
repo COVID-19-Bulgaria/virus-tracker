@@ -56,6 +56,62 @@ const Vaccination = () => {
                 </Card>
             </Col>
         </Row>
+        <Row>
+            <Col md={6} className="mb-4">
+                <Card className="shadow h-100">
+                <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 className="m-0 font-weight-bold text-primary">{t('vaccination:charts.vaccinated_by_age_infected.title')}</h6>
+                </Card.Header>
+                <Card.Body>
+                    <LanguageChart id="vaccinated_by_age_infected" lang={lang} />
+                </Card.Body>
+                </Card>
+            </Col>
+            <Col md={6} className="mb-4">
+                <Card className="shadow h-100">
+                <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 className="m-0 font-weight-bold text-primary">{t('vaccination:charts.vaccinated_by_age_fatal.title')}</h6>
+                </Card.Header>
+                <Card.Body>
+                    <LanguageChart id="vaccinated_by_age_fatal" lang={lang} />
+                </Card.Body>
+                </Card>
+            </Col>
+        </Row>
+        <Row>
+            <Col md={6} className="mb-4">
+                <Card className="shadow h-100">
+                <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 className="m-0 font-weight-bold text-primary">{t('vaccination:charts.vaccinated_by_age_hospitalized.title')}</h6>
+                </Card.Header>
+                <Card.Body>
+                    <LanguageChart id="vaccinated_by_age_hospitalized" lang={lang} />
+                </Card.Body>
+                </Card>
+            </Col>
+            <Col md={6} className="mb-4">
+                <Card className="shadow h-100">
+                <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 className="m-0 font-weight-bold text-primary">{t('vaccination:charts.vaccinated_by_age_intensive_care.title')}</h6>
+                </Card.Header>
+                <Card.Body>
+                    <LanguageChart id="vaccinated_by_age_intensive_care" lang={lang} />
+                </Card.Body>
+                </Card>
+            </Col>
+        </Row>
+        <Row>
+            <Col className="mb-4">
+                <Card className="shadow h-100">
+                <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 className="m-0 font-weight-bold text-primary">{t('vaccination:charts.vaccinated_by_age_fatal_percentage.title')}</h6>
+                </Card.Header>
+                <Card.Body>
+                    <LanguageChart id="vaccinated_by_age_fatal_percentage" lang={lang} />
+                </Card.Body>
+                </Card>
+            </Col>
+        </Row>
       </Container>
     </BaseLayout>
   );

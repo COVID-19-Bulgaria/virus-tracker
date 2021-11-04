@@ -12,6 +12,21 @@
         },
         "weekly_vaccination_timeline": {
             "title": "Vaccination timeline by week"
+        },
+        "vaccinated_by_age_infected": {
+            "title": "Cumulative vaccinated infected cases by age group"
+        },
+        "vaccinated_by_age_hospitalized": {
+            "title": "Cumulative vaccinated hospitalized cases by age group"
+        },
+        "vaccinated_by_age_intensive_care": {
+            "title": "Cumulative vaccinated under intensive care cases by age group"
+        },
+        "vaccinated_by_age_fatal": {
+            "title": "Cumulative vaccinated fatal cases by age group"
+        },
+        "vaccinated_by_age_fatal_percentage": {
+            "title": "Fatal cases percentage from the vaccinated infected by age group"
         }
     }
 }

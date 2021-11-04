@@ -66,6 +66,26 @@ const CHARTS_SRC = {
     bg: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/bg/RollingBiWeeklyPlacesCases.svg',
     en: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/en/RollingBiWeeklyPlacesCases.svg',
   },
+  vaccinated_by_age_infected: {
+    bg: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/bg/VaccinatedByAgeInfected.svg',
+    en: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/en/VaccinatedByAgeInfected.svg',
+  },
+  vaccinated_by_age_hospitalized: {
+    bg: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/bg/VaccinatedByAgeHospitalized.svg',
+    en: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/en/VaccinatedByAgeHospitalized.svg',
+  },
+  vaccinated_by_age_intensive_care: {
+    bg: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/bg/VaccinatedByAgeIntensiveCare.svg',
+    en: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/en/VaccinatedByAgeIntensiveCare.svg',
+  },
+  vaccinated_by_age_fatal: {
+    bg: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/bg/VaccinatedByAgeFatal.svg',
+    en: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/en/VaccinatedByAgeFatal.svg',
+  },
+  vaccinated_by_age_fatal_percentage: {
+    bg: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/bg/VaccinatedByAgeFatalPercentage.svg',
+    en: 'https://raw.githubusercontent.com/COVID-19-Bulgaria/covid-stats/stats/en/VaccinatedByAgeFatalPercentage.svg',
+  },
 };
 
 const LanguageChart = (props) => {
@@ -93,6 +113,11 @@ LanguageChart.propTypes = {
     'weekly_infected_cured_cases',
     'weekly_places_cases',
     'rolling_biweekly_places_cases',
+    'vaccinated_by_age_infected',
+    'vaccinated_by_age_hospitalized',
+    'vaccinated_by_age_intensive_care',
+    'vaccinated_by_age_fatal',
+    'vaccinated_by_age_fatal_percentage',
   ]).isRequired,
   lang: PropTypes.oneOf(['bg', 'en']).isRequired,
 };
