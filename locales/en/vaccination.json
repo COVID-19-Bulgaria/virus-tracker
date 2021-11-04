@@ -27,6 +27,9 @@
         },
         "vaccinated_by_age_fatal_percentage": {
             "title": "Fatal cases percentage from the vaccinated infected by age group"
+        },
+        "vaccinated_fatal_percentage": {
+            "title": "Percentage of vaccinated fatal cases in relation to the total number of fatal cases per month"
         }
     }
 }
