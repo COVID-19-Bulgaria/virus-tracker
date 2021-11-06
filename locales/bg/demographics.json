@@ -21,6 +21,9 @@
         },
         "fatal_percentage_by_age_group": {
             "title": "Процент на жертвите от заразените по възрастови групи"
+        },
+        "unvaccinated_fatal_percentage_by_age_group": {
+            "title": "Процент на жертвите от неваксинираните заразени по възрастови групи"
         }
     }
 }

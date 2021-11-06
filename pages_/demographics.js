@@ -79,13 +79,23 @@ const Demographics = () => {
             </Col>
         </Row>
         <Row>
-            <Col className="mb-4">
+            <Col md={6} className="mb-4">
                 <Card className="shadow h-100">
                 <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 className="m-0 font-weight-bold text-primary">{t('demographics:charts.fatal_percentage_by_age_group.title')}</h6>
                 </Card.Header>
                 <Card.Body>
                     <LanguageChart id="fatal_percentage_by_age_group" lang={lang} />
+                </Card.Body>
+                </Card>
+            </Col>
+            <Col md={6} className="mb-4">
+                <Card className="shadow h-100">
+                <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 className="m-0 font-weight-bold text-primary">{t('demographics:charts.unvaccinated_fatal_percentage_by_age_group.title')}</h6>
+                </Card.Header>
+                <Card.Body>
+                    <LanguageChart id="unvaccinated_fatal_percentage_by_age_group" lang={lang} />
                 </Card.Body>
                 </Card>
             </Col>
