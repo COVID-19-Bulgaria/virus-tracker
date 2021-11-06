@@ -12,6 +12,15 @@
         },
         "week_cases_age": {
             "title": "Weekly new cases by age group"
+        },
+        "infected_by_age_group": {
+            "title": "Cumulative infected cases by age group"
+        },
+        "fatal_by_age_group": {
+            "title": "Cumulative fatal cases by age group"
+        },
+        "fatal_percentage_by_age_group": {
+            "title": "Fatal cases percentage from the infected by age group"
         }
     }
 }
