@@ -21,6 +21,9 @@
         },
         "fatal_percentage_by_age_group": {
             "title": "Fatal cases percentage from the infected by age group"
+        },
+        "unvaccinated_fatal_percentage_by_age_group": {
+            "title": "Fatal cases percentage from the unvaccinated infected by age group"
         }
     }
 }
