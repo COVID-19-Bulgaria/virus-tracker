@@ -56,6 +56,40 @@ const Demographics = () => {
                 </Card>
             </Col>
         </Row>
+        <Row>
+            <Col md={6} className="mb-4">
+                <Card className="shadow h-100">
+                <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 className="m-0 font-weight-bold text-primary">{t('demographics:charts.infected_by_age_group.title')}</h6>
+                </Card.Header>
+                <Card.Body>
+                    <LanguageChart id="infected_by_age_group" lang={lang} />
+                </Card.Body>
+                </Card>
+            </Col>
+            <Col md={6} className="mb-4">
+                <Card className="shadow h-100">
+                <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 className="m-0 font-weight-bold text-primary">{t('demographics:charts.fatal_by_age_group.title')}</h6>
+                </Card.Header>
+                <Card.Body>
+                    <LanguageChart id="fatal_by_age_group" lang={lang} />
+                </Card.Body>
+                </Card>
+            </Col>
+        </Row>
+        <Row>
+            <Col className="mb-4">
+                <Card className="shadow h-100">
+                <Card.Header className="py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 className="m-0 font-weight-bold text-primary">{t('demographics:charts.fatal_percentage_by_age_group.title')}</h6>
+                </Card.Header>
+                <Card.Body>
+                    <LanguageChart id="fatal_percentage_by_age_group" lang={lang} />
+                </Card.Body>
+                </Card>
+            </Col>
+        </Row>
       </Container>
     </BaseLayout>
   );
