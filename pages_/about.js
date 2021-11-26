@@ -37,7 +37,12 @@ const About = () => {
         </div>
         <Card className="shadow">
           <Card.Body>
-            <p>{t('about:p1')}</p>
+            <p>
+              <Trans
+                i18nKey="about:p1"
+                components={[<ExternalLink href="https://coronavirus.bg" title="Единен информационен портал" />]}
+              />
+            </p>
             <p>{t('about:p2')}</p>
             <p>{t('about:p3')}</p>
             <p>
@@ -48,6 +53,12 @@ const About = () => {
               <Trans
                 i18nKey="about:p5"
                 components={[<ExternalLink href="https://github.com/COVID-19-Bulgaria/virus-tracker" title="GitHub virus-tracker repository" />]}
+              />
+            </p>
+            <p>
+              <Trans
+                i18nKey="about:p6"
+                components={[<ExternalLink href="https://coronavirus.bg" title={t('about:unified_information_portal')} />, <ExternalLink href="https://data.egov.bg/covid-19?section=8&subsection=16&item=36" title={t('about:open_data_portal')} />]}
               />
             </p>
           </Card.Body>
