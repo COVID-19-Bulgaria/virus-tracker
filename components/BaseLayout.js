@@ -14,7 +14,7 @@ const BaseLayout = ({ children }) => {
   const SEO = lang === 'en' ? enSEO : bgSEO;
 
   return (
-    <div>
+    <div data-nosnippet>
       <DefaultSeo {...SEO} />
       <CookieConsent />
       <Head>

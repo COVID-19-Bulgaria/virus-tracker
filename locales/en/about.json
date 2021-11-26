@@ -6,9 +6,12 @@
         "keywords": "covid-19 information portal,covid information website Bulgaria,coronavirus,covid,covid-19,Bulgaria",
         "canonical": "https://coronavirus-bulgaria.org/en/about/"
     },
-    "p1": "To date, the official source of statistical information on the spread of coronavirus in Bulgaria is the Unified Information Portal - https://coronavirus.bg.",
+    "unified_information_portal": "Unified Information Portal",
+    "open_data_portal": "Open Data Portal",
+    "p1": "To date, the official source of statistical information on the spread of coronavirus in Bulgaria is the Unified Information Portal - <0>https://coronavirus.bg</0>.",
     "p2": "The portal doesn't provide quality visualisations which show the historic development of the pandemic in Bulgaria in accessible and intuitive way.",
     "p3": "The purpose of this website is to track the spread of the infection in Bulgaria and to present chronologically the information in a systematic and visual way.",
     "p4": "The website is a non-profit and open source, distributed under <0>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</0>.",
-    "p5": "The source code is available at <0>GitHub</0>."
+    "p5": "The source code is available at <0>GitHub</0>.",
+    "p6": "This website uses data published by the authorities on the <0>Unified Information Portal</0>. Some of the visualisations are based on data published by the authorities on the <1>Open Data Portal</1>."
 }
